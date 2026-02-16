@@ -22,9 +22,8 @@ export default function Home() {
           muted
           playsInline
           className="w-full h-full object-cover opacity-80 brightness-75 contrast-125"
-          style={{ playbackRate: 0.5 }} // This is not a standard React prop for video, we need to use ref to set playbackRate
           ref={(el) => {
-            if (el) el.playbackRate = 0.5;
+            if (el) el.playbackRate = 0.25;
           }}
         >
           <source src={waterVideo} type="video/mp4" />
