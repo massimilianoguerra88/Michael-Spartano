@@ -3,16 +3,22 @@ import { motion } from "framer-motion";
 
 export default function MichaelSpartano() {
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+      className="min-h-screen bg-background text-foreground flex flex-col"
+    >
       <div className="relative z-50">
          <Navigation />
       </div>
 
       <main className="flex-1 flex flex-col items-start justify-center px-12 md:px-24 lg:px-32 max-w-4xl pt-20">
         <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           className="space-y-16 text-left"
         >
           <p className="text-xl md:text-2xl font-serif text-foreground/80">
@@ -28,6 +34,6 @@ export default function MichaelSpartano() {
           </div>
         </motion.div>
       </main>
-    </div>
+    </motion.div>
   );
 }

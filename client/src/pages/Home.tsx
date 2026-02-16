@@ -5,7 +5,13 @@ import waterVideo from "@/assets/videos/water-bg.mp4";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-[#0a1520]">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="relative min-h-screen w-full overflow-hidden bg-[#0a1520]"
+    >
       <Navigation />
       
       {/* Background Video */}
@@ -27,7 +33,7 @@ export default function Home() {
         <motion.div 
           initial={{ opacity: 0, scale: 0.95, rotate: -2 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
           className="relative max-w-sm md:max-w-md lg:max-w-lg w-full aspect-[3/4]"
         >
           {/* Floating animation wrapper */}
@@ -51,6 +57,6 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </main>
-    </div>
+    </motion.div>
   );
 }
