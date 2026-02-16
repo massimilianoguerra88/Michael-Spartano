@@ -59,13 +59,10 @@ export default function Home() {
                 Using real wood texture and multiple shadows for 3D realism 
               */}
               <div 
-                className="relative w-full h-full bg-[#fdfdfd] overflow-hidden"
+                className="relative w-full h-full bg-transparent"
                 style={{
                   transform: 'rotate(0deg)', // Rotation handled by parent
-                  boxShadow: `
-                    10px 30px 60px -10px rgba(0, 0, 0, 0.6), 
-                    0 0 0 1px rgba(0,0,0,0.1)
-                  `
+                  filter: 'drop-shadow(10px 30px 20px rgba(0,0,0,0.5))'
                 }}
               >
                 {/* Wood Frame Border with Real Texture - Thinner as per reference */}
@@ -85,15 +82,15 @@ export default function Home() {
                 </div>
                 
                 {/* Inner White Canvas */}
-                <div className="absolute inset-[12px] md:inset-[14px] bg-[#f8f8f8] flex items-center justify-center">
+                <div className="absolute inset-[12px] md:inset-[14px] bg-[#ffffff] flex items-center justify-center">
                    {/* Paper/Canvas Texture */}
                    <div className="absolute inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat" />
                    
                    {/* Inner shadow cast by frame onto canvas - deeper for realism */}
-                   <div className="absolute inset-0 shadow-[inset_2px_4px_12px_rgba(0,0,0,0.15)]" />
+                   <div className="absolute inset-0 shadow-[inset_1px_2px_8px_rgba(0,0,0,0.2)]" />
                    
                    {/* Subtle uneven surface effect */}
-                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent mix-blend-overlay" />
+                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent mix-blend-overlay" />
                 </div>
               </div>
             </motion.div>
