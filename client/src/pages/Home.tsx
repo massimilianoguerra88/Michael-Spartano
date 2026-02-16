@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
-import woodTexture from "@/assets/images/wood-texture.jpg";
+import woodTexture from "@/assets/images/wood-texture-light.jpg";
 import waterVideo from "@/assets/videos/water-bg.mp4";
 
 export default function Home() {
@@ -56,7 +56,8 @@ export default function Home() {
             >
               {/* 
                 Realistic CSS Frame Construction 
-                Using real wood texture and multiple shadows for 3D realism 
+                Fixed: Removed border-image fill to ensure center is transparent
+                Used simple div nesting for robustness
               */}
               <div 
                 className="relative w-full h-full bg-transparent"
@@ -65,32 +66,42 @@ export default function Home() {
                   filter: 'drop-shadow(10px 30px 20px rgba(0,0,0,0.5))'
                 }}
               >
-                {/* Wood Frame Border with Real Texture - Thinner as per reference */}
-                <div className="absolute inset-0 z-20 pointer-events-none border-[12px] md:border-[14px] border-solid"
-                     style={{
-                       borderImageSource: `url(${woodTexture})`,
-                       borderImageSlice: '30 fill',
-                       borderImageWidth: '14px',
-                       borderImageOutset: '0',
-                       borderImageRepeat: 'stretch',
-                       borderColor: '#8b5a2b',
-                       boxShadow: 'inset 0 2px 5px rgba(0,0,0,0.4), inset 0 0 15px rgba(0,0,0,0.1)'
-                     }}
+                {/* 
+                  Frame Container 
+                  Background is wood texture. Flex layout centers the canvas.
+                */}
+                <div 
+                  className="w-full h-full relative flex items-center justify-center bg-[#8b5a2b]"
+                  style={{
+                    backgroundImage: `url(${woodTexture})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    boxShadow: 'inset 0 0 20px rgba(0,0,0,0.3)'
+                  }}
                 >
-                  {/* Light reflection on frame */}
-                  <div className="absolute inset-0 border-[12px] md:border-[14px] border-white/5 mix-blend-overlay" />
-                </div>
-                
-                {/* Inner White Canvas */}
-                <div className="absolute inset-[12px] md:inset-[14px] bg-[#ffffff] flex items-center justify-center">
-                   {/* Paper/Canvas Texture */}
-                   <div className="absolute inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat" />
-                   
-                   {/* Inner shadow cast by frame onto canvas - deeper for realism */}
-                   <div className="absolute inset-0 shadow-[inset_1px_2px_8px_rgba(0,0,0,0.2)]" />
-                   
-                   {/* Subtle uneven surface effect */}
-                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent mix-blend-overlay" />
+                  {/* Outer Bevel / Light edge */}
+                  <div className="absolute inset-0 border border-white/10 mix-blend-overlay" />
+
+                  {/* 
+                    Inner Canvas 
+                    White background sits ON TOP of wood, leaving a border around it.
+                    This creates the frame effect.
+                    calc(100% - 28px) creates a 14px border on each side.
+                  */}
+                  <div 
+                    className="relative bg-[#ffffff] flex items-center justify-center"
+                    style={{
+                      width: 'calc(100% - 28px)', // 14px border * 2
+                      height: 'calc(100% - 28px)', // 14px border * 2
+                      boxShadow: 'inset 1px 2px 8px rgba(0,0,0,0.2)' // Inner shadow
+                    }}
+                  >
+                     {/* Paper/Canvas Texture */}
+                     <div className="absolute inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat" />
+                     
+                     {/* Subtle uneven surface effect */}
+                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent mix-blend-overlay" />
+                  </div>
                 </div>
               </div>
             </motion.div>
