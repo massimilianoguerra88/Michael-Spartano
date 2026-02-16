@@ -14,19 +14,19 @@ export default function MichaelSpartano() {
          <Navigation />
       </div>
 
-      <main className="flex-1 flex flex-col items-start justify-center px-12 md:px-24 lg:px-32 max-w-4xl pt-20">
+      <main className="flex-1 flex flex-col items-start justify-center px-6 md:px-12 max-w-2xl pt-20">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="space-y-16 text-left"
+          className="space-y-12 text-left"
         >
-          <p className="text-xl md:text-2xl font-serif text-foreground/80">
+          <p className="text-base md:text-lg font-serif text-foreground/80">
             Non sono interessato al tuo nome.
           </p>
 
           <div className="space-y-2">
-            <p className="text-xl md:text-2xl font-serif text-foreground/80 leading-relaxed">
+            <p className="text-base md:text-lg font-serif text-foreground/80 leading-relaxed">
               L’attenzione<br />
               va a ciò che sei,<br />
               che sono.
