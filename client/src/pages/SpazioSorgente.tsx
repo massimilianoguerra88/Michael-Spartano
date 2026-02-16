@@ -62,7 +62,7 @@ export default function SpazioSorgente() {
             <p>Se desideri ricevere il messaggio per i prossimi incontri</p>
             <p>e far parte del gruppo WhatsApp Spazio Sorgente,</p>
             <p>puoi scrivermi qui:</p>
-            <p className="font-sans font-medium mt-2">3206074072</p>
+            <p className="mt-2">+39 3206074072</p>
           </div>
 
           <div className="pt-8 space-y-1">
