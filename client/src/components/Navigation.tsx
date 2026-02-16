@@ -23,6 +23,9 @@ export function Navigation() {
   const [location] = useLocation();
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
+  // Check if we are on the home page (dark background)
+  const isHome = location === "/";
+
   return (
     <nav className="w-full py-8 px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 z-50 fixed top-0 left-0 w-full text-white mix-blend-difference">
       <Link href="/michael-spartano">
@@ -36,7 +39,7 @@ export function Navigation() {
         </a>
       </Link>
 
-      {location !== "/" && (
+      {!isHome && (
         <Link href="/">
           <a className="hidden md:block absolute left-1/2 -translate-x-1/2 text-sm md:text-base font-light tracking-wide hover:opacity-100 transition-opacity duration-300 opacity-80 top-1/2 -translate-y-1/2">
             Home
@@ -71,14 +74,22 @@ export function Navigation() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -5 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute left-1/2 -translate-x-1/2 top-full pt-2 min-w-[140px] flex flex-col items-center gap-2"
+                  className="absolute left-1/2 -translate-x-1/2 top-full pt-2 min-w-[160px] flex flex-col items-center gap-2"
+                  style={{ mixBlendMode: 'normal' }} // This isolates the dropdown blending
                 >
-                  <div className="bg-background/90 backdrop-blur-sm p-4 rounded-sm border border-border/10 shadow-lg flex flex-col items-center gap-3">
+                  <div className={cn(
+                    "backdrop-blur-md p-5 rounded-sm shadow-xl flex flex-col items-center gap-4 border border-white/10",
+                    isHome 
+                      ? "bg-black/80 text-white" 
+                      : "bg-white/95 text-black border-black/5"
+                  )}>
                     {link.subLinks.map((subLink) => (
                       <Link key={subLink.href} href={subLink.href}>
                         <a className={cn(
-                          "whitespace-nowrap hover:opacity-100 transition-opacity duration-200 opacity-70 text-sm",
-                          location === subLink.href && "opacity-100 font-normal underline decoration-1 underline-offset-4"
+                          "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-sm tracking-wide font-light",
+                          location === subLink.href 
+                            ? "opacity-100 font-normal border-b border-current pb-0.5" 
+                            : "opacity-70 hover:translate-x-1"
                         )}>
                           {subLink.label}
                         </a>
