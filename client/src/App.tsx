@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Home from "@/pages/Home";
 import Placeholder from "@/pages/Placeholder";
 import MichaelSpartano from "@/pages/MichaelSpartano";
+import SpazioSorgente from "@/pages/SpazioSorgente";
 import Contatti from "@/pages/Contatti";
 import NotFound from "@/pages/not-found";
 
@@ -22,9 +23,7 @@ function Router() {
       <Route path="/educazione">
         {() => <Placeholder title="Educazione" />}
       </Route>
-      <Route path="/spazio-sorgente">
-        {() => <Placeholder title="Spazio Sorgente" />}
-      </Route>
+      <Route path="/spazio-sorgente" component={SpazioSorgente} />
       <Route path="/contatti" component={Contatti} />
       <Route component={NotFound} />
     </Switch>
