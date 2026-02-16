@@ -38,7 +38,7 @@ export function Navigation() {
 
       {location !== "/" && (
         <Link href="/">
-          <a className="hidden md:block absolute left-1/2 -translate-x-1/2 text-sm md:text-base font-light tracking-wide hover:opacity-100 transition-opacity duration-300 opacity-80">
+          <a className="hidden md:block absolute left-1/2 -translate-x-1/2 text-sm md:text-base font-light tracking-wide hover:opacity-100 transition-opacity duration-300 opacity-80 top-1/2 -translate-y-1/2">
             Home
           </a>
         </Link>
