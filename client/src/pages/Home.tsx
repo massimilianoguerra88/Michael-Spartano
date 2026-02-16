@@ -73,34 +73,40 @@ export default function Home() {
                 <div 
                   className="w-full h-full relative flex items-center justify-center bg-[#b8956c]"
                   style={{
-                    boxShadow: 'inset 0 0 10px rgba(0,0,0,0.1)'
+                    boxShadow: `
+                      inset 0 0 20px rgba(0,0,0,0.4),
+                      0 0 0 1px rgba(0,0,0,0.2)
+                    `
                   }}
                 >
                   {/* Wood texture overlay - softer and more uniform */}
                   <div 
-                    className="absolute inset-0 opacity-40 mix-blend-multiply"
+                    className="absolute inset-0 opacity-60 mix-blend-overlay"
                     style={{
                       backgroundImage: `url(${woodTexture})`,
-                      backgroundSize: 'cover',
+                      backgroundSize: '150%',
                       backgroundPosition: 'center',
                     }}
                   />
                   
-                  {/* Outer Bevel / Light edge */}
-                  <div className="absolute inset-0 border border-white/20 mix-blend-overlay" />
+                  {/* Bevel highlights for 3D realism */}
+                  <div className="absolute inset-0 border-t border-l border-white/30 mix-blend-overlay" />
+                  <div className="absolute inset-0 border-b border-r border-black/30 mix-blend-overlay" />
 
                   {/* 
                     Inner Canvas 
                     White background sits ON TOP of wood, leaving a border around it.
                     This creates the frame effect.
-                    calc(100% - 24px) creates a 12px border on each side (more elegant).
                   */}
                   <div 
-                    className="relative bg-[#ffffff] flex items-center justify-center z-10"
+                    className="relative bg-[#fdfdfd] flex items-center justify-center z-10"
                     style={{
                       width: 'calc(100% - 24px)', // 12px border * 2
                       height: 'calc(100% - 24px)', // 12px border * 2
-                      boxShadow: 'inset 1px 2px 6px rgba(0,0,0,0.15)' // Inner shadow
+                      boxShadow: `
+                        inset 2px 4px 10px rgba(0,0,0,0.15),
+                        0 1px 2px rgba(0,0,0,0.1)
+                      `
                     }}
                   >
                      {/* Paper/Canvas Texture */}
