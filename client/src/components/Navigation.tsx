@@ -27,7 +27,10 @@ export function Navigation() {
   const isHome = location === "/";
 
   return (
-    <nav className="w-full py-8 px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 z-50 fixed top-0 left-0 w-full text-white mix-blend-difference">
+    <nav className={cn(
+      "w-full py-8 px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 z-50 fixed top-0 left-0 w-full transition-all duration-300",
+      isHome ? "text-white mix-blend-difference" : "text-black bg-white/95 backdrop-blur-sm border-b border-black/5"
+    )}>
       <Link href="/michael-spartano">
         <a className="flex flex-col items-center hover:opacity-70 transition-opacity group">
           <span className="text-xl md:text-2xl font-serif tracking-tight">
@@ -83,7 +86,6 @@ export function Navigation() {
                         ? "bg-black/90 text-white border border-white/20 backdrop-blur-md" 
                         : "bg-white text-black border border-gray-200 shadow-xl"
                     )}
-                    style={{ mixBlendMode: 'normal' }}
                   >
                     {link.subLinks.map((subLink) => (
                       <Link key={subLink.href} href={subLink.href}>
