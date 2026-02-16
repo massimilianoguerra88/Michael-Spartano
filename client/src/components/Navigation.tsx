@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { href: "/", label: "Home" },
   { href: "/opere", label: "Opere" },
   { 
     href: "/pratica", 
@@ -36,6 +35,14 @@ export function Navigation() {
           </span>
         </a>
       </Link>
+
+      {location !== "/" && (
+        <Link href="/">
+          <a className="hidden md:block absolute left-1/2 -translate-x-1/2 text-sm md:text-base font-light tracking-wide hover:opacity-100 transition-opacity duration-300 opacity-80">
+            Home
+          </a>
+        </Link>
+      )}
 
       <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm md:text-base font-light tracking-wide opacity-90">
         {links.map((link) => (
