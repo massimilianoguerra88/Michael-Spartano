@@ -78,18 +78,19 @@ export function Navigation() {
                   style={{ mixBlendMode: 'normal' }} // This isolates the dropdown blending
                 >
                   <div className={cn(
-                    "backdrop-blur-md p-5 rounded-sm shadow-xl flex flex-col items-center gap-4 border border-white/10",
+                    "p-5 rounded-sm shadow-2xl flex flex-col items-center gap-4 min-w-[180px]",
                     isHome 
-                      ? "bg-black/80 text-white" 
-                      : "bg-white/95 text-black border-black/5"
+                      ? "bg-black/90 text-white border border-white/20 backdrop-blur-md" 
+                      : "bg-white text-black border border-black/10"
                   )}>
                     {link.subLinks.map((subLink) => (
                       <Link key={subLink.href} href={subLink.href}>
                         <a className={cn(
-                          "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-sm tracking-wide font-light",
+                          "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-base tracking-wide",
+                          isHome ? "font-medium" : "font-normal hover:font-medium",
                           location === subLink.href 
-                            ? "opacity-100 font-normal border-b border-current pb-0.5" 
-                            : "opacity-70 hover:translate-x-1"
+                            ? "opacity-100 font-bold border-b-2 border-current pb-0.5" 
+                            : "opacity-80 hover:translate-x-1"
                         )}>
                           {subLink.label}
                         </a>
