@@ -52,10 +52,10 @@
 
 /* LIGHT MODE - Minimalist/Paper-like */
 :root {
-  --background: 40 20% 97%; /* Off-white, paper-like */
-  --foreground: 0 0% 15%;   /* Soft black */
+  --background: 0 0% 100%; /* Pure White */
+  --foreground: 0 0% 0%;   /* Pure Black */
   
-  --card: 40 20% 97%;
+  --card: 0 0% 100%;
   --card-foreground: 0 0% 15%;
   
   --popover: 40 20% 97%;
