@@ -75,13 +75,13 @@ export function Navigation() {
                   exit={{ opacity: 0, y: -5 }}
                   transition={{ duration: 0.2 }}
                   className="absolute left-1/2 -translate-x-1/2 top-full pt-2 min-w-[160px] flex flex-col items-center gap-2"
-                  style={{ mixBlendMode: 'normal' }} // This isolates the dropdown blending
+                  style={{ isolation: 'isolate' }} 
                 >
                   <div className={cn(
                     "p-5 rounded-sm shadow-2xl flex flex-col items-center gap-4 min-w-[180px]",
                     isHome 
                       ? "bg-black/90 text-white border border-white/20 backdrop-blur-md" 
-                      : "bg-white text-black border border-black/10"
+                      : "bg-white text-black border border-gray-200 shadow-xl"
                   )}>
                     {link.subLinks.map((subLink) => (
                       <Link key={subLink.href} href={subLink.href}>
