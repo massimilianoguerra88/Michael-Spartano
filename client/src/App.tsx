@@ -7,6 +7,9 @@ import Placeholder from "@/pages/Placeholder";
 import MichaelSpartano from "@/pages/MichaelSpartano";
 import SpazioSorgente from "@/pages/SpazioSorgente";
 import Contatti from "@/pages/Contatti";
+import NonDualismo from "@/pages/pratica/NonDualismo";
+import Arte from "@/pages/pratica/Arte";
+import Musica from "@/pages/pratica/Musica";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -20,6 +23,9 @@ function Router() {
       <Route path="/pratica">
         {() => <Placeholder title="Pratica" />}
       </Route>
+      <Route path="/pratica/non-dualismo" component={NonDualismo} />
+      <Route path="/pratica/arte" component={Arte} />
+      <Route path="/pratica/musica" component={Musica} />
       <Route path="/educazione">
         {() => <Placeholder title="Educazione" />}
       </Route>
