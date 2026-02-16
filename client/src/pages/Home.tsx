@@ -112,10 +112,10 @@ export default function Home() {
                      {/* Paper/Canvas Texture */}
                      <div className="absolute inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat" />
                      
-                     {/* Wet spots effect */}
-                     <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#dcecfc] opacity-30 blur-xl rounded-[40%_60%_70%_30%/40%_50%_60%_50%] mix-blend-multiply filter" />
-                     <div className="absolute bottom-[10%] right-[5%] w-[30%] h-[25%] bg-[#dcecfc] opacity-20 blur-lg rounded-[60%_40%_30%_70%/50%_30%_70%_50%] mix-blend-multiply filter" />
-                     <div className="absolute bottom-[-5%] left-[20%] w-[25%] h-[20%] bg-[#dcecfc] opacity-15 blur-md rounded-[50%_50%_30%_70%/50%_50%_70%_30%] mix-blend-multiply filter" />
+                     {/* Wet spots effect - much stronger */}
+                     <div className="absolute top-0 left-0 w-[45%] h-[45%] bg-[#bcccd9] opacity-40 blur-xl rounded-[0%_60%_70%_0%/0%_50%_60%_50%] mix-blend-multiply" />
+                     <div className="absolute bottom-0 right-0 w-[35%] h-[30%] bg-[#bcccd9] opacity-35 blur-lg rounded-[60%_0%_0%_70%/50%_0%_0%_50%] mix-blend-multiply" />
+                     <div className="absolute bottom-0 left-[20%] w-[30%] h-[25%] bg-[#bcccd9] opacity-30 blur-md rounded-[50%_50%_30%_70%/50%_50%_70%_30%] mix-blend-multiply" />
                      
                      {/* Subtle uneven surface effect */}
                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent mix-blend-overlay" />
