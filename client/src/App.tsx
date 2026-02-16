@@ -4,12 +4,14 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import Home from "@/pages/Home";
 import Placeholder from "@/pages/Placeholder";
+import MichaelSpartano from "@/pages/MichaelSpartano";
 import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/michael-spartano" component={MichaelSpartano} />
       <Route path="/opere">
         {() => <Placeholder title="Opere" />}
       </Route>

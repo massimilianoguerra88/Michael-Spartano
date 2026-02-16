@@ -15,7 +15,7 @@ export function Navigation() {
 
   return (
     <nav className="w-full py-8 px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 z-50 fixed top-0 left-0 w-full text-white mix-blend-difference">
-      <Link href="/">
+      <Link href="/michael-spartano">
         <a className="flex flex-col items-center hover:opacity-70 transition-opacity group">
           <span className="text-xl md:text-2xl font-serif tracking-tight">
             Michael Spartano
