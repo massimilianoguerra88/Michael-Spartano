@@ -13,14 +13,39 @@ export default function Home() {
     >
       <Navigation />
       
-      {/* Background Image with subtle movement */}
+      {/* SVG Filter for Water Ripple Effect */}
+      {/* Hidden SVG that defines the filter */}
+      <svg className="hidden">
+        <defs>
+          <filter id="water-ripple" x="0" y="0" width="100%" height="100%">
+            <feTurbulence 
+              type="fractalNoise" 
+              baseFrequency="0.01 0.01" 
+              numOctaves="1" 
+              result="noise" 
+            >
+              <animate 
+                attributeName="baseFrequency" 
+                dur="30s" 
+                values="0.01 0.01;0.015 0.015;0.01 0.01" 
+                repeatCount="indefinite" 
+              />
+            </feTurbulence>
+            <feDisplacementMap 
+              in="SourceGraphic" 
+              in2="noise" 
+              scale="20" 
+            />
+          </filter>
+        </defs>
+      </svg>
+
+      {/* Background Image with Filter applied */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div
           initial={{ scale: 1.05 }}
           animate={{ 
             scale: [1.05, 1.1, 1.05],
-            x: [0, -15, 0],
-            y: [0, -10, 0],
           }}
           transition={{ 
             duration: 20, 
@@ -34,8 +59,10 @@ export default function Home() {
             src={bgImage}
             alt="Water background with frame"
             className="w-full h-full object-cover"
+            style={{ filter: 'url(#water-ripple)' }}
           />
         </motion.div>
+        
         {/* Subtle overlay */}
         <div className="absolute inset-0 bg-black/10" />
       </div>
