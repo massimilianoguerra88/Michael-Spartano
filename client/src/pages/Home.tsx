@@ -13,37 +13,55 @@ export default function Home() {
     >
       <Navigation />
       
-      {/* Background Image - Subtle pan only, no zoom */}
+      {/* 
+        Water Ripple Effect 
+        Using a tuned SVG Turbulence filter for a subtle liquid distortion
+      */}
       <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* SVG Filter Definition */}
+        <svg style={{ position: 'absolute', width: 0, height: 0 }}>
+          <filter id="water-ripple">
+            <feTurbulence 
+              type="turbulence" 
+              baseFrequency="0.01 0.02" 
+              numOctaves="2" 
+              result="turbulence" 
+              seed="5"
+            >
+              <animate 
+                attributeName="baseFrequency" 
+                dur="15s" 
+                values="0.01 0.02;0.015 0.025;0.01 0.02" 
+                repeatCount="indefinite" 
+              />
+            </feTurbulence>
+            <feDisplacementMap 
+              in2="turbulence" 
+              in="SourceGraphic" 
+              scale="15" 
+              xChannelSelector="R" 
+              yChannelSelector="G" 
+            />
+          </filter>
+        </svg>
+
+        {/* The Image with the Filter Applied */}
         <motion.div
-          initial={{ scale: 1.1 }} // Slight scale to allow movement without showing edges
-          animate={{ 
-            x: [0, -20, 0],
-            y: [0, -10, 0],
-          }}
-          transition={{ 
-            duration: 25, 
-            ease: "easeInOut", 
-            repeat: Infinity,
-            repeatType: "reverse" 
-          }}
-          className="w-full h-full"
+          className="absolute inset-0 w-[105%] h-[105%] -left-[2.5%] -top-[2.5%]"
+          style={{ filter: "url(#water-ripple)" }}
         >
           <img
             src={bgImage}
-            alt="Water background with frame"
-            className="w-full h-full object-cover"
+            alt="Water background"
+            className="w-full h-full object-cover opacity-90"
           />
-          
-          {/* 
-            Subtle Texture Overlay
-            Adds a slight grain/noise to make it feel less static
-          */}
-          <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat opacity-[0.3]" />
         </motion.div>
         
-        {/* Subtle dark overlay for text contrast */}
-        <div className="absolute inset-0 bg-black/10" />
+        {/* Subtle Texture Overlay */}
+        <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat opacity-[0.3]" />
+        
+        {/* Dark overlay for text contrast */}
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       <main className="relative z-10 flex-1 w-full min-h-screen">
