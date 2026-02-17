@@ -15,7 +15,10 @@ export default function Home() {
       
       {/* 
         Water Ripple Effect 
-        Using a tuned SVG Turbulence filter for a subtle liquid distortion
+        Solution: We layer the image twice.
+        1. Bottom Layer: Static image (provides the clean, undistorted frame).
+        2. Top Layer: Rippled image, but with a radial mask so the effect only shows in the center (water),
+           fading out before it hits the frame edges.
       */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* SVG Filter Definition */}
@@ -38,21 +41,35 @@ export default function Home() {
             <feDisplacementMap 
               in2="turbulence" 
               in="SourceGraphic" 
-              scale="15" 
+              scale="10" 
               xChannelSelector="R" 
               yChannelSelector="G" 
             />
           </filter>
         </svg>
 
-        {/* The Image with the Filter Applied */}
+        {/* 1. Base Static Image (The Frame) - Undistorted */}
+        <div className="absolute inset-0 w-full h-full">
+           <img
+            src={bgImage}
+            alt="Background Frame"
+            className="w-full h-full object-cover opacity-90"
+          />
+        </div>
+
+        {/* 2. Rippled Water Layer - Masked to center */}
         <motion.div
-          className="absolute inset-0 w-[105%] h-[105%] -left-[2.5%] -top-[2.5%]"
-          style={{ filter: "url(#water-ripple)" }}
+          className="absolute inset-0 w-full h-full"
+          style={{ 
+            filter: "url(#water-ripple)",
+            // Mask fades out the edges so the distorted frame is hidden, revealing the static frame below
+            maskImage: "radial-gradient(ellipse at center, black 40%, transparent 70%)",
+            WebkitMaskImage: "radial-gradient(ellipse at center, black 40%, transparent 70%)"
+          }}
         >
           <img
             src={bgImage}
-            alt="Water background"
+            alt="Water animation"
             className="w-full h-full object-cover opacity-90"
           />
         </motion.div>
