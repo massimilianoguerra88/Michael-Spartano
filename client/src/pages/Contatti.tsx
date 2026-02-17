@@ -19,7 +19,7 @@ export default function Contatti() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="space-y-12 text-left text-lg md:text-xl font-serif text-foreground/80 leading-relaxed"
+          className="space-y-12 text-left text-base font-serif text-foreground/80 leading-relaxed"
         >
           <div className="space-y-1">
             <p>Per incontri individuali,</p>
