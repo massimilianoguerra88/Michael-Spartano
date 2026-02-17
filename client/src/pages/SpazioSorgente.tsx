@@ -19,11 +19,11 @@ export default function SpazioSorgente() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="max-w-2xl w-full text-center font-serif text-foreground/80 leading-relaxed text-lg md:text-xl space-y-12"
+          className="max-w-2xl w-full text-center font-serif text-foreground/80 leading-relaxed text-base space-y-12"
         >
           <div className="space-y-2">
-            <h1 className="text-3xl md:text-4xl font-normal">Spazio Sorgente</h1>
-            <p className="italic text-xl">Incontri nell’Uno</p>
+            <h1 className="text-2xl md:text-3xl font-normal">Spazio Sorgente</h1>
+            <p className="italic text-lg">Incontri nell’Uno</p>
           </div>
 
           <div className="space-y-1">
