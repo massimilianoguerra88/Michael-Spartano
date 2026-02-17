@@ -98,7 +98,7 @@ export function Navigation() {
                       <Link key={subLink.href} href={subLink.href}>
                         <a className={cn(
                           "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-base tracking-wide",
-                          isHome ? "font-medium" : "font-normal hover:font-medium",
+                          isHome ? "font-light" : "font-light hover:font-normal",
                           location === subLink.href 
                             ? "opacity-100 font-bold border-b-2 border-current pb-0.5" 
                             : "opacity-80 hover:translate-x-1"
