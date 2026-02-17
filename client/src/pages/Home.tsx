@@ -30,7 +30,7 @@ export default function Home() {
             >
               <animate 
                 attributeName="baseFrequency" 
-                dur="40s" 
+                dur="120s" 
                 values="0.01 0.02;0.015 0.025;0.01 0.02" 
                 repeatCount="indefinite" 
               />
