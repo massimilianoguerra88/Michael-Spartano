@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { AnimatePresence } from "framer-motion";
 import Home from "@/pages/Home";
+import Opere from "@/pages/Opere";
 import Placeholder from "@/pages/Placeholder";
 import MichaelSpartano from "@/pages/MichaelSpartano";
 import SpazioSorgente from "@/pages/SpazioSorgente";
@@ -21,9 +22,7 @@ function Router() {
       <Switch location={location} key={location}>
         <Route path="/" component={Home} />
         <Route path="/michael-spartano" component={MichaelSpartano} />
-        <Route path="/opere">
-          {() => <Placeholder title="Opere" />}
-        </Route>
+        <Route path="/opere" component={Opere} />
         <Route path="/pratica">
           {() => <Placeholder title="Pratica" />}
         </Route>
