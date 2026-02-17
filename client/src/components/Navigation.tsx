@@ -28,15 +28,15 @@ export function Navigation() {
 
   return (
     <nav className={cn(
-      "w-full py-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6 z-50 fixed top-0 left-0 w-full transition-all duration-300",
+      "w-full py-8 px-6 md:px-12 flex flex-col md:flex-row items-baseline justify-between gap-6 z-50 fixed top-0 left-0 w-full transition-all duration-300",
       isHome ? "text-white mix-blend-difference" : "text-black bg-white"
     )}>
       <Link href="/michael-spartano">
-        <a className="flex flex-col items-center hover:opacity-70 transition-opacity group">
-          <span className="text-[18px] md:text-[22px] font-serif tracking-tight">
+        <a className="flex flex-col items-start md:items-baseline group">
+          <span className="text-[18px] md:text-[22px] font-serif tracking-tight hover:opacity-70 transition-opacity">
             Michael Spartano
           </span>
-          <span className="text-sm font-serif italic opacity-80 mt-1">
+          <span className="text-sm font-serif italic opacity-80 mt-1 md:absolute md:top-full md:left-0">
             è solo un nome
           </span>
         </a>
@@ -44,7 +44,7 @@ export function Navigation() {
 
       {!isHome && (
         <Link href="/">
-          <a className="hidden md:block absolute left-1/2 -translate-x-1/2 text-sm md:text-base font-light tracking-wide hover:opacity-100 transition-opacity duration-300 opacity-80 top-1/2 -translate-y-1/2">
+          <a className="hidden md:block absolute left-1/2 -translate-x-1/2 text-base font-light tracking-wide hover:opacity-100 transition-opacity duration-300 opacity-80 top-8">
             Home
           </a>
         </Link>
