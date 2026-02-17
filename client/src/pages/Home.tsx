@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
-import woodTexture from "@/assets/images/wood-texture-light.jpg";
-import waterVideo from "@/assets/videos/water-bg.mp4";
+import bgImage from "@assets/unnamed_1771316738230.jpg";
 
 export default function Home() {
   return (
@@ -14,117 +13,19 @@ export default function Home() {
     >
       <Navigation />
       
-      {/* Background Video */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-60 brightness-[0.65] contrast-[1.1] saturate-[0.8]"
-          ref={(el) => {
-            if (el) el.playbackRate = 0.25;
-          }}
-        >
-          <source src={waterVideo} type="video/mp4" />
-        </video>
-        {/* Dark Blue Overlay to match reference */}
-        <div className="absolute inset-0 bg-[#020b14]/40 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-[#0a1f2e]/20 mix-blend-overlay" />
+        <img
+          src={bgImage}
+          alt="Water background with frame"
+          className="w-full h-full object-cover"
+        />
+        {/* Subtle overlay to ensure text/nav visibility if needed, though nav is high contrast */}
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
       <main className="relative z-10 flex-1 w-full min-h-screen">
-        <div className="absolute inset-0 flex items-center justify-end px-6 md:px-12 lg:px-24">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95, rotate: 12, x: 50 }}
-            animate={{ opacity: 1, scale: 1, rotate: 15, x: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-            className="relative w-full max-w-[280px] md:max-w-[340px] aspect-[3/4] mr-0 md:mr-16 lg:mr-32"
-          >
-            {/* Floating animation wrapper */}
-            <motion.div
-              animate={{ 
-                y: [0, -6, 0],
-                rotate: [15, 16, 14, 15] 
-              }}
-              transition={{ 
-                duration: 9, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-              className="w-full h-full relative perspective-1000 origin-center"
-            >
-              {/* 
-                Realistic CSS Frame Construction 
-                Fixed: Removed border-image fill to ensure center is transparent
-                Used simple div nesting for robustness
-              */}
-              <div 
-                className="relative w-full h-full bg-transparent"
-                style={{
-                  transform: 'rotate(0deg)', // Rotation handled by parent
-                  filter: 'drop-shadow(10px 30px 20px rgba(0,0,0,0.5))'
-                }}
-              >
-                {/* 
-                  Frame Container 
-                  Background is wood texture. Flex layout centers the canvas.
-                */}
-                <div 
-                  className="w-full h-full relative flex items-center justify-center bg-[#b8956c]"
-                  style={{
-                    boxShadow: `
-                      inset 0 0 20px rgba(0,0,0,0.4),
-                      0 0 0 1px rgba(0,0,0,0.2)
-                    `
-                  }}
-                >
-                  {/* Wood texture overlay - softer and more uniform */}
-                  <div 
-                    className="absolute inset-0 opacity-60 mix-blend-overlay"
-                    style={{
-                      backgroundImage: `url(${woodTexture})`,
-                      backgroundSize: '150%',
-                      backgroundPosition: 'center',
-                    }}
-                  />
-                  
-                  {/* Bevel highlights for 3D realism */}
-                  <div className="absolute inset-0 border-t border-l border-white/30 mix-blend-overlay" />
-                  <div className="absolute inset-0 border-b border-r border-black/30 mix-blend-overlay" />
-
-                  {/* 
-                    Inner Canvas 
-                    White background sits ON TOP of wood, leaving a border around it.
-                    This creates the frame effect.
-                  */}
-                  <div 
-                    className="relative bg-[#fdfdfd] flex items-center justify-center z-10"
-                    style={{
-                      width: 'calc(100% - 24px)', // 12px border * 2
-                      height: 'calc(100% - 24px)', // 12px border * 2
-                      boxShadow: `
-                        inset 2px 4px 10px rgba(0,0,0,0.15),
-                        0 1px 2px rgba(0,0,0,0.1)
-                      `
-                    }}
-                  >
-                     {/* Paper/Canvas Texture */}
-                     <div className="absolute inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat" />
-                     
-                     {/* Wet spots effect - much stronger */}
-                     <div className="absolute top-0 left-0 w-[45%] h-[45%] bg-[#bcccd9] opacity-40 blur-xl rounded-[0%_60%_70%_0%/0%_50%_60%_50%] mix-blend-multiply" />
-                     <div className="absolute bottom-0 right-0 w-[35%] h-[30%] bg-[#bcccd9] opacity-35 blur-lg rounded-[60%_0%_0%_70%/50%_0%_0%_50%] mix-blend-multiply" />
-                     <div className="absolute bottom-0 left-[20%] w-[30%] h-[25%] bg-[#bcccd9] opacity-30 blur-md rounded-[50%_50%_30%_70%/50%_50%_70%_30%] mix-blend-multiply" />
-                     
-                     {/* Subtle uneven surface effect */}
-                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent mix-blend-overlay" />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
+        {/* Content can go here if needed */}
       </main>
     </motion.div>
   );
