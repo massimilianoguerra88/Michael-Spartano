@@ -4,16 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { 
-    href: "/opere", 
-    label: "Opere",
-    subLinks: [
-      { href: "/opere/performance", label: "Performance" },
-      { href: "/opere/disegni", label: "Disegni" },
-      { href: "/opere/poesie", label: "Poesie" },
-      { href: "/opere/oggetti", label: "Oggetti" },
-    ]
-  },
+  { href: "/opere", label: "Opere" },
   { 
     href: "/pratica", 
     label: "Pratica",

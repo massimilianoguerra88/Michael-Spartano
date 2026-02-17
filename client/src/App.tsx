@@ -12,10 +12,6 @@ import Contatti from "@/pages/Contatti";
 import NonDualismo from "@/pages/pratica/NonDualismo";
 import Arte from "@/pages/pratica/Arte";
 import Musica from "@/pages/pratica/Musica";
-import Performance from "@/pages/opere/Performance";
-import Disegni from "@/pages/opere/Disegni";
-import Poesie from "@/pages/opere/Poesie";
-import Oggetti from "@/pages/opere/Oggetti";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -27,10 +23,6 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/michael-spartano" component={MichaelSpartano} />
         <Route path="/opere" component={Opere} />
-        <Route path="/opere/performance" component={Performance} />
-        <Route path="/opere/disegni" component={Disegni} />
-        <Route path="/opere/poesie" component={Poesie} />
-        <Route path="/opere/oggetti" component={Oggetti} />
         <Route path="/pratica">
           {() => <Placeholder title="Pratica" />}
         </Route>
