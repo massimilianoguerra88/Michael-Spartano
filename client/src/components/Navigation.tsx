@@ -97,7 +97,7 @@ export function Navigation() {
                     {link.subLinks.map((subLink) => (
                       <Link key={subLink.href} href={subLink.href}>
                         <a className={cn(
-                          "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-base tracking-wide",
+                          "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-sm tracking-wide",
                           isHome ? "font-light" : "font-light hover:font-normal",
                           location === subLink.href 
                             ? "opacity-100 font-bold border-b-2 border-current pb-0.5" 
