@@ -90,10 +90,8 @@ export function Navigation() {
                 >
                   <div 
                     className={cn(
-                      "p-5 rounded-sm shadow-2xl flex flex-col items-center gap-4 min-w-[180px]",
-                      isHome 
-                        ? "bg-black/90 text-white border border-white/20 backdrop-blur-md" 
-                        : "bg-white text-black border border-gray-200 shadow-xl"
+                      "pt-4 flex flex-col items-center gap-2 min-w-[180px]",
+                      isHome ? "text-white" : "text-black"
                     )}
                   >
                     {link.subLinks.map((subLink) => (
