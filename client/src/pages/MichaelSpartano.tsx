@@ -46,7 +46,7 @@ export default function MichaelSpartano() {
           <img 
             src={profileImage} 
             alt="Michael Spartano" 
-            className="w-full max-w-2xl h-auto object-cover"
+            className="w-full max-w-xl h-auto object-cover"
           />
         </motion.div>
       </main>
