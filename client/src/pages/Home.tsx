@@ -13,14 +13,30 @@ export default function Home() {
     >
       <Navigation />
       
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={bgImage}
-          alt="Water background with frame"
-          className="w-full h-full object-cover"
-        />
-        {/* Subtle overlay to ensure text/nav visibility if needed, though nav is high contrast */}
+      {/* Background Image with subtle movement */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <motion.div
+          initial={{ scale: 1.05 }}
+          animate={{ 
+            scale: [1.05, 1.1, 1.05],
+            x: [0, -15, 0],
+            y: [0, -10, 0],
+          }}
+          transition={{ 
+            duration: 20, 
+            ease: "easeInOut", 
+            repeat: Infinity,
+            repeatType: "reverse" 
+          }}
+          className="w-full h-full"
+        >
+          <img
+            src={bgImage}
+            alt="Water background with frame"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+        {/* Subtle overlay */}
         <div className="absolute inset-0 bg-black/10" />
       </div>
 
