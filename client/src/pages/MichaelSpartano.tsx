@@ -23,12 +23,12 @@ export default function MichaelSpartano() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           className="flex-shrink-0 max-w-lg text-left"
         >
-          <p className="text-base md:text-lg font-serif text-foreground/80 mb-8">
+          <p className="text-base font-serif text-foreground/80 mb-8">
             Non sono interessato al tuo nome.
           </p>
 
           <div className="space-y-2">
-            <p className="text-base md:text-lg font-serif text-foreground/80 leading-relaxed">
+            <p className="text-base font-serif text-foreground/80 leading-relaxed">
               L’attenzione<br />
               va a ciò che sei,<br />
               che sono.
