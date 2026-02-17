@@ -33,7 +33,7 @@ export function Navigation() {
     )}>
       <Link href="/michael-spartano">
         <a className="flex flex-col items-center hover:opacity-70 transition-opacity group">
-          <span className="text-xl md:text-2xl font-serif tracking-tight">
+          <span className="text-[18px] md:text-[22px] font-serif tracking-tight">
             Michael Spartano
           </span>
           <span className="text-sm font-serif italic opacity-80 mt-1">
