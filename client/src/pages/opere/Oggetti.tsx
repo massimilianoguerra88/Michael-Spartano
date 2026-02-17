@@ -12,7 +12,7 @@ export default function Oggetti() {
     >
       <Navigation />
       <main className="flex-1 flex items-center justify-center p-6">
-        <h1 className="text-3xl font-serif opacity-50">Oggetti</h1>
+        <h1 className="text-xl font-serif opacity-50">Oggetti</h1>
       </main>
     </motion.div>
   );
