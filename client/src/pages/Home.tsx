@@ -13,42 +13,17 @@ export default function Home() {
     >
       <Navigation />
       
-      {/* SVG Filter for Water Ripple Effect */}
-      {/* Hidden SVG that defines the filter */}
-      <svg className="hidden">
-        <defs>
-          <filter id="water-ripple" x="0" y="0" width="100%" height="100%">
-            <feTurbulence 
-              type="fractalNoise" 
-              baseFrequency="0.01 0.01" 
-              numOctaves="1" 
-              result="noise" 
-            >
-              <animate 
-                attributeName="baseFrequency" 
-                dur="30s" 
-                values="0.01 0.01;0.015 0.015;0.01 0.01" 
-                repeatCount="indefinite" 
-              />
-            </feTurbulence>
-            <feDisplacementMap 
-              in="SourceGraphic" 
-              in2="noise" 
-              scale="20" 
-            />
-          </filter>
-        </defs>
-      </svg>
-
-      {/* Background Image with Filter applied */}
+      {/* Background Image - Solid and Sharp */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div
           initial={{ scale: 1.05 }}
           animate={{ 
-            scale: [1.05, 1.1, 1.05],
+            scale: [1.05, 1.08, 1.05],
+            x: [0, -10, 0],
+            y: [0, -5, 0],
           }}
           transition={{ 
-            duration: 20, 
+            duration: 18, 
             ease: "easeInOut", 
             repeat: Infinity,
             repeatType: "reverse" 
@@ -59,11 +34,29 @@ export default function Home() {
             src={bgImage}
             alt="Water background with frame"
             className="w-full h-full object-cover"
-            style={{ filter: 'url(#water-ripple)' }}
           />
+          
+          {/* 
+            Overlay for Water Surface Effect 
+            This creates a subtle moving texture ON TOP of the image
+            without distorting the frame underneath.
+          */}
+          <div className="absolute inset-0 opacity-30 mix-blend-overlay pointer-events-none">
+            <svg className="w-full h-full opacity-50">
+               <filter id="noiseFilter">
+                 <feTurbulence 
+                   type="fractalNoise" 
+                   baseFrequency="0.6" 
+                   stitchTiles="stitch" 
+                   numOctaves="1"
+                 />
+               </filter>
+               <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+            </svg>
+          </div>
         </motion.div>
         
-        {/* Subtle overlay */}
+        {/* Subtle dark overlay for text contrast */}
         <div className="absolute inset-0 bg-black/10" />
       </div>
 
