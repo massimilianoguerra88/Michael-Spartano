@@ -1,5 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
+import img1 from "@/assets/images/1.jpg";
+import img2 from "@/assets/images/2.jpg";
+import img3 from "@/assets/images/3.jpg";
 
 export default function Musica() {
   return (
@@ -32,14 +35,14 @@ export default function Musica() {
         </motion.div>
 
         {/* Content Grid */}
-        <div className="flex flex-col md:flex-row gap-16 md:gap-32 lg:gap-48 items-start">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
           
-          {/* Text Column (Left) */}
+          {/* Text Column (Left Half) */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-            className="flex-shrink-0 w-full md:w-80 text-left"
+            className="flex-1 w-full text-left"
           >
             <div className="space-y-8 font-sans text-base md:text-lg text-foreground/80 leading-relaxed">
               <p>
@@ -65,18 +68,33 @@ export default function Musica() {
             </div>
           </motion.div>
 
-          {/* Images Column (Right) - 2 photos with space */}
+          {/* Images Column (Right Half) - 3 photos in 2 columns */}
           <motion.div 
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-            className="flex-1 w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16"
+            className="flex-1 w-full grid grid-cols-2 gap-2 md:gap-4"
           >
-            <div className="aspect-[1/2] max-h-[70vh] bg-foreground/5 rounded-sm flex items-center justify-center text-sm text-foreground/40 italic">
-              Spazio foto 1
+            <div className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
+              <img 
+                src={img1} 
+                alt="Sessione musicale 1" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
-            <div className="aspect-[1/2] max-h-[70vh] bg-foreground/5 rounded-sm flex items-center justify-center text-sm text-foreground/40 italic">
-              Spazio foto 2
+            <div className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
+              <img 
+                src={img2} 
+                alt="Sessione musicale 2" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
+              <img 
+                src={img3} 
+                alt="Sessione musicale 3" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 
