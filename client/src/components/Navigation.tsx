@@ -125,11 +125,12 @@ export function Navigation() {
                           <a className={cn(
                             "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-sm tracking-wide block py-1",
                             isHome ? "font-light" : "font-light hover:font-normal",
-                            location === subLink.href 
+                            (location === subLink.href || hoveredSubLink === subLink.href)
                               ? "opacity-100 font-bold border-b-2 border-current pb-0.5 inline-block" 
                               : "opacity-80 hover:translate-x-1 inline-block"
                           )}>
                             {subLink.label}
+                            {subLink.subLinks && <span className="ml-2 opacity-50 font-serif text-[10px] align-middle">›</span>}
                           </a>
                         </Link>
 
