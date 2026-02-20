@@ -38,7 +38,7 @@ export function Navigation() {
   return (
     <nav className={cn(
       "w-full py-8 px-6 md:px-12 flex flex-col md:flex-row items-baseline justify-between gap-6 z-50 fixed top-0 left-0 w-full transition-all duration-300",
-      isHome ? "text-white mix-blend-difference" : "text-black bg-white"
+      isHome ? "text-white" : "text-black bg-white"
     )}>
       <Link href="/michael-spartano">
         <a className="flex flex-col items-center hover:opacity-70 transition-opacity group relative">
@@ -59,7 +59,7 @@ export function Navigation() {
         </Link>
       )}
 
-      <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm md:text-base font-light tracking-wide text-white mix-blend-normal">
+      <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm md:text-base font-normal tracking-wide">
         {links.map((link) => (
           <div 
             key={link.href} 
