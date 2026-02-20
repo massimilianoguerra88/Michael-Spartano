@@ -35,7 +35,34 @@ function Router() {
           {() => <Placeholder title="Pratica" />}
         </Route>
         <Route path="/pratica/non-dualismo" component={NonDualismo} />
+        <Route path="/pratica/non-dualismo/sessione-individuale">
+          {() => <Placeholder title="Sessione individuale" />}
+        </Route>
+        <Route path="/pratica/non-dualismo/seminario">
+          {() => <Placeholder title="Seminario" />}
+        </Route>
+        <Route path="/pratica/non-dualismo/meditazione">
+          {() => <Placeholder title="Meditazione" />}
+        </Route>
         <Route path="/pratica/arte" component={Arte} />
+        <Route path="/pratica/arte/il-fiore-della-vita">
+          {() => <Placeholder title="Il Fiore della Vita" />}
+        </Route>
+        <Route path="/pratica/arte/land-art">
+          {() => <Placeholder title="Land Art" />}
+        </Route>
+        <Route path="/pratica/arte/corpo-natura">
+          {() => <Placeholder title="Corpo Natura" />}
+        </Route>
+        <Route path="/pratica/arte/tracce-di-fango">
+          {() => <Placeholder title="Tracce di fango" />}
+        </Route>
+        <Route path="/pratica/arte/dipingere-naturalmente">
+          {() => <Placeholder title="Dipingere Naturalmente" />}
+        </Route>
+        <Route path="/pratica/arte/stone-balancing">
+          {() => <Placeholder title="Stone balancing" />}
+        </Route>
         <Route path="/pratica/musica" component={Musica} />
         <Route path="/educazione">
           {() => <Placeholder title="Educazione" />}

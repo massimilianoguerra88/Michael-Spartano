@@ -18,8 +18,27 @@ const links = [
     href: "/pratica", 
     label: "Pratica",
     subLinks: [
-      { href: "/pratica/non-dualismo", label: "Non-Dualismo" },
-      { href: "/pratica/arte", label: "Arte" },
+      { 
+        href: "/pratica/non-dualismo", 
+        label: "Non-Dualismo",
+        subLinks: [
+          { href: "/pratica/non-dualismo/sessione-individuale", label: "Sessione individuale" },
+          { href: "/pratica/non-dualismo/seminario", label: "Seminario" },
+          { href: "/pratica/non-dualismo/meditazione", label: "Meditazione" }
+        ]
+      },
+      { 
+        href: "/pratica/arte", 
+        label: "Arte",
+        subLinks: [
+          { href: "/pratica/arte/il-fiore-della-vita", label: "Il Fiore della Vita" },
+          { href: "/pratica/arte/land-art", label: "Land Art" },
+          { href: "/pratica/arte/corpo-natura", label: "Corpo Natura" },
+          { href: "/pratica/arte/tracce-di-fango", label: "Tracce di fango" },
+          { href: "/pratica/arte/dipingere-naturalmente", label: "Dipingere Naturalmente" },
+          { href: "/pratica/arte/stone-balancing", label: "Stone balancing" }
+        ]
+      },
       { href: "/pratica/musica", label: "Musica" },
     ]
   },
@@ -31,6 +50,7 @@ const links = [
 export function Navigation() {
   const [location] = useLocation();
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const [hoveredSubLink, setHoveredSubLink] = useState<string | null>(null);
 
   // Check if we are on the home page (dark background)
   const isHome = location === "/";
@@ -95,17 +115,56 @@ export function Navigation() {
                     )}
                   >
                     {link.subLinks.map((subLink) => (
-                      <Link key={subLink.href} href={subLink.href}>
-                        <a className={cn(
-                          "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-sm tracking-wide",
-                          isHome ? "font-light" : "font-light hover:font-normal",
-                          location === subLink.href 
-                            ? "opacity-100 font-bold border-b-2 border-current pb-0.5" 
-                            : "opacity-80 hover:translate-x-1"
-                        )}>
-                          {subLink.label}
-                        </a>
-                      </Link>
+                      <div 
+                        key={subLink.href}
+                        className="relative w-full flex flex-col items-center"
+                        onMouseEnter={() => setHoveredSubLink(subLink.href)}
+                        onMouseLeave={() => setHoveredSubLink(null)}
+                      >
+                        <Link href={subLink.href}>
+                          <a className={cn(
+                            "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-sm tracking-wide block py-1",
+                            isHome ? "font-light" : "font-light hover:font-normal",
+                            location === subLink.href 
+                              ? "opacity-100 font-bold border-b-2 border-current pb-0.5 inline-block" 
+                              : "opacity-80 hover:translate-x-1 inline-block"
+                          )}>
+                            {subLink.label}
+                          </a>
+                        </Link>
+
+                        {/* Nested Dropdown */}
+                        <AnimatePresence>
+                          {subLink.subLinks && hoveredSubLink === subLink.href && (
+                            <motion.div
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              exit={{ opacity: 0, x: -10 }}
+                              transition={{ duration: 0.2 }}
+                              className="absolute left-[calc(100%+0.5rem)] top-0 pt-0 min-w-[160px] flex flex-col items-start gap-2 z-[70]"
+                            >
+                              <div className={cn(
+                                "flex flex-col items-start gap-2 pl-4",
+                                isHome ? "text-white" : "text-black"
+                              )}>
+                                {subLink.subLinks.map((nested) => (
+                                  <Link key={nested.href} href={nested.href}>
+                                    <a className={cn(
+                                      "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-sm tracking-wide block py-1",
+                                      isHome ? "font-light" : "font-light hover:font-normal",
+                                      location === nested.href 
+                                        ? "opacity-100 font-bold border-b-2 border-current pb-0.5" 
+                                        : "opacity-80 hover:translate-x-1"
+                                    )}>
+                                      {nested.label}
+                                    </a>
+                                  </Link>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
                     ))}
                   </div>
                 </motion.div>
