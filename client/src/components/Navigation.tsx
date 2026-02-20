@@ -59,7 +59,7 @@ export function Navigation() {
         </Link>
       )}
 
-      <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm md:text-base font-light tracking-wide opacity-100">
+      <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm md:text-base font-light tracking-wide text-white mix-blend-normal">
         {links.map((link) => (
           <div 
             key={link.href} 
