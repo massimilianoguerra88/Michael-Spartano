@@ -59,7 +59,7 @@ export function Navigation() {
         </Link>
       )}
 
-      <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm md:text-base font-light tracking-wide opacity-90">
+      <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm md:text-base font-light tracking-wide opacity-100">
         {links.map((link) => (
           <div 
             key={link.href} 
@@ -70,7 +70,7 @@ export function Navigation() {
             <Link href={link.href}>
               <a
                 className={cn(
-                  "hover:opacity-100 transition-opacity duration-300 relative group opacity-80 block py-2",
+                  "hover:opacity-100 transition-opacity duration-300 relative group opacity-100 block py-2",
                   location.startsWith(link.href) && "opacity-100 font-normal"
                 )}
               >
