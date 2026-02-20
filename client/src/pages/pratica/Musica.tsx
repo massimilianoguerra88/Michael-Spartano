@@ -26,10 +26,10 @@ export default function Musica() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
           className="mb-16 md:mb-24"
         >
-          <h1 className="text-xl md:text-2xl font-bold font-serif text-foreground/90 mb-1">
+          <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90 mb-2">
             Bagno di suoni e parole
           </h1>
-          <p className="text-base md:text-lg font-serif text-foreground/80 italic">
+          <p className="text-lg font-serif text-foreground/80 italic">
             La voce della natura
           </p>
         </motion.div>
@@ -44,7 +44,7 @@ export default function Musica() {
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             className="flex-1 w-full text-left"
           >
-            <div className="space-y-8 font-sans text-sm md:text-base text-foreground/80 leading-relaxed">
+            <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
               <p>
                 Un incontro di vibrazioni,<br />
                 silenzi<br />
