@@ -73,7 +73,7 @@ export default function Musica() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-            className="flex-1 w-full grid grid-cols-2 gap-2 md:gap-4"
+            className="flex-1 w-full grid grid-cols-2 gap-2 md:gap-4 mt-1 md:mt-[6px]"
           >
             <div className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
               <img 
