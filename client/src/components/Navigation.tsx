@@ -130,7 +130,6 @@ export function Navigation() {
                               : "opacity-80 hover:translate-x-1 inline-block"
                           )}>
                             {subLink.label}
-                            {subLink.subLinks && <span className="ml-2 opacity-50 font-serif text-[10px] align-middle">›</span>}
                           </a>
                         </Link>
 
