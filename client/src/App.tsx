@@ -12,6 +12,7 @@ import Contatti from "@/pages/Contatti";
 import NonDualismo from "@/pages/pratica/NonDualismo";
 import Arte from "@/pages/pratica/Arte";
 import Musica from "@/pages/pratica/Musica";
+import FioredellaVita from "@/pages/pratica/FioredellaVita";
 import Performance from "@/pages/opere/Performance";
 import Disegni from "@/pages/opere/Disegni";
 import Poesie from "@/pages/opere/Poesie";
@@ -45,9 +46,7 @@ function Router() {
           {() => <Placeholder title="Meditazione" />}
         </Route>
         <Route path="/pratica/arte" component={Arte} />
-        <Route path="/pratica/arte/il-fiore-della-vita">
-          {() => <Placeholder title="Il Fiore della Vita" />}
-        </Route>
+        <Route path="/pratica/arte/il-fiore-della-vita" component={FioredellaVita} />
         <Route path="/pratica/arte/land-art">
           {() => <Placeholder title="Land Art" />}
         </Route>
