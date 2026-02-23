@@ -10,8 +10,9 @@ const links = [
     subLinks: [
       { href: "/opere/performance", label: "Performance" },
       { href: "/opere/disegni", label: "Disegni" },
-      { href: "/opere/poesie", label: "Poesie" },
+      { href: "/opere/land-art", label: "Land Art" },
       { href: "/opere/oggetti", label: "Oggetti" },
+      { href: "/opere/poesie", label: "Poesie" },
     ]
   },
   { 
@@ -32,7 +33,6 @@ const links = [
         label: "Arte",
         subLinks: [
           { href: "/pratica/arte/il-fiore-della-vita", label: "Il Fiore della Vita" },
-          { href: "/pratica/arte/land-art", label: "Land Art" },
           { href: "/pratica/arte/corpo-natura", label: "Corpo Natura" },
           { href: "/pratica/arte/tracce-di-fango", label: "Tracce di fango" },
           { href: "/pratica/arte/dipingere-naturalmente", label: "Dipingere Naturalmente" },

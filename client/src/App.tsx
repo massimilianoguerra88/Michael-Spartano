@@ -49,7 +49,7 @@ function Router() {
         </Route>
         <Route path="/pratica/arte" component={Arte} />
         <Route path="/pratica/arte/il-fiore-della-vita" component={FioredellaVita} />
-        <Route path="/pratica/arte/land-art">
+        <Route path="/opere/land-art">
           {() => <Placeholder title="Land Art" />}
         </Route>
         <Route path="/pratica/arte/corpo-natura">
