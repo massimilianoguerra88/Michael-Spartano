@@ -13,6 +13,7 @@ import NonDualismo from "@/pages/pratica/NonDualismo";
 import Arte from "@/pages/pratica/Arte";
 import Musica from "@/pages/pratica/Musica";
 import FioredellaVita from "@/pages/pratica/FioredellaVita";
+import StoneBalancing from "@/pages/pratica/StoneBalancing";
 import Performance from "@/pages/opere/Performance";
 import Disegni from "@/pages/opere/Disegni";
 import Poesie from "@/pages/opere/Poesie";
@@ -59,9 +60,7 @@ function Router() {
         <Route path="/pratica/arte/dipingere-naturalmente">
           {() => <Placeholder title="Dipingere Naturalmente" />}
         </Route>
-        <Route path="/pratica/arte/stone-balancing">
-          {() => <Placeholder title="Stone balancing" />}
-        </Route>
+        <Route path="/pratica/arte/stone-balancing" component={StoneBalancing} />
         <Route path="/pratica/musica" component={Musica} />
         <Route path="/educazione">
           {() => <Placeholder title="Educazione" />}
