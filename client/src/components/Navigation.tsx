@@ -62,10 +62,10 @@ export function Navigation() {
     )}>
       <Link href="/michael-spartano">
         <a className="flex flex-col items-center hover:opacity-70 transition-opacity group relative">
-          <span className="text-base md:text-[16px] font-serif tracking-tight leading-none">
+          <span className="text-[18px] font-serif tracking-tight leading-none">
             Michael Spartano
           </span>
-          <span className="text-sm font-serif italic opacity-80 mt-1 absolute top-full left-1/2 -translate-x-1/2 whitespace-nowrap">
+          <span className="text-[16px] font-serif italic opacity-80 mt-1 absolute top-full left-1/2 -translate-x-1/2 whitespace-nowrap">
             è solo un nome
           </span>
         </a>
