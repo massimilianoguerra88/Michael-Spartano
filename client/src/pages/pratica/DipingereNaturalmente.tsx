@@ -1,5 +1,28 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
+import dip1 from "@/assets/images/dipingere/dip1.jpg";
+import dip2 from "@/assets/images/dipingere/dip2.jpg";
+import dip3 from "@/assets/images/dipingere/dip3.jpg";
+import dip4 from "@/assets/images/dipingere/dip4.jpg";
+import dip5 from "@/assets/images/dipingere/dip5.jpg";
+import dip6 from "@/assets/images/dipingere/dip6.jpg";
+import dip7 from "@/assets/images/dipingere/dip7.jpg";
+import dip8 from "@/assets/images/dipingere/dip8.jpg";
+import dip9 from "@/assets/images/dipingere/dip9.jpg";
+import dip10 from "@/assets/images/dipingere/dip10.jpg";
+
+const images = [
+  { src: dip1, alt: "Materiali naturali dalla terra" },
+  { src: dip2, alt: "Michael con bambino e pigmenti" },
+  { src: dip3, alt: "Bambini scoprono il cavolo viola" },
+  { src: dip4, alt: "Cavolo viola nella pentola" },
+  { src: dip5, alt: "Barattoli di pigmenti naturali" },
+  { src: dip6, alt: "Mano nel pigmento viola" },
+  { src: dip7, alt: "Bambino dipinge con pennello" },
+  { src: dip8, alt: "Bambina dipinge all'aperto" },
+  { src: dip9, alt: "Tavolo con opere e pigmenti" },
+  { src: dip10, alt: "Acquerello in lavorazione" },
+];
 
 export default function DipingereNaturalmente() {
   return (
@@ -75,6 +98,24 @@ export default function DipingereNaturalmente() {
                 senza idee.
               </p>
             </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+            className="flex-1 w-full grid grid-cols-2 gap-2 md:gap-4 mt-1 md:mt-[6px]"
+          >
+            {images.map((image, index) => (
+              <div key={index} className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
+                <img 
+                  src={image.src} 
+                  alt={image.alt} 
+                  className="absolute inset-0 w-full h-full object-cover"
+                  data-testid={`img-dipingere-${index}`}
+                />
+              </div>
+            ))}
           </motion.div>
 
         </div>
