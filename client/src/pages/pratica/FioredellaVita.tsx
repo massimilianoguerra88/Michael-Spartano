@@ -1,22 +1,26 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 import fiore1 from "@/assets/images/fiore/fiore1.jpg";
-import fiore2 from "@/assets/images/fiore/fiore2.jpg";
-import fiore3 from "@/assets/images/fiore/fiore3.jpg";
-import fiore4 from "@/assets/images/fiore/fiore4.jpg";
 import fiore5 from "@/assets/images/fiore/fiore5.jpg";
 import fiore6 from "@/assets/images/fiore/fiore6.jpg";
 import fiore7 from "@/assets/images/fiore/fiore7.jpg";
 import fiore8 from "@/assets/images/fiore/fiore8.jpg";
+import fioreNew1 from "@/assets/images/fiore/fiore_new1.jpg";
+import fioreNew2 from "@/assets/images/fiore/fiore_new2.jpg";
+import fioreNew3 from "@/assets/images/fiore/fiore_new3.jpg";
+import fioreCrop1 from "@/assets/images/fiore/fiore_crop1.jpg";
+import fioreCrop2 from "@/assets/images/fiore/fiore_crop2.jpg";
 
 const images = [
   { src: fiore1, alt: "Il Fiore della Vita incorniciato" },
+  { src: fioreNew1, alt: "Mano che colora il Fiore rosa e blu" },
   { src: fiore5, alt: "Disegno del Fiore in lavorazione" },
-  { src: fiore2, alt: "Sessione all'aperto con vista montagne" },
-  { src: fiore3, alt: "Pratica del disegno sul balcone" },
+  { src: fioreNew2, alt: "Mani che colorano il Fiore giallo e rosso" },
   { src: fiore6, alt: "Dettaglio del cerchio arcobaleno" },
-  { src: fiore4, alt: "Il Fiore della Vita completato" },
+  { src: fioreCrop2, alt: "Tavolo con pennarelli e Fiore colorato" },
   { src: fiore7, alt: "Fiore rosa e viola in lavorazione" },
+  { src: fioreNew3, alt: "Pratica del disegno del Fiore" },
+  { src: fioreCrop1, alt: "Due disegni in lavorazione sul tavolo" },
   { src: fiore8, alt: "Fiore multicolore pastello" },
 ];
 
@@ -109,6 +113,7 @@ export default function FioredellaVita() {
                   src={img.src} 
                   alt={img.alt}
                   className="absolute inset-0 w-full h-full object-cover"
+                  data-testid={`img-fiore-${i}`}
                 />
               </div>
             ))}
