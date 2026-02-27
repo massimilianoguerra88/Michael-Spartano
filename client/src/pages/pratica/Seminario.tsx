@@ -23,7 +23,7 @@ export default function Seminario() {
           className="mb-16 md:mb-24"
         >
           <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90 mb-2">
-            Non-Dualismo
+            Seminario
           </h1>
           <p className="text-lg font-serif text-foreground/80 italic">
             Seminari di presenza e indagine condivisa
