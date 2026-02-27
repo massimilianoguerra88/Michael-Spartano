@@ -24,6 +24,11 @@ import Performance from "@/pages/opere/Performance";
 import Disegni from "@/pages/opere/Disegni";
 import Poesie from "@/pages/opere/Poesie";
 import Oggetti from "@/pages/opere/Oggetti";
+import AMetaNotte from "@/pages/opere/poesie/AMetaNotte";
+import CaraNatura from "@/pages/opere/poesie/CaraNatura";
+import ImmobileComeMe from "@/pages/opere/poesie/ImmobileComeMe";
+import IlSilenzioDelleParole from "@/pages/opere/poesie/IlSilenzioDelleParole";
+import CioCheSei from "@/pages/opere/poesie/CioCheSei";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -38,6 +43,11 @@ function Router() {
         <Route path="/opere/performance" component={Performance} />
         <Route path="/opere/disegni" component={Disegni} />
         <Route path="/opere/poesie" component={Poesie} />
+        <Route path="/opere/poesie/a-meta-notte" component={AMetaNotte} />
+        <Route path="/opere/poesie/cara-natura" component={CaraNatura} />
+        <Route path="/opere/poesie/immobile-come-me" component={ImmobileComeMe} />
+        <Route path="/opere/poesie/il-silenzio-delle-parole" component={IlSilenzioDelleParole} />
+        <Route path="/opere/poesie/cio-che-sei" component={CioCheSei} />
         <Route path="/opere/oggetti" component={Oggetti} />
         <Route path="/pratica">
           {() => <Placeholder title="Pratica" />}
