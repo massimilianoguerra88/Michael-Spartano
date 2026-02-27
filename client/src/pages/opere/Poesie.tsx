@@ -52,7 +52,7 @@ export default function Poesie() {
               >
                 <Link href={poem.path}>
                   <a className="font-serif text-lg text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer" data-testid={`link-poem-${index}`}>
-                    <span className="mr-3 opacity-60">·</span>{poem.title}
+                    <span className="mr-3">·</span>{poem.title}
                   </a>
                 </Link>
               </motion.li>
