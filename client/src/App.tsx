@@ -17,6 +17,7 @@ import StoneBalancing from "@/pages/pratica/StoneBalancing";
 import DipingereNaturalmente from "@/pages/pratica/DipingereNaturalmente";
 import TracceDiFango from "@/pages/pratica/TracceDiFango";
 import CorpoNatura from "@/pages/pratica/CorpoNatura";
+import Meditazione from "@/pages/pratica/Meditazione";
 import Performance from "@/pages/opere/Performance";
 import Disegni from "@/pages/opere/Disegni";
 import Poesie from "@/pages/opere/Poesie";
@@ -46,9 +47,7 @@ function Router() {
         <Route path="/pratica/non-dualismo/seminario">
           {() => <Placeholder title="Seminario" />}
         </Route>
-        <Route path="/pratica/non-dualismo/meditazione">
-          {() => <Placeholder title="Meditazione" />}
-        </Route>
+        <Route path="/pratica/non-dualismo/meditazione" component={Meditazione} />
         <Route path="/pratica/arte" component={Arte} />
         <Route path="/pratica/arte/il-fiore-della-vita" component={FioredellaVita} />
         <Route path="/opere/land-art">
