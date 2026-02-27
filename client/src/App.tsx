@@ -16,6 +16,7 @@ import FioredellaVita from "@/pages/pratica/FioredellaVita";
 import StoneBalancing from "@/pages/pratica/StoneBalancing";
 import DipingereNaturalmente from "@/pages/pratica/DipingereNaturalmente";
 import TracceDiFango from "@/pages/pratica/TracceDiFango";
+import CorpoNatura from "@/pages/pratica/CorpoNatura";
 import Performance from "@/pages/opere/Performance";
 import Disegni from "@/pages/opere/Disegni";
 import Poesie from "@/pages/opere/Poesie";
@@ -53,9 +54,7 @@ function Router() {
         <Route path="/opere/land-art">
           {() => <Placeholder title="Land Art" />}
         </Route>
-        <Route path="/pratica/arte/corpo-natura">
-          {() => <Placeholder title="Corpo Natura" />}
-        </Route>
+        <Route path="/pratica/arte/corpo-natura" component={CorpoNatura} />
         <Route path="/pratica/arte/tracce-di-fango" component={TracceDiFango} />
         <Route path="/pratica/arte/dipingere-naturalmente" component={DipingereNaturalmente} />
         <Route path="/pratica/arte/stone-balancing" component={StoneBalancing} />
