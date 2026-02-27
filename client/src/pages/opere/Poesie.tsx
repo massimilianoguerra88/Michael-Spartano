@@ -51,8 +51,8 @@ export default function Poesie() {
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 + index * 0.1 }}
               >
                 <Link href={poem.path}>
-                  <a className="font-serif text-lg text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer" data-testid={`link-poem-${index}`}>
-                    {poem.title}
+                  <a className="font-serif text-lg text-foreground/80 hover:text-foreground transition-all duration-300 cursor-pointer inline-block hover:border-b-2 hover:border-current hover:pb-0.5" data-testid={`link-poem-${index}`}>
+                    <span className="mr-3 opacity-60">·</span>{poem.title}
                   </a>
                 </Link>
               </motion.li>
