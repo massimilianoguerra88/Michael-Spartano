@@ -2,15 +2,15 @@ import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 
 const artworks = [
-  { id: 1, title: "Performance I", year: "2024", type: "Azione dal vivo" },
-  { id: 2, title: "Performance II", year: "2024", type: "Corpo e natura" },
-  { id: 3, title: "Performance III", year: "2023", type: "Installazione performativa" },
-  { id: 4, title: "Performance IV", year: "2023", type: "Azione collettiva" },
-  { id: 5, title: "Performance V", year: "2022", type: "Corpo e materia" },
-  { id: 6, title: "Performance VI", year: "2022", type: "Azione site-specific" },
+  { id: 1, title: "Land Art I", year: "2024", type: "Intervento naturale" },
+  { id: 2, title: "Land Art II", year: "2024", type: "Composizione organica" },
+  { id: 3, title: "Land Art III", year: "2023", type: "Installazione en plein air" },
+  { id: 4, title: "Land Art IV", year: "2023", type: "Scultura naturale" },
+  { id: 5, title: "Land Art V", year: "2022", type: "Tracce nel paesaggio" },
+  { id: 6, title: "Land Art VI", year: "2022", type: "Gesto ambientale" },
 ];
 
-export default function Performance() {
+export default function LandArt() {
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -31,7 +31,7 @@ export default function Performance() {
           className="max-w-7xl mx-auto"
         >
           <header className="mb-16 md:mb-24 text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">Performance</h1>
+            <h1 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">Land Art</h1>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 md:gap-y-24">

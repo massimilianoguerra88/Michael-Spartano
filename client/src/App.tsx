@@ -24,6 +24,7 @@ import Performance from "@/pages/opere/Performance";
 import Disegni from "@/pages/opere/Disegni";
 import Poesie from "@/pages/opere/Poesie";
 import Oggetti from "@/pages/opere/Oggetti";
+import LandArt from "@/pages/opere/LandArt";
 import AMetaNotte from "@/pages/opere/poesie/AMetaNotte";
 import CaraNatura from "@/pages/opere/poesie/CaraNatura";
 import ImmobileComeMe from "@/pages/opere/poesie/ImmobileComeMe";
@@ -58,9 +59,7 @@ function Router() {
         <Route path="/pratica/non-dualismo/meditazione" component={Meditazione} />
         <Route path="/pratica/arte" component={Arte} />
         <Route path="/pratica/arte/il-fiore-della-vita" component={FioredellaVita} />
-        <Route path="/opere/land-art">
-          {() => <Placeholder title="Land Art" />}
-        </Route>
+        <Route path="/opere/land-art" component={LandArt} />
         <Route path="/pratica/arte/corpo-natura" component={CorpoNatura} />
         <Route path="/pratica/arte/tracce-di-fango" component={TracceDiFango} />
         <Route path="/pratica/arte/dipingere-naturalmente" component={DipingereNaturalmente} />
