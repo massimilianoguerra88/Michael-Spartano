@@ -9,6 +9,7 @@ import Placeholder from "@/pages/Placeholder";
 import MichaelSpartano from "@/pages/MichaelSpartano";
 import SpazioSorgente from "@/pages/SpazioSorgente";
 import Contatti from "@/pages/Contatti";
+import Educazione from "@/pages/Educazione";
 import NonDualismo from "@/pages/pratica/NonDualismo";
 import Arte from "@/pages/pratica/Arte";
 import Musica from "@/pages/pratica/Musica";
@@ -65,9 +66,7 @@ function Router() {
         <Route path="/pratica/arte/dipingere-naturalmente" component={DipingereNaturalmente} />
         <Route path="/pratica/arte/stone-balancing" component={StoneBalancing} />
         <Route path="/pratica/musica" component={Musica} />
-        <Route path="/educazione">
-          {() => <Placeholder title="Educazione" />}
-        </Route>
+        <Route path="/educazione" component={Educazione} />
         <Route path="/spazio-sorgente" component={SpazioSorgente} />
         <Route path="/contatti" component={Contatti} />
         <Route component={NotFound} />
