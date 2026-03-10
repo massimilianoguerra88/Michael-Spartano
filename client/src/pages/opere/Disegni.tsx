@@ -63,7 +63,7 @@ export default function Disegni() {
                   <h3 className="text-lg font-serif tracking-wide">{art.title}</h3>
                   <div className="text-sm text-foreground/60 font-serif leading-relaxed">
                     <span>Colori naturali su carta cotone</span><br />
-                    <span>21x30 cm</span><br />
+                    <span>21 x 30 cm</span><br />
                     <span>2025</span>
                   </div>
                 </div>
