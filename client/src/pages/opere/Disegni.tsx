@@ -49,13 +49,13 @@ export default function Disegni() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-                className="group"
+                className=""
               >
                 <div className="aspect-[4/5] bg-neutral-100 overflow-hidden mb-6 relative">
                   <img 
                     src={art.img} 
                     alt={art.title} 
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
                 
