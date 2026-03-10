@@ -25,7 +25,7 @@ export default function Disegni() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className="min-h-screen bg-background text-foreground flex flex-col"
+      className="min-h-screen bg-background text-foreground flex flex-col relative z-[101]"
     >
       <div className="relative z-50">
          <Navigation />
