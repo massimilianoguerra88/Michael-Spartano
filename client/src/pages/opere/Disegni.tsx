@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 import imgCaratteristiche from "@assets/Caratteristiche_del_corpo_nobg.png";
 import imgIoSonoTe from "@assets/Io_sono_te_nobg.png";
 import imgGabbia from "@assets/la_gabbia_del_me_nobg.png";
-import imgAbbracciacolori from "@assets/Abbracciacolori_1773065323543.jpg";
+import imgAbbracciacolori from "@assets/Abbracciacolori_nobg.png";
 import imgNelleMani from "@assets/Nelle_mani_della_vita_nobg.png";
 import imgSurrendering from "@assets/Surrendering_nobg.png";
 import imgVitaAttraverso from "@assets/Vita_attraverso_nobg.png";
 
 const artworks = [
-  { id: 1, title: "Caratteristiche del corpo", img: imgCaratteristiche, isOriginal: false },
-  { id: 2, title: "Io sono te", img: imgIoSonoTe, isOriginal: false },
-  { id: 3, title: "La gabbia del 'me'", img: imgGabbia, isOriginal: false },
-  { id: 4, title: "Abbracciacolori", img: imgAbbracciacolori, isOriginal: true },
-  { id: 5, title: "Nelle mani della vita", img: imgNelleMani, isOriginal: false },
-  { id: 6, title: "Surrendering", img: imgSurrendering, isOriginal: false },
-  { id: 7, title: "Vita attraverso", img: imgVitaAttraverso, isOriginal: false },
+  { id: 1, title: "Caratteristiche del corpo", img: imgCaratteristiche },
+  { id: 2, title: "Io sono te", img: imgIoSonoTe },
+  { id: 3, title: "La gabbia del 'me'", img: imgGabbia },
+  { id: 4, title: "Abbracciacolori", img: imgAbbracciacolori },
+  { id: 5, title: "Nelle mani della vita", img: imgNelleMani },
+  { id: 6, title: "Surrendering", img: imgSurrendering },
+  { id: 7, title: "Vita attraverso", img: imgVitaAttraverso },
 ];
 
 export default function Disegni() {
@@ -55,9 +55,7 @@ export default function Disegni() {
                   <img 
                     src={art.img} 
                     alt={art.title} 
-                    className={`absolute inset-0 w-full h-full group-hover:scale-105 transition-transform duration-700 ${
-                      art.isOriginal ? "object-cover" : "object-contain p-6"
-                    }`}
+                    className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 
