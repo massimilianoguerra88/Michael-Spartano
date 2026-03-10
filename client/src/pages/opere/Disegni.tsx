@@ -1,12 +1,12 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
-import imgCaratteristiche from "@assets/Caratteristiche_del_corpo_1773159181871.jpg";
-import imgIoSonoTe from "@assets/Io_sono_te_1773065323542.jpg";
-import imgGabbia from "@assets/la_gabbia_del_'me'_1773065323543.jpg";
-import imgAbbracciacolori from "@assets/Abbracciacolori_1773065323543.jpg";
-import imgNelleMani from "@assets/Nelle_mani_della_vita_1773065323544.jpg";
-import imgSurrendering from "@assets/Surrendering_1773065323545.jpg";
-import imgVitaAttraverso from "@assets/Vita_attraverso_1773065323545.jpg";
+import imgCaratteristiche from "@/assets/images/disegni/caratteristiche_del_corpo.jpg";
+import imgIoSonoTe from "@/assets/images/disegni/io_sono_te.jpg";
+import imgGabbia from "@/assets/images/disegni/la_gabbia_del_me.jpg";
+import imgAbbracciacolori from "@/assets/images/disegni/abbracciacolori.jpg";
+import imgNelleMani from "@/assets/images/disegni/nelle_mani_della_vita.jpg";
+import imgSurrendering from "@/assets/images/disegni/surrendering.jpg";
+import imgVitaAttraverso from "@/assets/images/disegni/vita_attraverso.jpg";
 
 const artworks = [
   { id: 1, title: "Caratteristiche del corpo", img: imgCaratteristiche },
@@ -25,7 +25,7 @@ export default function Disegni() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className="min-h-screen bg-background text-foreground flex flex-col relative z-[101]"
+      className="min-h-screen bg-background text-foreground flex flex-col"
     >
       <div className="relative z-50">
          <Navigation />
