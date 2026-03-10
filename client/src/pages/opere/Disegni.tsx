@@ -1,12 +1,12 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
-import imgCaratteristiche from "@assets/Caratteristiche_del_corpo_nobg.png";
-import imgIoSonoTe from "@assets/Io_sono_te_nobg.png";
-import imgGabbia from "@assets/la_gabbia_del_me_nobg.png";
-import imgAbbracciacolori from "@assets/Abbracciacolori_nobg.png";
-import imgNelleMani from "@assets/Nelle_mani_della_vita_nobg.png";
-import imgSurrendering from "@assets/Surrendering_nobg.png";
-import imgVitaAttraverso from "@assets/Vita_attraverso_nobg.png";
+import imgCaratteristiche from "@assets/Caratteristiche_del_corpo_1773159181871.jpg";
+import imgIoSonoTe from "@assets/Io_sono_te_1773065323542.jpg";
+import imgGabbia from "@assets/la_gabbia_del_'me'_1773065323543.jpg";
+import imgAbbracciacolori from "@assets/Abbracciacolori_1773065323543.jpg";
+import imgNelleMani from "@assets/Nelle_mani_della_vita_1773065323544.jpg";
+import imgSurrendering from "@assets/Surrendering_1773065323545.jpg";
+import imgVitaAttraverso from "@assets/Vita_attraverso_1773065323545.jpg";
 
 const artworks = [
   { id: 1, title: "Caratteristiche del corpo", img: imgCaratteristiche },
@@ -51,11 +51,11 @@ export default function Disegni() {
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="group"
               >
-                <div className="aspect-[4/5] bg-[#e8e4df] overflow-hidden mb-6 relative">
+                <div className="aspect-[4/5] bg-neutral-100 overflow-hidden mb-6 relative">
                   <img 
                     src={art.img} 
                     alt={art.title} 
-                    className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 
