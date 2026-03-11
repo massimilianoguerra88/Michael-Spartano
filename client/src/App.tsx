@@ -31,6 +31,7 @@ import MappaVuota from "@/pages/opere/poesie/MappaVuota";
 import CaraNatura from "@/pages/opere/poesie/CaraNatura";
 import IoTe from "@/pages/opere/poesie/IoTe";
 import ImmobileComeMe from "@/pages/opere/poesie/ImmobileComeMe";
+import Innatura from "@/pages/opere/poesie/Innatura";
 import IlSilenzioDelleParole from "@/pages/opere/poesie/IlSilenzioDelleParole";
 import CioCheSei from "@/pages/opere/poesie/CioCheSei";
 import NotFound from "@/pages/not-found";
@@ -52,6 +53,7 @@ function Router() {
         <Route path="/opere/poesie/cara-natura" component={CaraNatura} />
         <Route path="/opere/poesie/io-te" component={IoTe} />
         <Route path="/opere/poesie/immobile-come-me" component={ImmobileComeMe} />
+        <Route path="/opere/poesie/innatura" component={Innatura} />
         <Route path="/opere/poesie/il-silenzio-delle-parole" component={IlSilenzioDelleParole} />
         <Route path="/opere/poesie/cio-che-sei" component={CioCheSei} />
         <Route path="/opere/oggetti" component={Oggetti} />

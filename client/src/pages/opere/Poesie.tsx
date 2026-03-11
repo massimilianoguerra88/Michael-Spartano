@@ -6,7 +6,7 @@ const poems = [
   { title: "Ciò che sei", path: "/opere/poesie/cio-che-sei" },
   { title: "Mappa vuota", path: "/opere/poesie/mappa-vuota" },
   { title: "Io te", path: "/opere/poesie/io-te" },
-  { title: "Immobile, come me", path: "/opere/poesie/immobile-come-me" },
+  { title: "Innatura", path: "/opere/poesie/innatura" },
   { title: "Il silenzio delle parole", path: "/opere/poesie/il-silenzio-delle-parole" },
 ];
 
