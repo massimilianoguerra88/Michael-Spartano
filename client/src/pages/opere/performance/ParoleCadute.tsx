@@ -13,13 +13,13 @@ import img10 from "@/assets/images/performance/pc_10.jpg";
 
 const photos = [
   { src: img2, alt: "Performance sotto i portici" },
-  { src: img8, alt: "Performance in piazza, vista da lontano" },
   { src: img3, alt: "Performance con il pubblico" },
   { src: img4, alt: "Conversazione durante la performance" },
-  { src: img7, alt: "Dialogo seduti sul tappeto rosso" },
-  { src: img6, alt: "Intervista durante la performance" },
-  { src: img9, alt: "Interazione con il pubblico" },
   { src: img5, alt: "Abbraccio durante la performance" },
+  { src: img6, alt: "Intervista durante la performance" },
+  { src: img7, alt: "Dialogo seduti sul tappeto rosso" },
+  { src: img8, alt: "Performance in piazza, vista da lontano" },
+  { src: img9, alt: "Interazione con il pubblico" },
   { src: img10, alt: "Incontro con una bambina" },
 ];
 
