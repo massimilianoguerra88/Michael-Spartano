@@ -1,6 +1,27 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import img2 from "@/assets/images/performance/pc_2.jpg";
+import img3 from "@/assets/images/performance/pc_3.jpg";
+import img4 from "@/assets/images/performance/pc_4.jpg";
+import img5 from "@/assets/images/performance/pc_5.jpg";
+import img6 from "@/assets/images/performance/pc_6.jpg";
+import img7 from "@/assets/images/performance/pc_7.jpg";
+import img8 from "@/assets/images/performance/pc_8.jpg";
+import img9 from "@/assets/images/performance/pc_9.jpg";
+import img10 from "@/assets/images/performance/pc_10.jpg";
+
+const photos = [
+  { src: img2, alt: "Performance sotto i portici" },
+  { src: img8, alt: "Performance in piazza, vista da lontano" },
+  { src: img3, alt: "Performance con il pubblico" },
+  { src: img4, alt: "Conversazione durante la performance" },
+  { src: img7, alt: "Dialogo seduti sul tappeto rosso" },
+  { src: img6, alt: "Intervista durante la performance" },
+  { src: img9, alt: "Interazione con il pubblico" },
+  { src: img5, alt: "Abbraccio durante la performance" },
+  { src: img10, alt: "Incontro con una bambina" },
+];
 
 export default function ParoleCadute() {
   return (
@@ -15,7 +36,7 @@ export default function ParoleCadute() {
          <Navigation />
       </div>
 
-      <main className="flex-1 flex flex-col items-center justify-center px-6 md:px-12 py-32 md:py-40">
+      <main className="flex-1 flex flex-col items-center px-6 md:px-12 py-32 md:py-40">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -38,6 +59,32 @@ export default function ParoleCadute() {
 
           <div className="space-y-1">
             <p>La frase "Sei senza volto – e tutti i volti" non è uno slogan, ma una soglia percettiva: invita chi la incontra a riconoscersi oltre quell'immagine allo specchio. In questo spazio, l'artista non interpreta un personaggio e non rappresenta nulla.</p>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          className="max-w-7xl w-full mt-24"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
+            {photos.map((photo, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 + 0.1 * index }}
+              >
+                <div className="aspect-[4/5] bg-neutral-100 overflow-hidden relative">
+                  <img 
+                    src={photo.src} 
+                    alt={photo.alt} 
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </main>
