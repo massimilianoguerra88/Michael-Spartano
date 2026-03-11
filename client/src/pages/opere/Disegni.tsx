@@ -9,13 +9,13 @@ import imgSurrendering from "@/assets/images/disegni/surrendering.jpg";
 import imgVitaAttraverso from "@/assets/images/disegni/vita_attraverso.jpg";
 
 const artworks = [
-  { id: 1, title: "Caratteristiche del corpo", img: imgCaratteristiche },
-  { id: 2, title: "Io sono te", img: imgIoSonoTe },
-  { id: 3, title: "La gabbia del 'me'", img: imgGabbia },
-  { id: 4, title: "Abbracciacolori", img: imgAbbracciacolori },
-  { id: 5, title: "Nelle mani della vita", img: imgNelleMani },
-  { id: 6, title: "Surrendering", img: imgSurrendering },
-  { id: 7, title: "Vita attraverso", img: imgVitaAttraverso },
+  { id: 1, title: "Nelle mani della vita", img: imgNelleMani },
+  { id: 2, title: "Vita attraverso", img: imgVitaAttraverso },
+  { id: 3, title: "Surrendering", img: imgSurrendering },
+  { id: 4, title: "Io sono te", img: imgIoSonoTe },
+  { id: 5, title: "Caratteristiche del corpo", img: imgCaratteristiche },
+  { id: 6, title: "La gabbia del 'me'", img: imgGabbia },
+  { id: 7, title: "Abbracciacolori", img: imgAbbracciacolori },
 ];
 
 export default function Disegni() {
