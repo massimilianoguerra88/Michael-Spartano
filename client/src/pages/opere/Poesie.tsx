@@ -7,7 +7,7 @@ const poems = [
   { title: "Mappa vuota", path: "/opere/poesie/mappa-vuota" },
   { title: "Io te", path: "/opere/poesie/io-te" },
   { title: "Innatura", path: "/opere/poesie/innatura" },
-  { title: "Il silenzio delle parole", path: "/opere/poesie/il-silenzio-delle-parole" },
+  { title: "All'Uno", path: "/opere/poesie/all-uno" },
 ];
 
 export default function Poesie() {
