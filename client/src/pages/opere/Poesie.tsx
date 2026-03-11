@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 
 const poems = [
+  { title: "Ciò che sei", path: "/opere/poesie/cio-che-sei" },
   { title: "A metà notte", path: "/opere/poesie/a-meta-notte" },
   { title: "Cara Natura", path: "/opere/poesie/cara-natura" },
   { title: "Immobile, come me", path: "/opere/poesie/immobile-come-me" },
   { title: "Il silenzio delle parole", path: "/opere/poesie/il-silenzio-delle-parole" },
-  { title: "Ciò che sei", path: "/opere/poesie/cio-che-sei" },
 ];
 
 export default function Poesie() {
