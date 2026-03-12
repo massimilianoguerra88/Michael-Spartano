@@ -54,11 +54,11 @@ export default function ParoleCadute() {
           </div>
 
           <div className="space-y-1">
-            <p>"Parole Cadute" è un progetto che attraversa i confini tra arte relazionale, performance e meditazione pubblica. Al centro vi è la ricerca dell'essere come spazio condiviso, il riconoscimento della non-dualità tra chi osserva e chi è osservato. Ogni incontro, ogni parola, ogni gesto diventa occasione di dissoluzione del confine.</p>
+            <p>"Parole Cadute" è un progetto che attraversa i confini tra arte relazionale, performance e<br />meditazione pubblica.<br />Al centro vi è la ricerca dell'essere come spazio condiviso, il riconoscimento della non-dualità tra<br />chi osserva e chi è osservato.<br />Ogni incontro, ogni parola, ogni gesto diventa occasione di dissoluzione del confine.</p>
           </div>
 
           <div className="space-y-1">
-            <p>La frase "Sei senza volto – e tutti i volti" non è uno slogan, ma una soglia percettiva: invita chi la incontra a riconoscersi oltre quell'immagine allo specchio. In questo spazio, l'artista non interpreta un personaggio e non rappresenta nulla.</p>
+            <p>La frase "Sei senza volto – e tutti i volti" non è uno slogan, ma una soglia percettiva:<br />invita chi la incontra a riconoscersi oltre quell'immagine allo specchio.<br />In questo spazio, l'artista non interpreta un personaggio e non rappresenta nulla.</p>
           </div>
         </motion.div>
 
