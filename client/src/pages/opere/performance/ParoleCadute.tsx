@@ -41,7 +41,7 @@ export default function ParoleCadute() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="max-w-2xl w-full text-center font-serif text-foreground/80 leading-relaxed text-base space-y-12"
+          className="max-w-2xl w-full text-left font-serif text-foreground/80 leading-relaxed text-base space-y-12"
         >
           <div className="text-left mb-8">
             <Link href="/opere/performance">
