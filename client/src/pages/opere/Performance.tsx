@@ -1,13 +1,11 @@
+import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 
-const performances = [
-  { title: "Parole cadute", path: "/opere/performance/parole-cadute" },
-  { title: "Dal due all'Uno", path: "/opere/performance/dal-due-all-uno" },
-];
-
 export default function Performance() {
+  const [paroleCaduteOpen, setParoleCaduteOpen] = useState(false);
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -40,20 +38,51 @@ export default function Performance() {
           className="max-w-xl"
         >
           <ul className="space-y-6">
-            {performances.map((item, index) => (
-              <motion.li
-                key={item.path}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 + index * 0.1 }}
+            <motion.li
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+            >
+              <button 
+                onClick={() => setParoleCaduteOpen(!paroleCaduteOpen)}
+                className="font-serif text-lg text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer text-left"
+                data-testid="link-performance-0"
               >
-                <Link href={item.path}>
-                  <a className="font-serif text-lg text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer" data-testid={`link-performance-${index}`}>
-                    <span className="mr-3">·</span>{item.title}
-                  </a>
-                </Link>
-              </motion.li>
-            ))}
+                <span className="mr-3">·</span>Parole cadute
+              </button>
+
+              <AnimatePresence>
+                {paroleCaduteOpen && (
+                  <motion.ul
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="ml-8 mt-4 space-y-4 overflow-hidden"
+                  >
+                    <li>
+                      <Link href="/opere/performance/parole-cadute/sei-senza-volto">
+                        <a className="font-serif text-lg text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer" data-testid="link-sei-senza-volto">
+                          <span className="mr-3">·</span>Sei senza volto – e tutti i volti
+                        </a>
+                      </Link>
+                    </li>
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            </motion.li>
+
+            <motion.li
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+            >
+              <Link href="/opere/performance/dal-due-all-uno">
+                <a className="font-serif text-lg text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer" data-testid="link-performance-1">
+                  <span className="mr-3">·</span>Dal due all'Uno
+                </a>
+              </Link>
+            </motion.li>
           </ul>
         </motion.div>
 
