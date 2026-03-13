@@ -49,7 +49,7 @@ export default function Oggetti() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
               >
-                <div className="aspect-[4/5] bg-neutral-100 overflow-hidden mb-6 relative">
+                <div className="aspect-[5/4] bg-neutral-100 overflow-hidden mb-6 relative">
                   <img 
                     src={art.img} 
                     alt={art.title} 
