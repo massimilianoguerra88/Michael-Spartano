@@ -36,57 +36,66 @@ export default function ParoleCadute() {
          <Navigation />
       </div>
 
-      <main className="flex-1 flex flex-col items-center px-6 md:px-12 py-32 md:py-40">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="max-w-2xl w-full text-center font-serif text-foreground/80 leading-relaxed text-base space-y-12"
-        >
-          <div className="text-left mb-8">
-            <Link href="/opere/performance">
-              <a className="font-serif text-sm text-foreground/50 hover:text-foreground/80 transition-colors duration-300 cursor-pointer">← Performance</a>
-            </Link>
-          </div>
-
-          <div className="space-y-2">
-            <h1 className="text-2xl md:text-3xl font-normal">Parole cadute</h1>
-          </div>
-
-          <div className="space-y-1">
-            <p>"Parole Cadute" è un progetto che attraversa i confini tra arte relazionale, performance e<br />meditazione pubblica.<br />Al centro vi è la ricerca dell'essere come spazio condiviso, il riconoscimento della non-dualità tra<br />chi osserva e chi è osservato.<br />Ogni incontro, ogni parola, ogni gesto diventa occasione di dissoluzione del confine.</p>
-          </div>
-
-          <div className="space-y-1">
-            <p>La frase "Sei senza volto – e tutti i volti" non è uno slogan, ma una soglia percettiva:<br />invita chi la incontra a riconoscersi oltre quell'immagine allo specchio.<br />In questo spazio, l'artista non interpreta un personaggio e non rappresenta nulla.</p>
-          </div>
-        </motion.div>
-
+      <main className="flex-1 w-full pt-48 px-6 md:px-12 pb-32 max-w-7xl mx-auto">
+        
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-          className="max-w-7xl w-full mt-24"
+          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+          className="mb-16 md:mb-24"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
-            {photos.map((photo, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + 0.1 * index }}
-              >
-                <div className="aspect-[4/5] bg-neutral-100 overflow-hidden relative">
-                  <img 
-                    src={photo.src} 
-                    alt={photo.alt} 
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <Link href="/opere/performance">
+            <a className="font-serif text-sm text-foreground/50 hover:text-foreground/80 transition-colors duration-300 cursor-pointer mb-6 inline-block">← Performance</a>
+          </Link>
+          <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90">
+            Parole cadute
+          </h1>
         </motion.div>
+
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+          
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            className="flex-1 w-full text-left"
+          >
+            <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
+              <p>
+                "Parole Cadute" è un progetto che attraversa i confini tra arte relazionale, performance e<br />
+                meditazione pubblica.<br />
+                Al centro vi è la ricerca dell'essere come spazio condiviso, il riconoscimento della non-dualità tra<br />
+                chi osserva e chi è osservato.<br />
+                Ogni incontro, ogni parola, ogni gesto diventa occasione di dissoluzione del confine.
+              </p>
+
+              <p>
+                La frase "Sei senza volto – e tutti i volti" non è uno slogan, ma una soglia percettiva:<br />
+                invita chi la incontra a riconoscersi oltre quell'immagine allo specchio.<br />
+                In questo spazio, l'artista non interpreta un personaggio e non rappresenta nulla.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+            className="flex-1 w-full grid grid-cols-2 gap-2 md:gap-4 mt-1 md:mt-[6px]"
+          >
+            {photos.map((photo, index) => (
+              <div key={index} className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
+                <img 
+                  src={photo.src} 
+                  alt={photo.alt} 
+                  className="absolute inset-0 w-full h-full object-cover"
+                  data-testid={`img-parole-cadute-${index}`}
+                />
+              </div>
+            ))}
+          </motion.div>
+
+        </div>
       </main>
     </motion.div>
   );
