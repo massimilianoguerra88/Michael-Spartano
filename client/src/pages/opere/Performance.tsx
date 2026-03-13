@@ -5,6 +5,7 @@ import { Link } from "wouter";
 
 export default function Performance() {
   const [paroleCaduteOpen, setParoleCaduteOpen] = useState(false);
+  const [hoverTimeout, setHoverTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
 
   return (
     <motion.div 
@@ -42,14 +43,21 @@ export default function Performance() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                onMouseEnter={() => {
+                  if (hoverTimeout) clearTimeout(hoverTimeout);
+                  setParoleCaduteOpen(true);
+                }}
+                onMouseLeave={() => {
+                  const t = setTimeout(() => setParoleCaduteOpen(false), 300);
+                  setHoverTimeout(t);
+                }}
               >
-                <button 
-                  onClick={() => setParoleCaduteOpen(!paroleCaduteOpen)}
-                  className={`font-serif text-lg transition-colors duration-300 cursor-pointer text-left ${paroleCaduteOpen ? 'text-foreground underline underline-offset-4' : 'text-foreground/80 hover:text-foreground'}`}
+                <span 
+                  className={`font-serif text-lg transition-colors duration-300 cursor-default text-left ${paroleCaduteOpen ? 'text-foreground underline underline-offset-4' : 'text-foreground/80 hover:text-foreground'}`}
                   data-testid="link-performance-0"
                 >
                   <span className="mr-3">·</span>Parole cadute
-                </button>
+                </span>
               </motion.li>
 
               <motion.li
@@ -73,6 +81,14 @@ export default function Performance() {
                   exit={{ opacity: 0, x: -10 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                   className="space-y-4 pt-[2px]"
+                  onMouseEnter={() => {
+                    if (hoverTimeout) clearTimeout(hoverTimeout);
+                    setParoleCaduteOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    const t = setTimeout(() => setParoleCaduteOpen(false), 300);
+                    setHoverTimeout(t);
+                  }}
                 >
                   <li>
                     <Link href="/opere/performance/parole-cadute/sei-senza-volto">
