@@ -35,55 +35,56 @@ export default function Performance() {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="max-w-xl"
         >
-          <ul className="space-y-6">
-            <motion.li
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-            >
-              <button 
-                onClick={() => setParoleCaduteOpen(!paroleCaduteOpen)}
-                className="font-serif text-lg text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer text-left"
-                data-testid="link-performance-0"
+          <div className="flex flex-row items-start gap-16">
+            <ul className="space-y-6">
+              <motion.li
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
               >
-                <span className="mr-3">·</span>Parole cadute
-              </button>
+                <button 
+                  onClick={() => setParoleCaduteOpen(!paroleCaduteOpen)}
+                  className={`font-serif text-lg transition-colors duration-300 cursor-pointer text-left ${paroleCaduteOpen ? 'text-foreground underline underline-offset-4' : 'text-foreground/80 hover:text-foreground'}`}
+                  data-testid="link-performance-0"
+                >
+                  <span className="mr-3">·</span>Parole cadute
+                </button>
+              </motion.li>
 
-              <AnimatePresence>
-                {paroleCaduteOpen && (
-                  <motion.ul
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="ml-8 mt-4 space-y-4 overflow-hidden"
-                  >
-                    <li>
-                      <Link href="/opere/performance/parole-cadute/sei-senza-volto">
-                        <a className="font-serif text-lg text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer" data-testid="link-sei-senza-volto">
-                          <span className="mr-3">·</span>Sei senza volto – e tutti i volti
-                        </a>
-                      </Link>
-                    </li>
-                  </motion.ul>
-                )}
-              </AnimatePresence>
-            </motion.li>
+              <motion.li
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+              >
+                <Link href="/opere/performance/dal-due-all-uno">
+                  <a className="font-serif text-lg text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer" data-testid="link-performance-1">
+                    <span className="mr-3">·</span>Dal due all'Uno
+                  </a>
+                </Link>
+              </motion.li>
+            </ul>
 
-            <motion.li
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-            >
-              <Link href="/opere/performance/dal-due-all-uno">
-                <a className="font-serif text-lg text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer" data-testid="link-performance-1">
-                  <span className="mr-3">·</span>Dal due all'Uno
-                </a>
-              </Link>
-            </motion.li>
-          </ul>
+            <AnimatePresence>
+              {paroleCaduteOpen && (
+                <motion.ul
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -10 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  className="space-y-4 pt-[2px]"
+                >
+                  <li>
+                    <Link href="/opere/performance/parole-cadute/sei-senza-volto">
+                      <a className="font-serif text-lg text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer" data-testid="link-sei-senza-volto">
+                        Sei senza volto – e tutti i volti
+                      </a>
+                    </Link>
+                  </li>
+                </motion.ul>
+              )}
+            </AnimatePresence>
+          </div>
         </motion.div>
 
       </main>
