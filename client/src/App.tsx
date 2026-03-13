@@ -24,6 +24,7 @@ import Seminario from "@/pages/pratica/Seminario";
 import Performance from "@/pages/opere/Performance";
 import ParoleCadute from "@/pages/opere/performance/ParoleCadute";
 import DalDueAllUno from "@/pages/opere/performance/DalDueAllUno";
+import SeiSenzaVolto from "@/pages/opere/performance/SeiSenzaVolto";
 import Disegni from "@/pages/opere/Disegni";
 import Poesie from "@/pages/opere/Poesie";
 import Oggetti from "@/pages/opere/Oggetti";
@@ -51,6 +52,7 @@ function Router() {
         <Route path="/opere/performance" component={Performance} />
         <Route path="/opere/performance/parole-cadute" component={ParoleCadute} />
         <Route path="/opere/performance/dal-due-all-uno" component={DalDueAllUno} />
+        <Route path="/opere/performance/parole-cadute/sei-senza-volto" component={SeiSenzaVolto} />
         <Route path="/opere/disegni" component={Disegni} />
         <Route path="/opere/poesie" component={Poesie} />
         <Route path="/opere/poesie/a-meta-notte" component={AMetaNotte} />
