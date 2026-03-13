@@ -1,13 +1,20 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
+import imgImmobile from "@/assets/images/oggetti/immobile.jpg";
 
 const artworks = [
-  { id: 1, title: "Oggetto I", year: "2024", type: "Scultura" },
-  { id: 2, title: "Oggetto II", year: "2024", type: "Assemblaggio" },
-  { id: 3, title: "Oggetto III", year: "2023", type: "Materiale naturale" },
-  { id: 4, title: "Oggetto IV", year: "2023", type: "Tecnica mista" },
-  { id: 5, title: "Oggetto V", year: "2022", type: "Installazione" },
-  { id: 6, title: "Oggetto VI", year: "2022", type: "Composizione" },
+  {
+    id: 1,
+    title: "Immobile, come me",
+    img: imgImmobile,
+    description: [
+      "Pennarello su pietra di fiume",
+      "14 x 20 x 12 cm",
+      "2025",
+      "In mostra presso La Torre della Filanda,",
+      "all'interno della collettiva Tracce Ferme.",
+    ],
+  },
 ];
 
 export default function Oggetti() {
@@ -41,20 +48,21 @@ export default function Oggetti() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-                className="group cursor-pointer"
               >
                 <div className="aspect-[4/5] bg-neutral-100 overflow-hidden mb-6 relative">
-                  <div className="absolute inset-0 bg-neutral-200 animate-pulse group-hover:bg-neutral-300 transition-colors duration-500" />
-                  <div className="absolute inset-0 flex items-center justify-center text-neutral-400 font-serif opacity-30">
-                    Image {art.id}
-                  </div>
+                  <img 
+                    src={art.img} 
+                    alt={art.title} 
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
                 
                 <div className="space-y-1">
                   <h3 className="text-lg font-serif tracking-wide">{art.title}</h3>
-                  <div className="flex justify-between items-baseline text-sm text-foreground/60 font-serif">
-                    <span>{art.type}</span>
-                    <span>{art.year}</span>
+                  <div className="text-sm text-foreground/60 font-serif leading-relaxed">
+                    {art.description.map((line, i) => (
+                      <span key={i}>{line}<br /></span>
+                    ))}
                   </div>
                 </div>
               </motion.div>
