@@ -41,7 +41,7 @@ export default function ParoleCadute() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="max-w-2xl w-full text-left font-serif text-foreground/80 leading-relaxed text-base space-y-12"
+          className="max-w-2xl w-full text-center font-serif text-foreground/80 leading-relaxed text-base space-y-12"
         >
           <div className="text-left mb-8">
             <Link href="/opere/performance">
@@ -54,7 +54,7 @@ export default function ParoleCadute() {
           </div>
 
           <div className="space-y-1">
-            <p>"Parole Cadute" è un progetto che attraversa i confini tra arte relazionale, performance e<br />meditazione pubblica.<br />Al centro vi è la ricerca dell'essere come spazio condiviso, il riconoscimento della non-dualità tra<br />chi osserva e chi è osservato.<br />Ogni incontro, ogni parola, ogni gesto diventa occasione di dissoluzione del confine.</p>
+            <p>"Parole Cadute" è un progetto che attraversa i confini tra arte relazionale, performance e meditazione pubblica.<br />Al centro vi è la ricerca dell'essere come spazio condiviso, il riconoscimento della non-dualità tra chi osserva e chi è osservato.<br />Ogni incontro, ogni parola, ogni gesto diventa occasione di dissoluzione del confine.</p>
           </div>
 
           <div className="space-y-1">
