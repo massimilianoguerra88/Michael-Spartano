@@ -53,10 +53,10 @@ export default function Performance() {
                 }}
               >
                 <span 
-                  className={`font-serif text-lg transition-colors duration-300 cursor-default text-left ${paroleCaduteOpen ? 'text-foreground underline underline-offset-4' : 'text-foreground/80 hover:text-foreground'}`}
+                  className="font-serif text-lg transition-colors duration-300 cursor-default text-left"
                   data-testid="link-performance-0"
                 >
-                  <span className="mr-3">·</span>Parole cadute
+                  <span className={`mr-3 ${paroleCaduteOpen ? 'text-foreground' : 'text-foreground/80'}`}>·</span><span className={`${paroleCaduteOpen ? 'text-foreground underline underline-offset-4' : 'text-foreground/80 hover:text-foreground'}`}>Parole cadute</span>
                 </span>
               </motion.li>
 
