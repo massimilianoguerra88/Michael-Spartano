@@ -54,7 +54,7 @@ export default function ParoleCadute() {
           </div>
 
           <div className="space-y-1">
-            <p>"Parole Cadute" è un progetto che attraversa i confini tra arte relazionale, performance e meditazione pubblica.<br />Al centro vi è la ricerca dell'essere come spazio condiviso, il riconoscimento della non-dualità tra chi osserva e chi è osservato.<br />Ogni incontro, ogni parola, ogni gesto diventa occasione di dissoluzione del confine.</p>
+            <p>"Parole Cadute" è un progetto che attraversa i confini tra arte relazionale, performance e<br />meditazione pubblica.<br />Al centro vi è la ricerca dell'essere come spazio condiviso, il riconoscimento della non-dualità tra<br />chi osserva e chi è osservato.<br />Ogni incontro, ogni parola, ogni gesto diventa occasione di dissoluzione del confine.</p>
           </div>
 
           <div className="space-y-1">
