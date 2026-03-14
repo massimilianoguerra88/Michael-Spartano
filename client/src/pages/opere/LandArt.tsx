@@ -1,13 +1,21 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
+import imgVesicaPiscis from "@/assets/images/landart/vesica_piscis.jpg";
+import imgBilanciaFiume from "@/assets/images/landart/la_bilancia_del_fiume.jpg";
+import imgSilentEarth from "@/assets/images/landart/silent_earth.jpg";
+import imgAdorazione from "@/assets/images/landart/adorazione_al_nulla.jpg";
+import imgConnessioni from "@/assets/images/landart/connessioni_svelate.jpg";
+import imgFiorDiFiume from "@/assets/images/landart/fior_di_fiume.jpg";
+import imgMandala from "@/assets/images/landart/mandala.jpg";
 
 const artworks = [
-  { id: 1, title: "Land Art I", year: "2024", type: "Intervento naturale" },
-  { id: 2, title: "Land Art II", year: "2024", type: "Composizione organica" },
-  { id: 3, title: "Land Art III", year: "2023", type: "Installazione en plein air" },
-  { id: 4, title: "Land Art IV", year: "2023", type: "Scultura naturale" },
-  { id: 5, title: "Land Art V", year: "2022", type: "Tracce nel paesaggio" },
-  { id: 6, title: "Land Art VI", year: "2022", type: "Gesto ambientale" },
+  { id: 1, title: "Vesica Piscis", year: "2025", img: imgVesicaPiscis },
+  { id: 2, title: "La bilancia del fiume", year: "2025", img: imgBilanciaFiume },
+  { id: 3, title: "Silent Earth", year: "2025", img: imgSilentEarth },
+  { id: 4, title: "Adorazione al nulla", year: "2025", img: imgAdorazione },
+  { id: 5, title: "Connessioni svelate", year: "2025", img: imgConnessioni },
+  { id: 6, title: "Fior di fiume", year: "2025", img: imgFiorDiFiume },
+  { id: 7, title: "Mandala", year: "2025", img: imgMandala },
 ];
 
 export default function LandArt() {
@@ -41,19 +49,20 @@ export default function LandArt() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-                className="group cursor-pointer"
+                className=""
               >
                 <div className="aspect-[4/5] bg-neutral-100 overflow-hidden mb-6 relative">
-                  <div className="absolute inset-0 bg-neutral-200 animate-pulse group-hover:bg-neutral-300 transition-colors duration-500" />
-                  <div className="absolute inset-0 flex items-center justify-center text-neutral-400 font-serif opacity-30">
-                    Image {art.id}
-                  </div>
+                  <img 
+                    src={art.img} 
+                    alt={art.title} 
+                    className="absolute inset-0 w-full h-full object-cover"
+                    data-testid={`img-landart-${art.id}`}
+                  />
                 </div>
                 
                 <div className="space-y-1">
                   <h3 className="text-lg font-serif tracking-wide">{art.title}</h3>
-                  <div className="flex justify-between items-baseline text-sm text-foreground/60 font-serif">
-                    <span>{art.type}</span>
+                  <div className="text-sm text-foreground/60 font-serif">
                     <span>{art.year}</span>
                   </div>
                 </div>
