@@ -1,6 +1,19 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import img1 from "@/assets/images/performance/dal_due/ddu_1.jpg";
+import img2 from "@/assets/images/performance/dal_due/ddu_2.jpg";
+import img3 from "@/assets/images/performance/dal_due/ddu_3.jpg";
+import img4 from "@/assets/images/performance/dal_due/ddu_4.jpg";
+import img5 from "@/assets/images/performance/dal_due/ddu_5.jpg";
+
+const photos = [
+  { src: img1, alt: "Spazio della performance con teli leggeri" },
+  { src: img2, alt: "Allestimento sul prato" },
+  { src: img3, alt: "Momento della performance" },
+  { src: img4, alt: "Dettaglio della performance" },
+  { src: img5, alt: "Performance serale" },
+];
 
 export default function DalDueAllUno() {
   return (
@@ -32,13 +45,15 @@ export default function DalDueAllUno() {
           <p className="font-serif text-base text-foreground/60 italic mt-2">Pratica performativa</p>
         </motion.div>
 
-        <motion.div 
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="max-w-xl text-left"
-        >
-          <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+          
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            className="flex-1 w-full text-left"
+          >
+            <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
               <p>
                 "Dal Due all'Uno" è un'esperienza<br />
                 sul superamento dell'apparente separazione tra le forme.
@@ -80,9 +95,28 @@ export default function DalDueAllUno() {
                 emozioni,<br />
                 movimenti.
               </p>
-          </div>
-        </motion.div>
+            </div>
+          </motion.div>
 
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+            className="flex-1 w-full grid grid-cols-2 gap-2 md:gap-4 mt-1 md:mt-[6px]"
+          >
+            {photos.map((photo, index) => (
+              <div key={index} className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
+                <img 
+                  src={photo.src} 
+                  alt={photo.alt} 
+                  className="absolute inset-0 w-full h-full object-cover"
+                  data-testid={`img-dal-due-all-uno-${index}`}
+                />
+              </div>
+            ))}
+          </motion.div>
+
+        </div>
       </main>
     </motion.div>
   );
