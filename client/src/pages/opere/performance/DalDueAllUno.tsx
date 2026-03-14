@@ -27,8 +27,9 @@ export default function DalDueAllUno() {
             <a className="font-serif text-sm text-foreground/50 hover:text-foreground/80 transition-colors duration-300 cursor-pointer mb-6 inline-block">← Performance</a>
           </Link>
           <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90">
-            Dal due all'Uno
+            Dal Due all'Uno
           </h1>
+          <p className="font-serif text-base text-foreground/60 italic mt-2">Pratica performativa</p>
         </motion.div>
 
         <motion.div 
@@ -38,6 +39,47 @@ export default function DalDueAllUno() {
           className="max-w-xl text-left"
         >
           <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
+              <p>
+                "Dal Due all'Uno" è un'esperienza<br />
+                sul superamento dell'apparente separazione tra le forme.
+              </p>
+
+              <p>
+                L'esperienza si svolge<br />
+                in uno spazio delimitato da teli leggeri,<br />
+                all'aperto o al chiuso,<br />
+                spesso in luoghi pubblici o naturali.
+              </p>
+
+              <p>
+                I partecipanti si siedono<br />
+                in silenzio<br />
+                di fronte all'artista.
+              </p>
+
+              <p>
+                Al centro del tavolino<br />
+                vengono posizionati<br />
+                due elementi naturali.
+              </p>
+
+              <p>
+                Da qui la performance ha inizio.
+              </p>
+
+              <p>
+                Si apre una dimensione<br />
+                di silenzio e osservazione.
+              </p>
+
+              <p>
+                In questo spazio<br />
+                può emergere ogni cosa:<br />
+                parole,<br />
+                sensazioni,<br />
+                emozioni,<br />
+                movimenti.
+              </p>
           </div>
         </motion.div>
 
