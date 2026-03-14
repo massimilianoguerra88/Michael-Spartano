@@ -62,17 +62,43 @@ export default function SeiSenzaVolto() {
           >
             <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
               <p>
-                "Parole Cadute" è un progetto che attraversa i confini tra arte relazionale, performance e<br />
-                meditazione pubblica.<br />
-                Al centro vi è la ricerca dell'essere come spazio condiviso, il riconoscimento della non-dualità tra<br />
-                chi osserva e chi è osservato.<br />
-                Ogni incontro, ogni parola, ogni gesto diventa occasione di dissoluzione del confine.
+                "Parole Cadute" è un progetto<br />
+                che attraversa i confini tra arte,<br />
+                performance<br />
+                e meditazione pubblica.
               </p>
 
               <p>
-                La frase "Sei senza volto – e tutti i volti" non è uno slogan, ma una soglia percettiva:<br />
-                invita chi la incontra a riconoscersi oltre quell'immagine allo specchio.<br />
-                In questo spazio, l'artista non interpreta un personaggio e non rappresenta nulla.
+                Ogni incontro,<br />
+                ogni parola,<br />
+                ogni gesto,<br />
+                ogni silenzio<br />
+                diventa occasione<br />
+                di dissoluzione del confine<br />
+                tra chi osserva<br />
+                e ciò che è osservato.
+              </p>
+
+              <p>
+                La frase<br />
+                <em>"Sei senza volto — e tutti i volti"</em>
+              </p>
+
+              <p>
+                non è uno slogan,<br />
+                ma una soglia percettiva.
+              </p>
+
+              <p>
+                Invita chi la incontra<br />
+                a riconoscersi<br />
+                oltre l'immagine allo specchio.
+              </p>
+
+              <p>
+                In questo spazio<br />
+                l'artista non interpreta un personaggio<br />
+                e non rappresenta nulla.
               </p>
             </div>
           </motion.div>
