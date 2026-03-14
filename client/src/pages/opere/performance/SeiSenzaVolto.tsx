@@ -44,8 +44,8 @@ export default function SeiSenzaVolto() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
           className="mb-16 md:mb-24"
         >
-          <Link href="/opere/performance/parole-cadute">
-            <a className="font-serif text-sm text-foreground/50 hover:text-foreground/80 transition-colors duration-300 cursor-pointer mb-6 inline-block">← Parole cadute</a>
+          <Link href="/opere/performance">
+            <a className="font-serif text-sm text-foreground/50 hover:text-foreground/80 transition-colors duration-300 cursor-pointer mb-6 inline-block">← Performance</a>
           </Link>
           <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90">
             Sei senza volto – e tutti i volti
