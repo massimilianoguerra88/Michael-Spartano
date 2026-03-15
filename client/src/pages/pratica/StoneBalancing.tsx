@@ -1,5 +1,28 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
+import img1 from "@/assets/images/pratica/stone_balancing/sb_1.jpg";
+import img2 from "@/assets/images/pratica/stone_balancing/sb_2.jpg";
+import img3 from "@/assets/images/pratica/stone_balancing/sb_3.jpg";
+import img4 from "@/assets/images/pratica/stone_balancing/sb_4.jpg";
+import img5 from "@/assets/images/pratica/stone_balancing/sb_5.jpg";
+import img6 from "@/assets/images/pratica/stone_balancing/sb_6.jpg";
+import img7 from "@/assets/images/pratica/stone_balancing/sb_7.jpg";
+import img8 from "@/assets/images/pratica/stone_balancing/sb_8.jpg";
+import img9 from "@/assets/images/pratica/stone_balancing/sb_9.jpg";
+import img10 from "@/assets/images/pratica/stone_balancing/sb_10.jpg";
+
+const photos = [
+  { src: img1, alt: "Pietre in equilibrio in bianco e nero sul mare" },
+  { src: img2, alt: "Pietra scura in equilibrio sul fiume" },
+  { src: img3, alt: "Stone balancing nella natura" },
+  { src: img4, alt: "Pietra allungata in equilibrio sul fiume" },
+  { src: img5, alt: "Composizione di pietre in equilibrio" },
+  { src: img6, alt: "Stone balancing al tramonto" },
+  { src: img7, alt: "Pratica di stone balancing sul fiume" },
+  { src: img8, alt: "Equilibrio di pietre" },
+  { src: img9, alt: "Stone balancing nel paesaggio" },
+  { src: img10, alt: "Pietre in equilibrio nella natura" },
+];
 
 export default function StoneBalancing() {
   return (
@@ -103,6 +126,24 @@ export default function StoneBalancing() {
                 individuali o di gruppo.
               </p>
             </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+            className="flex-1 w-full grid grid-cols-2 gap-2 md:gap-4 mt-1 md:mt-[6px]"
+          >
+            {photos.map((photo, index) => (
+              <div key={index} className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
+                <img 
+                  src={photo.src} 
+                  alt={photo.alt} 
+                  className="absolute inset-0 w-full h-full object-cover"
+                  data-testid={`img-stone-balancing-${index}`}
+                />
+              </div>
+            ))}
           </motion.div>
 
         </div>
