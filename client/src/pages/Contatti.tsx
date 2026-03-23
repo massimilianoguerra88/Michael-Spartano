@@ -14,7 +14,7 @@ export default function Contatti() {
          <Navigation />
       </div>
 
-      <main className="flex-1 flex flex-col items-start justify-start px-6 md:px-12 max-w-2xl pt-48">
+      <main className="flex-1 flex flex-col items-start justify-start px-6 md:px-12 max-w-2xl pt-28 md:pt-48">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

@@ -14,7 +14,7 @@ export default function SessioneIndividuale() {
          <Navigation />
       </div>
 
-      <main className="flex-1 w-full pt-48 px-6 md:px-12 pb-32 max-w-7xl mx-auto">
+      <main className="flex-1 w-full pt-28 md:pt-48 px-6 md:px-12 pb-16 md:pb-32 max-w-7xl mx-auto">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

@@ -15,7 +15,7 @@ export default function MichaelSpartano() {
          <Navigation />
       </div>
 
-      <main className="flex-1 w-full flex flex-col md:flex-row pt-48 px-6 md:px-12 pb-20">
+      <main className="flex-1 w-full flex flex-col md:flex-row pt-28 md:pt-48 px-6 md:px-12 pb-20">
         {/* Text Section - Kept strictly to the left to match header alignment */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

@@ -29,7 +29,7 @@ export default function CorpoNatura() {
          <Navigation />
       </div>
 
-      <main className="flex-1 w-full pt-48 px-6 md:px-12 pb-32 max-w-7xl mx-auto">
+      <main className="flex-1 w-full pt-28 md:pt-48 px-6 md:px-12 pb-16 md:pb-32 max-w-7xl mx-auto">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -111,7 +111,7 @@ export default function CorpoNatura() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-            className="flex-1 w-full grid grid-cols-2 gap-2 md:gap-4 mt-1 md:mt-[6px]"
+            className="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 mt-1 md:mt-[6px]"
           >
             {photos.map((photo, index) => (
               <div key={index} className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
