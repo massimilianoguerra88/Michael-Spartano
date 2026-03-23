@@ -7,6 +7,16 @@ export default function Performance() {
   const [paroleCaduteOpen, setParoleCaduteOpen] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
 
+  const handleMouseEnter = () => {
+    if (hoverTimeout) clearTimeout(hoverTimeout);
+    setParoleCaduteOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    const t = setTimeout(() => setParoleCaduteOpen(false), 300);
+    setHoverTimeout(t);
+  };
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -37,27 +47,50 @@ export default function Performance() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
+          {/* Desktop layout: list + side submenu in a row */}
           <div className="flex flex-row items-start gap-16">
             <ul className="space-y-6">
+              {/* Parole cadute */}
               <motion.li
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-                onMouseEnter={() => {
-                  if (hoverTimeout) clearTimeout(hoverTimeout);
-                  setParoleCaduteOpen(true);
-                }}
-                onMouseLeave={() => {
-                  const t = setTimeout(() => setParoleCaduteOpen(false), 300);
-                  setHoverTimeout(t);
-                }}
               >
-                <span 
-                  className="font-serif text-lg transition-colors duration-300 cursor-default text-left"
+                <div
+                  className="cursor-pointer select-none"
                   data-testid="link-performance-0"
+                  onClick={() => setParoleCaduteOpen(o => !o)}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  <span className={`mr-3 ${paroleCaduteOpen ? 'text-foreground' : 'text-foreground/80'}`}>·</span><span className={`${paroleCaduteOpen ? 'text-foreground underline underline-offset-4' : 'text-foreground/80 hover:text-foreground'}`}>Parole cadute</span>
-                </span>
+                  <span className="font-serif text-lg transition-colors duration-300">
+                    <span className={`mr-3 ${paroleCaduteOpen ? 'text-foreground' : 'text-foreground/80'}`}>·</span>
+                    <span className={`${paroleCaduteOpen ? 'text-foreground underline underline-offset-4' : 'text-foreground/80 hover:text-foreground'}`}>
+                      Parole cadute
+                    </span>
+                  </span>
+                </div>
+
+                {/* Mobile-only submenu (appears below) */}
+                <AnimatePresence>
+                  {paroleCaduteOpen && (
+                    <motion.ul
+                      initial={{ opacity: 0, y: -4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -4 }}
+                      transition={{ duration: 0.25, ease: "easeOut" }}
+                      className="mt-4 ml-5 space-y-3 md:hidden"
+                    >
+                      <li>
+                        <Link href="/opere/performance/parole-cadute/sei-senza-volto">
+                          <a className="font-serif text-base text-foreground/80 hover:text-foreground transition-colors duration-300 cursor-pointer" data-testid="link-sei-senza-volto-mobile">
+                            Sei senza volto – e tutti i volti
+                          </a>
+                        </Link>
+                      </li>
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
               </motion.li>
 
               <motion.li
@@ -73,6 +106,7 @@ export default function Performance() {
               </motion.li>
             </ul>
 
+            {/* Desktop-only submenu (appears to the right) */}
             <AnimatePresence>
               {paroleCaduteOpen && (
                 <motion.ul
@@ -80,15 +114,9 @@ export default function Performance() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -10 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="space-y-4 pt-[2px]"
-                  onMouseEnter={() => {
-                    if (hoverTimeout) clearTimeout(hoverTimeout);
-                    setParoleCaduteOpen(true);
-                  }}
-                  onMouseLeave={() => {
-                    const t = setTimeout(() => setParoleCaduteOpen(false), 300);
-                    setHoverTimeout(t);
-                  }}
+                  className="hidden md:block space-y-4 pt-[2px]"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
                   <li>
                     <Link href="/opere/performance/parole-cadute/sei-senza-volto">
