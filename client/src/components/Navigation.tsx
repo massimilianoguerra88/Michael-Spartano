@@ -90,8 +90,8 @@ export function Navigation() {
   return (
     <>
       <nav className={cn(
-        "w-full py-8 px-6 md:px-12 flex flex-row items-center justify-between gap-6 z-50 fixed top-0 left-0 transition-all duration-300",
-        isHome ? "text-white" : "text-black bg-white"
+        "w-full py-8 px-6 md:px-12 flex flex-row items-center justify-between gap-6 z-[110] fixed top-0 left-0 transition-all duration-300",
+        isHome && !mobileOpen ? "text-white" : "text-black bg-white"
       )}>
         <Link href="/michael-spartano">
           <a className="flex flex-col items-center hover:opacity-70 transition-opacity group relative">
@@ -214,17 +214,17 @@ export function Navigation() {
         >
           <span className={cn(
             "block w-6 h-px transition-all duration-300 origin-center",
-            isHome ? "bg-white" : "bg-black",
+            isHome && !mobileOpen ? "bg-white" : "bg-black",
             mobileOpen && "rotate-45 translate-y-[6px]"
           )} />
           <span className={cn(
             "block w-6 h-px transition-all duration-300",
-            isHome ? "bg-white" : "bg-black",
+            isHome && !mobileOpen ? "bg-white" : "bg-black",
             mobileOpen && "opacity-0"
           )} />
           <span className={cn(
             "block w-6 h-px transition-all duration-300 origin-center",
-            isHome ? "bg-white" : "bg-black",
+            isHome && !mobileOpen ? "bg-white" : "bg-black",
             mobileOpen && "-rotate-45 -translate-y-[6px]"
           )} />
         </button>
