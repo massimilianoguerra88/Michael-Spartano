@@ -19,7 +19,7 @@ export default function Home() {
            <img
             src={bgImage}
             alt="Background Frame"
-            className="w-full h-full object-cover object-[75%] md:object-center"
+            className="w-full h-full object-cover object-[72%] md:object-center"
           />
         </div>
         
