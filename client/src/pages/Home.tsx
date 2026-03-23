@@ -15,13 +15,26 @@ export default function Home() {
       
       {/* Background Image - Static, no animation */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
-           <img
-            src={bgImage}
-            alt="Background Frame"
-            className="w-full h-full object-cover object-[72%] md:object-center"
-          />
-        </div>
+        {/* Mobile: immagine ridotta all'85% con bordi scuri */}
+        <div
+          className="absolute inset-0 w-full h-full block md:hidden"
+          style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: 'auto 85%',
+            backgroundPosition: '72% center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        {/* Desktop: immagine che copre tutto */}
+        <div
+          className="absolute inset-0 w-full h-full hidden md:block"
+          style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
         
         {/* Subtle Texture Overlay */}
         <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat opacity-[0.3]" />
