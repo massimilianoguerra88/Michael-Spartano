@@ -121,16 +121,27 @@ export function Navigation() {
               onMouseEnter={() => setHoveredLink(link.href)}
               onMouseLeave={() => setHoveredLink(null)}
             >
-              <Link href={link.href}>
-                <a
+              {link.subLinks ? (
+                <span
                   className={cn(
-                    "hover:opacity-100 transition-opacity duration-300 relative group opacity-100 block py-2",
+                    "hover:opacity-100 transition-opacity duration-300 relative group opacity-100 block py-2 cursor-default select-none",
                     location.startsWith(link.href) && "opacity-100 font-normal"
                   )}
                 >
                   {link.label}
-                </a>
-              </Link>
+                </span>
+              ) : (
+                <Link href={link.href}>
+                  <a
+                    className={cn(
+                      "hover:opacity-100 transition-opacity duration-300 relative group opacity-100 block py-2",
+                      location.startsWith(link.href) && "opacity-100 font-normal"
+                    )}
+                  >
+                    {link.label}
+                  </a>
+                </Link>
+              )}
 
               <AnimatePresence>
                 {link.subLinks && hoveredLink === link.href && (
