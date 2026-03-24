@@ -7,12 +7,12 @@ import img7 from "@/assets/images/educazione/edu_7.jpg";
 import img8 from "@/assets/images/educazione/edu_8.jpg";
 import img10 from "@/assets/images/educazione/edu_10.jpg";
 import img12 from "@/assets/images/educazione/edu_12.jpg";
-import img13 from "@/assets/images/educazione/edu_13.jpg";
 import img14 from "@/assets/images/educazione/edu_14.jpg";
 import imgDisegno from "@/assets/images/educazione/edu_disegno.jpg";
+import imgTdf3 from "@/assets/images/pratica/tracce_di_fango/tdf_3.jpg";
 
 const photos = [
-  { src: img13, alt: "Mani di bambina lavorano con il fango su un tavolo" },
+  { src: imgTdf3, alt: "Mani di bambino lavorano il fango su carta bianca" },
   { src: img10, alt: "Adulto suona la lira con bambini in ambiente interno" },
   { src: imgDisegno, alt: "Disegno di bambino con scarabocchi a matita su foglio bianco" },
   { src: img14, alt: "Mani di bambino scrivono lettere su un sasso" },
