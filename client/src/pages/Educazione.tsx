@@ -9,12 +9,12 @@ import img10 from "@/assets/images/educazione/edu_10.jpg";
 import img12 from "@/assets/images/educazione/edu_12.jpg";
 import img13 from "@/assets/images/educazione/edu_13.jpg";
 import img14 from "@/assets/images/educazione/edu_14.jpg";
-import img15 from "@/assets/images/educazione/edu_15.jpg";
+import imgDisegno from "@/assets/images/educazione/edu_disegno.jpg";
 
 const photos = [
   { src: img13, alt: "Mani di bambina lavorano con il fango su un tavolo" },
   { src: img10, alt: "Adulto suona la lira con bambini in ambiente interno" },
-  { src: img15, alt: "Bambino scrive lettere su carta con pennarello" },
+  { src: imgDisegno, alt: "Disegno di bambino con scarabocchi a matita su foglio bianco" },
   { src: img14, alt: "Mani di bambino scrivono lettere su un sasso" },
   { src: img2, alt: "Bambini toccano il tronco di un albero da vicino" },
   { src: img4, alt: "Bambino esplora installazione di fogli d'argento tra gli alberi" },
