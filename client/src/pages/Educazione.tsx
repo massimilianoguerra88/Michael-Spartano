@@ -1,37 +1,27 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
-import img1 from "@/assets/images/educazione/edu_1.jpg";
 import img2 from "@/assets/images/educazione/edu_2.jpg";
-import img3 from "@/assets/images/educazione/edu_3.jpg";
 import img4 from "@/assets/images/educazione/edu_4.jpg";
-import img5 from "@/assets/images/educazione/edu_5.jpg";
 import img6 from "@/assets/images/educazione/edu_6.jpg";
 import img7 from "@/assets/images/educazione/edu_7.jpg";
 import img8 from "@/assets/images/educazione/edu_8.jpg";
-import img9 from "@/assets/images/educazione/edu_9.jpg";
 import img10 from "@/assets/images/educazione/edu_10.jpg";
-import img11 from "@/assets/images/educazione/edu_11.jpg";
 import img12 from "@/assets/images/educazione/edu_12.jpg";
 import img13 from "@/assets/images/educazione/edu_13.jpg";
 import img14 from "@/assets/images/educazione/edu_14.jpg";
 import img15 from "@/assets/images/educazione/edu_15.jpg";
 
 const photos = [
-  { src: img1, alt: "Bambini e adulto abbracciano un albero nel parco" },
-  { src: img2, alt: "Bambini toccano il tronco di un albero da vicino" },
-  { src: img3, alt: "Adulto con due piccoli bambini vicino a un albero" },
-  { src: img4, alt: "Bambino esplora installazione di fogli metallici tra gli alberi" },
-  { src: img5, alt: "Cartello Welcome to the Singing Metal Forest" },
-  { src: img6, alt: "Utensili da cucina appesi agli alberi come strumenti sonori" },
-  { src: img7, alt: "Mano di bambino che suona un coperchio metallico" },
-  { src: img8, alt: "Gruppo di bambini con lira all'aperto su coperta" },
-  { src: img9, alt: "Suonare la lira all'aperto con un bambino" },
-  { src: img10, alt: "Uomo suona la lira con bambini in ambiente interno" },
-  { src: img11, alt: "Sessione di gruppo all'aperto con tamburo" },
-  { src: img12, alt: "Dettaglio delle mani che suonano il tongue drum" },
-  { src: img13, alt: "Bambina lavora con ciotola di fango e opera appesa" },
+  { src: img13, alt: "Mani di bambina lavorano con il fango su un tavolo" },
+  { src: img10, alt: "Adulto suona la lira con bambini in ambiente interno" },
+  { src: img15, alt: "Bambino scrive lettere su carta con pennarello" },
   { src: img14, alt: "Mani di bambino scrivono lettere su un sasso" },
-  { src: img15, alt: "Bambino scrive e disegna lettere su carta" },
+  { src: img2, alt: "Bambini toccano il tronco di un albero da vicino" },
+  { src: img4, alt: "Bambino esplora installazione di fogli d'argento tra gli alberi" },
+  { src: img6, alt: "Utensili da cucina appesi agli alberi come strumenti sonori" },
+  { src: img7, alt: "Mani che suonano un coperchio metallico all'aperto" },
+  { src: img8, alt: "Sessione musicale all'aperto su coperta a quadri con lira" },
+  { src: img12, alt: "Dettaglio delle mani che suonano il tongue drum" },
 ];
 
 export default function Educazione() {
