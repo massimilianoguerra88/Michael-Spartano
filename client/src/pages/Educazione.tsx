@@ -80,14 +80,11 @@ export default function Educazione() {
               </p>
 
               <p>
-                La natura non è uno sfondo,<br />
-                ma il luogo in cui l'esperienza accade.
-              </p>
-
-              <p>
                 Le proposte nascono<br />
                 dal contatto diretto con la materia:<br />
-                terra, foglie, acqua, sassi, colore.
+                terra, foglie, acqua, sassi, colore.<br />
+                Ogni attività è pensata in base all'età dei partecipanti<br />
+                e al contesto in cui si svolge.
               </p>
 
               <p>
@@ -99,7 +96,7 @@ export default function Educazione() {
               <p>
                 Attraverso il gesto,<br />
                 il ritmo<br />
-                e il silenzio<br />
+                e il silenzio,<br />
                 i bambini approfondiscono<br />
                 la relazione<br />
                 con ciò che li circonda<br />
@@ -110,7 +107,7 @@ export default function Educazione() {
                 Brevi momenti di meditazione<br />
                 vengono proposti in modo semplice,<br />
                 come spazio di ascolto<br />
-                e familiarità con il respiro.
+                e di familiarità con il respiro.
               </p>
 
               <p>
@@ -130,9 +127,10 @@ export default function Educazione() {
               <p>
                 Le attività possono svolgersi<br />
                 in italiano o in lingua inglese,<br />
-                in contesti educativi,<br />
-                associativi<br />
-                o all'aperto.
+                in contesti educativi, associativi<br />
+                o all'aperto,<br />
+                adattandosi al luogo<br />
+                e al gruppo.
               </p>
             </div>
           </motion.div>
