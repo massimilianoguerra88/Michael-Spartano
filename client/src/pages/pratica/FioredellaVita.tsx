@@ -65,9 +65,10 @@ export default function FioredellaVita() {
               <p>
                 Il Fiore della Vita è una geometria sacra<br />
                 primordiale.<br />
-                Una forma semplice e potente,<br />
+                Una forma potente,<br />
                 presente in antiche culture<br />
-                come matrice di perfezione.
+                come matrice di perfezione,<br />
+                equilibrio e armonia.
               </p>
               
               <p>
@@ -77,26 +78,26 @@ export default function FioredellaVita() {
               
               <p>
                 Cerchio dopo cerchio,<br />
-                il gesto si lento,<br />
+                il gesto si fa lento,<br />
                 preciso,<br />
-                ripetuto.
+                ripetuto.<br />
+                Come qualcosa che va<br />
+                ricordato e ricordato.
               </p>
 
               <p>
                 La mano segue la forma<br />
                 e l'attenzione si raccoglie.<br />
                 Il Fiore si rivela un'esperienza di presenza,<br />
-                ascolto<br />
-                e pazienza,<br />
-                in cui può emergere<br />
-                un naturale processo di guarigione.
+                ascolto e pazienza.
               </p>
 
               <p>
                 Sono proposte sessioni<br />
                 individuali o di gruppo,<br />
                 in cui il disegno diventa<br />
-                uno spazio sacro di condivisione.
+                uno spazio di condivisione<br />
+                e apertura.
               </p>
             </div>
           </motion.div>
