@@ -1,27 +1,19 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
-import fiore1 from "@/assets/images/fiore/fiore1.jpg";
-import fiore5 from "@/assets/images/fiore/fiore5.jpg";
-import fiore6 from "@/assets/images/fiore/fiore6.jpg";
-import fiore7 from "@/assets/images/fiore/fiore7.jpg";
-import fiore8 from "@/assets/images/fiore/fiore8.jpg";
-import fioreNew1 from "@/assets/images/fiore/fiore_new1.jpg";
-import fioreNew2 from "@/assets/images/fiore/fiore_new2.jpg";
-import fioreNew3 from "@/assets/images/fiore/fiore_new3.jpg";
-import fioreCrop1 from "@/assets/images/fiore/fiore_crop1.jpg";
-import fioreCrop2 from "@/assets/images/fiore/fiore_crop2.jpg";
+import fioreA from "@/assets/images/fiore/fiore_a.jpg";
+import fioreF from "@/assets/images/fiore/fiore_f.jpg";
+import fioreB from "@/assets/images/fiore/fiore_b.jpg";
+import fioreC from "@/assets/images/fiore/fiore_c.jpg";
+import fioreD from "@/assets/images/fiore/fiore_d.jpg";
+import fioreE from "@/assets/images/fiore/fiore_e.jpg";
 
 const images = [
-  { src: fiore1, alt: "Il Fiore della Vita incorniciato" },
-  { src: fioreNew1, alt: "Mano che colora il Fiore rosa e blu" },
-  { src: fiore5, alt: "Disegno del Fiore in lavorazione" },
-  { src: fioreNew2, alt: "Mani che colorano il Fiore giallo e rosso" },
-  { src: fiore6, alt: "Dettaglio del cerchio arcobaleno" },
-  { src: fioreCrop2, alt: "Tavolo con pennarelli e Fiore colorato" },
-  { src: fiore7, alt: "Fiore rosa e viola in lavorazione" },
-  { src: fioreNew3, alt: "Pratica del disegno del Fiore" },
-  { src: fioreCrop1, alt: "Due disegni in lavorazione sul tavolo" },
-  { src: fiore8, alt: "Fiore multicolore pastello" },
+  { src: fioreA, alt: "Il Fiore della Vita incorniciato su sfondo bianco" },
+  { src: fioreF, alt: "Geometria sacra e cosmologia del Fiore della Vita" },
+  { src: fioreB, alt: "Mani che disegnano il Fiore della Vita con il compasso" },
+  { src: fioreC, alt: "Mano che colora il Fiore della Vita con matite" },
+  { src: fioreD, alt: "Persona che colora il Fiore della Vita con matite colorate" },
+  { src: fioreE, alt: "Fiore della Vita colorato in lavorazione su carta" },
 ];
 
 export default function FioredellaVita() {
