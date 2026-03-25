@@ -60,8 +60,8 @@ export default function TracceDiFango() {
               </p>
 
               <p>
-                Il fango, materiale primordiale,<br />
-                diventa superficie e strumento insieme.
+                Il fango diventa superficie<br />
+                e strumento insieme.
               </p>
 
               <p>
@@ -74,11 +74,6 @@ export default function TracceDiFango() {
               <p>
                 Non si disegna per rappresentare.<br />
                 Si lascia una traccia.
-              </p>
-
-              <p>
-                Il corpo entra in relazione con la materia,<br />
-                e la materia risponde.
               </p>
 
               <p>
