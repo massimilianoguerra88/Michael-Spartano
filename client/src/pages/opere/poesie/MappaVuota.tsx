@@ -61,7 +61,10 @@ export default function MappaVuota() {
             <p>
               Una mappa vuota<br />
               svela la consapevolezza<br />
-              Un tesoro che non serve cercare<br />
+              di un tesoro che non serve cercare.
+            </p>
+
+            <p>
               Non ti affannare
             </p>
 
