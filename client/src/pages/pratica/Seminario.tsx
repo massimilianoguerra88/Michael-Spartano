@@ -62,7 +62,7 @@ export default function Seminario() {
               la condivisione di parole<br />
               ed esercizi mirati,<br />
               l'attenzione viene riportata<br />
-              a ciò che crediamo di cercare,
+              a ciò che credi di cercare,
             </p>
 
             <p>
@@ -110,7 +110,7 @@ export default function Seminario() {
               oppure da strutture, associazioni<br />
               o contesti che sentono il desiderio<br />
               di ospitare un tempo condiviso<br />
-              di ascolto e presenza.
+              di consapevolezza.
             </p>
           </div>
         </motion.div>
