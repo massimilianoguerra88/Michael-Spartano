@@ -41,7 +41,7 @@ export default function CorpoNatura() {
             Corpo Natura
           </h1>
           <p className="text-lg font-serif text-foreground/80 italic">
-            Ascolto e osservazione
+            Cura e osservazione
           </p>
         </motion.div>
 
@@ -70,7 +70,7 @@ export default function CorpoNatura() {
               <p>
                 Intorno ad esso,<br />
                 elementi raccolti nel luogo:<br />
-                foglie, rami, semi, tracce vegetali<br />
+                foglie, rami, sassi, tracce vegetali<br />
                 vengono disposti sul perimetro del corpo<br />
                 attraverso un gesto semplice e condiviso.
               </p>
@@ -90,7 +90,7 @@ export default function CorpoNatura() {
 
               <p>
                 Con gli adulti<br />
-                diventa uno spazio di sospensione del fare,<br />
+                diventa un punto di sospensione del fare,<br />
                 un ritorno a una percezione non separata.
               </p>
 
