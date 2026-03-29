@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import bgImage from "@assets/unnamed_1771316738230.jpg";
-import bgImageMobile from "@assets/home_mobile.jpg";
 
 export default function Home() {
   return (
