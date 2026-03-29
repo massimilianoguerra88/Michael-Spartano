@@ -16,12 +16,13 @@ export default function Home() {
       
       {/* Background Image - Static, no animation */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Mobile: crop 4:5 centrato sulla cornice */}
+        {/* Mobile: crop quasi quadrato con acqua intorno alla cornice */}
         <div
           className="absolute inset-0 w-full h-full block md:hidden"
           style={{
+            backgroundColor: '#0d2a40',
             backgroundImage: `url(${bgImageMobile})`,
-            backgroundSize: 'cover',
+            backgroundSize: 'contain',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
           }}
