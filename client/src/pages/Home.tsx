@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import bgImage from "@assets/unnamed_1771316738230.jpg";
+import bgImageMobile from "@assets/home_mobile.jpg";
 
 export default function Home() {
   return (
@@ -15,13 +16,12 @@ export default function Home() {
       
       {/* Background Image - Static, no animation */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Mobile: immagine orizzontale originale intera */}
+        {/* Mobile: crop 4:5 centrato sulla cornice */}
         <div
           className="absolute inset-0 w-full h-full block md:hidden"
           style={{
-            backgroundColor: '#0d2a40',
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: 'contain',
+            backgroundImage: `url(${bgImageMobile})`,
+            backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
           }}
