@@ -22,7 +22,7 @@ export default function Home() {
           style={{
             backgroundImage: `url(${bgImageMobile})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center center',
+            backgroundPosition: '60% center',
             backgroundRepeat: 'no-repeat',
           }}
         />
