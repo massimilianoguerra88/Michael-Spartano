@@ -23,7 +23,7 @@ export default function Home() {
             backgroundColor: '#0d2a40',
             backgroundImage: `url(${bgImageMobile})`,
             backgroundSize: '118%',
-            backgroundPosition: '60% center',
+            backgroundPosition: '75% center',
             backgroundRepeat: 'no-repeat',
           }}
         />
