@@ -10,6 +10,8 @@ import img12 from "@/assets/images/educazione/edu_12.jpg";
 import img14 from "@/assets/images/educazione/edu_14.jpg";
 import imgDisegno from "@/assets/images/educazione/edu_disegno.jpg";
 import imgTdf3 from "@/assets/images/pratica/tracce_di_fango/tdf_3.jpg";
+import { useT } from "@/i18n/useT";
+import { renderLines } from "@/i18n/renderLines";
 
 const photos = [
   { src: imgTdf3, alt: "Mani di bambino lavorano il fango su carta bianca" },
@@ -25,6 +27,9 @@ const photos = [
 ];
 
 export default function Educazione() {
+  const t = useT();
+  const edu = t.educazione;
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -46,10 +51,10 @@ export default function Educazione() {
           className="mb-16 md:mb-24"
         >
           <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90 mb-2">
-            Educazione
+            {edu.title}
           </h1>
           <p className="text-lg font-serif text-foreground/80 italic">
-            Arte, natura e consapevolezza
+            {edu.subtitle}
           </p>
         </motion.div>
 
@@ -62,66 +67,9 @@ export default function Educazione() {
             className="flex-1 w-full text-left"
           >
             <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
-              <p>
-                Lavoro con bambini e ragazzi<br />
-                attraverso esperienze artistiche e sonore,<br />
-                spesso radicate nella natura,<br />
-                ma capaci di portarne la presenza anche negli spazi chiusi.
-              </p>
-
-              <p>
-                Le proposte nascono<br />
-                dal contatto diretto con la materia:<br />
-                terra, foglie, acqua, sassi, colore.<br />
-                Ogni attività è pensata in base all'età dei partecipanti<br />
-                e al contesto in cui si svolge.
-              </p>
-
-              <p>
-                Il corpo è sempre coinvolto.<br />
-                Non come strumento da guidare,<br />
-                ma come luogo di scoperta e osservazione.
-              </p>
-
-              <p>
-                Attraverso il gesto,<br />
-                il ritmo<br />
-                e il silenzio,<br />
-                i bambini approfondiscono<br />
-                la relazione<br />
-                con ciò che li circonda<br />
-                e con ciò che sentono.
-              </p>
-
-              <p>
-                Brevi momenti di meditazione<br />
-                vengono proposti in modo semplice,<br />
-                come spazio di ascolto<br />
-                e di familiarità con il respiro.
-              </p>
-
-              <p>
-                Non si cerca il risultato.<br />
-                Si coltiva l'esperienza,<br />
-                come una terra fertile<br />
-                da cui qualcosa può nascere.
-              </p>
-
-              <p>
-                Ogni incontro diventa<br />
-                fonte di meraviglia,<br />
-                di attenzione<br />
-                e di libertà espressiva.
-              </p>
-
-              <p>
-                Le attività possono svolgersi<br />
-                in italiano o in lingua inglese,<br />
-                in contesti educativi, associativi<br />
-                o all'aperto,<br />
-                adattandosi al luogo<br />
-                e al gruppo.
-              </p>
+              {edu.paragraphs.map((para, i) => (
+                <p key={i}>{renderLines(para)}</p>
+              ))}
             </div>
           </motion.div>
 

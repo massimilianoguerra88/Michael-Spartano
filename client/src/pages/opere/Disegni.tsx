@@ -7,6 +7,7 @@ import imgAbbracciacolori from "@/assets/images/disegni/abbracciacolori.jpg";
 import imgNelleMani from "@/assets/images/disegni/nelle_mani_della_vita.jpg";
 import imgSurrendering from "@/assets/images/disegni/surrendering.jpg";
 import imgVitaAttraverso from "@/assets/images/disegni/vita_attraverso.jpg";
+import { useT } from "@/i18n/useT";
 
 const artworks = [
   { id: 1, title: "Nelle mani della vita", img: imgNelleMani },
@@ -19,6 +20,8 @@ const artworks = [
 ];
 
 export default function Disegni() {
+  const t = useT();
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -39,7 +42,7 @@ export default function Disegni() {
           className="max-w-7xl mx-auto"
         >
           <header className="mb-16 md:mb-24 text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">Disegni</h1>
+            <h1 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">{t.disegni.title}</h1>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 md:gap-y-24">
@@ -49,7 +52,6 @@ export default function Disegni() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-                className=""
               >
                 <div className="aspect-[4/5] bg-neutral-100 overflow-hidden mb-6 relative">
                   <img 
@@ -62,9 +64,9 @@ export default function Disegni() {
                 <div className="space-y-1">
                   <h3 className="text-lg font-serif tracking-wide">{art.title}</h3>
                   <div className="text-sm text-foreground/60 font-serif leading-relaxed">
-                    <span>Colori naturali su carta cotone</span><br />
-                    <span>21 x 30 cm</span><br />
-                    <span>2025</span>
+                    <span>{t.disegni.medium}</span><br />
+                    <span>{t.disegni.size}</span><br />
+                    <span>{t.disegni.year}</span>
                   </div>
                 </div>
               </motion.div>

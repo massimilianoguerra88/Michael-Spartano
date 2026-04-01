@@ -3,6 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { AnimatePresence } from "framer-motion";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import Home from "@/pages/Home";
 import Opere from "@/pages/Opere";
 import Placeholder from "@/pages/Placeholder";
@@ -91,11 +92,13 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Toaster />
-      <Router />
-      <div className="fixed inset-0 pointer-events-none opacity-[0.07] z-[100] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-100 contrast-150 mix-blend-multiply" />
-    </QueryClientProvider>
+    <LanguageProvider>
+      <QueryClientProvider client={queryClient}>
+        <Toaster />
+        <Router />
+        <div className="fixed inset-0 pointer-events-none opacity-[0.07] z-[100] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-100 contrast-150 mix-blend-multiply" />
+      </QueryClientProvider>
+    </LanguageProvider>
   );
 }
 

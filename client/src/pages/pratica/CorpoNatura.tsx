@@ -6,6 +6,8 @@ import img3 from "@/assets/images/pratica/corpo_natura/cn_3.jpg";
 import img4 from "@/assets/images/pratica/corpo_natura/cn_4.jpg";
 import img5 from "@/assets/images/pratica/corpo_natura/cn_5.jpg";
 import img6 from "@/assets/images/pratica/corpo_natura/cn_6.jpg";
+import { useT } from "@/i18n/useT";
+import { renderLines } from "@/i18n/renderLines";
 
 const photos = [
   { src: img1, alt: "Adulto disteso a terra con foglie e bambini attorno" },
@@ -17,6 +19,9 @@ const photos = [
 ];
 
 export default function CorpoNatura() {
+  const t = useT();
+  const cn = t.corpoNatura;
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -38,10 +43,10 @@ export default function CorpoNatura() {
           className="mb-16 md:mb-24"
         >
           <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90 mb-2">
-            Corpo Natura
+            {cn.title}
           </h1>
           <p className="text-lg font-serif text-foreground/80 italic">
-            Cura e osservazione
+            {cn.subtitle}
           </p>
         </motion.div>
 
@@ -54,56 +59,9 @@ export default function CorpoNatura() {
             className="flex-1 w-full text-left"
           >
             <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
-              <p>
-                Nasce dall'ascolto del corpo<br />
-                come primo luogo di relazione<br />
-                con lo spazio<br />
-                e con ciò che chiamiamo natura.
-              </p>
-
-              <p>
-                Il corpo viene accolto così com'è:<br />
-                disteso, presente,<br />
-                non chiamato a fare.
-              </p>
-
-              <p>
-                Intorno ad esso,<br />
-                elementi raccolti nel luogo:<br />
-                foglie, rami, sassi, tracce vegetali<br />
-                vengono disposti sul perimetro del corpo<br />
-                attraverso un gesto semplice e condiviso.
-              </p>
-
-              <p>
-                Prende forma una sagoma temporanea:<br />
-                qualcosa che emerge,<br />
-                resta per un tempo,<br />
-                e può dissolversi.
-              </p>
-
-              <p>
-                La pratica è nata con i bambini,<br />
-                dove il sapere corporeo è diretto,<br />
-                senza mediazione.
-              </p>
-
-              <p>
-                Con gli adulti<br />
-                diventa un punto di sospensione del fare,<br />
-                un ritorno a una percezione non separata.
-              </p>
-
-              <p>
-                Può essere attivato come gesto intimo,<br />
-                come pratica condivisa<br />
-                o come azione aperta nello spazio.
-              </p>
-
-              <p>
-                Rimane essenziale.<br />
-                Non spettacolare.
-              </p>
+              {cn.paragraphs.map((para, i) => (
+                <p key={i}>{renderLines(para)}</p>
+              ))}
             </div>
           </motion.div>
 

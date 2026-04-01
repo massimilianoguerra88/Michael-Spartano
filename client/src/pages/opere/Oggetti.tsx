@@ -1,23 +1,27 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 import imgImmobile from "@/assets/images/oggetti/immobile.jpg";
-
-const artworks = [
-  {
-    id: 1,
-    title: "Immobile, come me",
-    img: imgImmobile,
-    description: [
-      "Pennarello su pietra di fiume",
-      "14 x 20 x 12 cm",
-      "2025",
-      "In mostra presso La Torre della Filanda,",
-      "all'interno della collettiva Tracce Ferme.",
-    ],
-  },
-];
+import { useT } from "@/i18n/useT";
 
 export default function Oggetti() {
+  const t = useT();
+  const obj = t.oggetti;
+
+  const artworks = [
+    {
+      id: 1,
+      title: "Immobile, come me",
+      img: imgImmobile,
+      description: [
+        obj.immobile.medium,
+        obj.immobile.size,
+        obj.immobile.year,
+        obj.immobile.exhibit1,
+        obj.immobile.exhibit2,
+      ],
+    },
+  ];
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -38,7 +42,7 @@ export default function Oggetti() {
           className="max-w-7xl mx-auto"
         >
           <header className="mb-16 md:mb-24 text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">Oggetti</h1>
+            <h1 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">{obj.title}</h1>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 md:gap-y-24">

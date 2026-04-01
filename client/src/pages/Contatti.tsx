@@ -1,7 +1,10 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
+import { useT } from "@/i18n/useT";
 
 export default function Contatti() {
+  const t = useT();
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -11,7 +14,7 @@ export default function Contatti() {
       className="min-h-screen bg-background text-foreground flex flex-col"
     >
       <div className="relative z-50">
-         <Navigation />
+        <Navigation />
       </div>
 
       <main className="flex-1 flex flex-col items-start justify-start px-6 md:px-12 max-w-2xl pt-28 md:pt-48">
@@ -22,25 +25,25 @@ export default function Contatti() {
           className="space-y-12 text-left text-base font-serif text-foreground/80 leading-relaxed"
         >
           <div className="space-y-1">
-            <p>Per incontri individuali,</p>
-            <p>performance, laboratori</p>
-            <p>o proposte di collaborazione,</p>
-            <p>puoi scrivermi qui:</p>
+            {t.contatti.section1.map((line, i) => (
+              <p key={i}>{line}</p>
+            ))}
             <a href="mailto:spartanomichael@gmail.com" className="hover:text-foreground transition-colors underline decoration-1 underline-offset-4 block mt-2">
               spartanomichael@gmail.com
             </a>
           </div>
 
           <div className="space-y-1">
-            <p>Oppure, se preferisci,</p>
-            <p>WhatsApp</p>
+            {t.contatti.section2.map((line, i) => (
+              <p key={i}>{line}</p>
+            ))}
             <p className="mt-2">+39 3206074072</p>
           </div>
 
           <div className="space-y-1">
-            <p>Alcune tracce del lavoro</p>
-            <p>si trovano anche qui:</p>
-            <p>Instagram</p>
+            {t.contatti.section3.map((line, i) => (
+              <p key={i}>{line}</p>
+            ))}
             <a href="https://instagram.com/michael_spartano" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors underline decoration-1 underline-offset-4 block mt-2">
               @michael_spartano
             </a>

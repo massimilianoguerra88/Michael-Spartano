@@ -8,6 +8,8 @@ import img8 from "@/assets/images/pratica/stone_balancing/sb_8.jpg";
 import img9 from "@/assets/images/pratica/stone_balancing/sb_9.jpg";
 import imgNew1 from "@/assets/images/pratica/stone_balancing/sb_new1.jpg";
 import imgNew2 from "@/assets/images/pratica/stone_balancing/sb_new2.jpg";
+import { useT } from "@/i18n/useT";
+import { renderLines } from "@/i18n/renderLines";
 
 const photos = [
   { src: img1, alt: "Pietra in equilibrio in bianco e nero sul mare" },
@@ -21,6 +23,9 @@ const photos = [
 ];
 
 export default function StoneBalancing() {
+  const t = useT();
+  const sb = t.stoneBalancing;
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -42,10 +47,10 @@ export default function StoneBalancing() {
           className="mb-16 md:mb-24"
         >
           <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90 mb-2">
-            Stone Balancing
+            {sb.title}
           </h1>
           <p className="text-lg font-serif text-foreground/80 italic">
-            L'equilibrio delle pietre
+            {sb.subtitle}
           </p>
         </motion.div>
 
@@ -58,69 +63,9 @@ export default function StoneBalancing() {
             className="flex-1 w-full text-left"
           >
             <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
-              <p>
-                È una pratica rudimentale,<br />
-                di un sapore antico.
-              </p>
-
-              <p>
-                Una pietra sull'altra,<br />
-                cercando un punto che c'è, sempre.
-              </p>
-
-              <p>
-                Con il tempo ho scoperto<br />
-                che non si tratta di costruire qualcosa,<br />
-                ma di ascoltare.
-              </p>
-
-              <p>
-                Nel silenzio<br />
-                le mani iniziano a sentire le pietre.
-              </p>
-
-              <p>
-                È attenzione e pazienza,<br />
-                e poi tecnica.
-              </p>
-
-              <p>
-                La natura intorno diventa presenza.<br />
-                Non fa nulla, osserva.<br />
-                E lentamente<br />
-                non c'è più "qualcuno che impila",<br />
-                c'è solo il corpo che si muove,<br />
-                che prova e aspetta.<br />
-                Riprova e aspetta.
-              </p>
-
-              <p>
-                L'equilibrio ricercato nella pietra<br />
-                porta con sé<br />
-                un equilibrio più sottile.
-              </p>
-
-              <p>
-                La separazione si assottiglia.<br />
-                Le pietre non sono altro.<br />
-                Non sono fuori.
-              </p>
-
-              <p>
-                Quando l'attenzione si stabilizza,<br />
-                spazio e tempo si fanno leggeri.
-              </p>
-
-              <p>
-                I pensieri si diradano.<br />
-                Resta il gesto.<br />
-                Resta il silenzio, sempre presente.
-              </p>
-
-              <p>
-                Sono proposte sessioni<br />
-                individuali o di gruppo.
-              </p>
+              {sb.paragraphs.map((para, i) => (
+                <p key={i}>{renderLines(para)}</p>
+              ))}
             </div>
           </motion.div>
 

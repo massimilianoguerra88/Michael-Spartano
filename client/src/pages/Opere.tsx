@@ -1,5 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
+import { useT } from "@/i18n/useT";
+import { renderLines } from "@/i18n/renderLines";
 
 const artworks = [
   { id: 1, title: "Opera I", year: "2024", type: "Acquerello su carta" },
@@ -11,6 +13,8 @@ const artworks = [
 ];
 
 export default function Opere() {
+  const t = useT();
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -31,10 +35,9 @@ export default function Opere() {
           className="max-w-7xl mx-auto"
         >
           <header className="mb-16 md:mb-24 text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">Opere</h1>
+            <h1 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">{t.opere.title}</h1>
             <p className="text-base font-serif text-foreground/60 max-w-xl leading-relaxed">
-              Un'esplorazione visiva attraverso il silenzio e la forma. 
-              Ogni opera è un invito a guardare oltre l'apparenza.
+              {renderLines(t.opere.subtitle)}
             </p>
           </header>
 
@@ -48,7 +51,6 @@ export default function Opere() {
                 className="group cursor-pointer"
               >
                 <div className="aspect-[4/5] bg-neutral-100 overflow-hidden mb-6 relative">
-                  {/* Placeholder for artwork image */}
                   <div className="absolute inset-0 bg-neutral-200 animate-pulse group-hover:bg-neutral-300 transition-colors duration-500" />
                   <div className="absolute inset-0 flex items-center justify-center text-neutral-400 font-serif opacity-30">
                     Image {art.id}

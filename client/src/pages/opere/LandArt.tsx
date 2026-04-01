@@ -7,6 +7,7 @@ import imgAdorazione from "@/assets/images/landart/adorazione_al_nulla.jpg";
 import imgConnessioni from "@/assets/images/landart/connessioni_svelate.jpg";
 import imgFiorDiFiume from "@/assets/images/landart/fior_di_fiume.jpg";
 import imgMandala from "@/assets/images/landart/mandala.jpg";
+import { useT } from "@/i18n/useT";
 
 const artworks = [
   { id: 1, title: "Vesica Piscis", year: "2025", img: imgVesicaPiscis },
@@ -19,6 +20,8 @@ const artworks = [
 ];
 
 export default function LandArt() {
+  const t = useT();
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -39,7 +42,7 @@ export default function LandArt() {
           className="max-w-7xl mx-auto"
         >
           <header className="mb-16 md:mb-24 text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">Land Art</h1>
+            <h1 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">{t.landArt.title}</h1>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 md:gap-y-24">
@@ -49,7 +52,6 @@ export default function LandArt() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-                className=""
               >
                 <div className="aspect-[4/5] bg-neutral-100 overflow-hidden mb-6 relative">
                   <img 

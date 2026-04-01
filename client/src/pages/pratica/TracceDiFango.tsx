@@ -6,6 +6,8 @@ import img3 from "@/assets/images/pratica/tracce_di_fango/tdf_3.jpg";
 import img4 from "@/assets/images/pratica/tracce_di_fango/tdf_4.jpg";
 import img5 from "@/assets/images/pratica/tracce_di_fango/tdf_5.jpg";
 import img6 from "@/assets/images/pratica/tracce_di_fango/tdf_6.jpg";
+import { useT } from "@/i18n/useT";
+import { renderLines } from "@/i18n/renderLines";
 
 const photos = [
   { src: img1, alt: "Foglietto bianco appeso su struttura di rami" },
@@ -17,6 +19,9 @@ const photos = [
 ];
 
 export default function TracceDiFango() {
+  const t = useT();
+  const tdf = t.tracceDiFango;
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -38,10 +43,10 @@ export default function TracceDiFango() {
           className="mb-16 md:mb-24"
         >
           <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90 mb-2">
-            Tracce di Fango
+            {tdf.title}
           </h1>
           <p className="text-lg font-serif text-foreground/80 italic">
-            Materia e gesto
+            {tdf.subtitle}
           </p>
         </motion.div>
 
@@ -54,51 +59,9 @@ export default function TracceDiFango() {
             className="flex-1 w-full text-left"
           >
             <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
-              <p>
-                Un incontro con la terra, da vicino.<br />
-                In un suo stato spesso evitato.
-              </p>
-
-              <p>
-                Il fango diventa superficie<br />
-                e strumento insieme.
-              </p>
-
-              <p>
-                Con le mani<br />
-                o con un pennello,<br />
-                si tracciano segni semplici,<br />
-                diretti.
-              </p>
-
-              <p>
-                Non si disegna per rappresentare.<br />
-                Si lascia una traccia.
-              </p>
-
-              <p>
-                Ciò che emerge<br />
-                può restare nel tempo,<br />
-                seccandosi e trasformandosi,<br />
-                oppure sgretolarsi lentamente.
-              </p>
-
-              <p>
-                Non è importante ciò che rimane.<br />
-                È importante ciò che è accaduto.
-              </p>
-
-              <p>
-                La pratica può essere proposta<br />
-                a bambini e adulti,<br />
-                in forma individuale<br />
-                o condivisa.
-              </p>
-
-              <p>
-                Rimane essenziale.<br />
-                Alla terra.
-              </p>
+              {tdf.paragraphs.map((para, i) => (
+                <p key={i}>{renderLines(para)}</p>
+              ))}
             </div>
           </motion.div>
 

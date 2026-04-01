@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
+import { useT } from "@/i18n/useT";
 
 export default function Performance() {
   const [paroleCaduteOpen, setParoleCaduteOpen] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
+  const t = useT();
 
   const handleMouseEnter = () => {
     if (hoverTimeout) clearTimeout(hoverTimeout);
@@ -13,8 +15,8 @@ export default function Performance() {
   };
 
   const handleMouseLeave = () => {
-    const t = setTimeout(() => setParoleCaduteOpen(false), 300);
-    setHoverTimeout(t);
+    const timeout = setTimeout(() => setParoleCaduteOpen(false), 300);
+    setHoverTimeout(timeout);
   };
 
   return (
@@ -38,7 +40,7 @@ export default function Performance() {
           className="mb-16 md:mb-24"
         >
           <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90">
-            Performance
+            {t.performance.title}
           </h1>
         </motion.div>
 
@@ -47,10 +49,8 @@ export default function Performance() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
-          {/* Desktop layout: list + side submenu in a row */}
           <div className="flex flex-row items-start gap-16">
             <ul className="space-y-6">
-              {/* Parole cadute */}
               <motion.li
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -71,7 +71,6 @@ export default function Performance() {
                   </span>
                 </div>
 
-                {/* Mobile-only submenu (appears below) */}
                 <AnimatePresence>
                   {paroleCaduteOpen && (
                     <motion.ul
@@ -106,7 +105,6 @@ export default function Performance() {
               </motion.li>
             </ul>
 
-            {/* Desktop-only submenu (appears to the right) */}
             <AnimatePresence>
               {paroleCaduteOpen && (
                 <motion.ul

@@ -1,8 +1,12 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 import profileImage from "@assets/Mattia_Gianfelici-2-2-Modifica-Modifica_1771234718589.jpg";
+import { useT } from "@/i18n/useT";
+import { renderLines } from "@/i18n/renderLines";
 
 export default function MichaelSpartano() {
+  const t = useT();
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -16,7 +20,6 @@ export default function MichaelSpartano() {
       </div>
 
       <main className="flex-1 w-full flex flex-col md:flex-row pt-28 md:pt-48 px-6 md:px-12 pb-20">
-        {/* Text Section - Kept strictly to the left to match header alignment */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -24,19 +27,16 @@ export default function MichaelSpartano() {
           className="flex-shrink-0 max-w-lg text-left"
         >
           <p className="text-base font-serif text-foreground/80 mb-8">
-            Non sono interessato al tuo nome.
+            {t.michaelSpartano.line1}
           </p>
 
           <div className="space-y-2">
             <p className="text-base font-serif text-foreground/80 leading-relaxed">
-              L’attenzione<br />
-              va a ciò che sei,<br />
-              che sono.
+              {renderLines(t.michaelSpartano.poem)}
             </p>
           </div>
         </motion.div>
 
-        {/* Image Section - Takes remaining space and centers the image */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}

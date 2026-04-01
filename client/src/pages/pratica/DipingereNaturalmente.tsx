@@ -10,6 +10,8 @@ import dip7 from "@/assets/images/dipingere/dip7.jpg";
 import dip8 from "@/assets/images/dipingere/dip8.jpg";
 import dip9 from "@/assets/images/dipingere/dip9.jpg";
 import dip10 from "@/assets/images/dipingere/dip10.jpg";
+import { useT } from "@/i18n/useT";
+import { renderLines } from "@/i18n/renderLines";
 
 const images = [
   { src: dip1, alt: "Materiali naturali dalla terra" },
@@ -25,6 +27,9 @@ const images = [
 ];
 
 export default function DipingereNaturalmente() {
+  const t = useT();
+  const dn = t.dipingereNaturalmente;
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -46,10 +51,10 @@ export default function DipingereNaturalmente() {
           className="mb-16 md:mb-24"
         >
           <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90 mb-2">
-            Dipingere Naturalmente
+            {dn.title}
           </h1>
           <p className="text-lg font-serif text-foreground/80 italic">
-            La natura dipinge attraverso il corpo
+            {dn.subtitle}
           </p>
         </motion.div>
 
@@ -62,41 +67,9 @@ export default function DipingereNaturalmente() {
             className="flex-1 w-full text-left"
           >
             <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
-              <p>
-                Un'esperienza che intreccia<br />
-                arte, sostenibilità e consapevolezza.
-              </p>
-
-              <p>
-                Pigmenti naturali, estratti da frutta,<br />
-                verdura e foglie,<br />
-                diventano strumenti di espressione intuitiva.
-              </p>
-
-              <p>
-                Il corpo si fa tramite<br />
-                e lascia emergere segni essenziali,<br />
-                liberi da intenzione<br />
-                e da risultato.
-              </p>
-
-              <p>
-                La pratica apre uno spazio<br />
-                di sperimentazione e meraviglia,<br />
-                una lentezza in cui il gesto<br />
-                incontra la semplicità della natura<br />
-                e ne ascolta le infinite possibilità.
-              </p>
-
-              <p>
-                È un po' come avvicinarsi<br />
-                alla porta di casa.
-              </p>
-
-              <p>
-                Quella senza muri,<br />
-                senza idee.
-              </p>
+              {dn.paragraphs.map((para, i) => (
+                <p key={i}>{renderLines(para)}</p>
+              ))}
             </div>
           </motion.div>
 

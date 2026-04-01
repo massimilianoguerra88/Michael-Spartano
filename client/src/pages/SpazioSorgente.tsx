@@ -1,7 +1,11 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
+import { useT } from "@/i18n/useT";
 
 export default function SpazioSorgente() {
+  const t = useT();
+  const ss = t.spazioSorgente;
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -22,53 +26,20 @@ export default function SpazioSorgente() {
           className="max-w-2xl w-full text-center font-serif text-foreground/80 leading-relaxed text-base space-y-12"
         >
           <div className="space-y-2">
-            <h1 className="text-2xl md:text-3xl font-normal">Spazio Sorgente</h1>
-            <p className="italic text-lg">Incontri nell’Uno</p>
+            <h1 className="text-2xl md:text-3xl font-normal">{ss.title}</h1>
+            <p className="italic text-lg">{ss.subtitle}</p>
           </div>
 
-          <div className="space-y-1">
-            <p>Questo non è un percorso.</p>
-            <p>Non ha una forma, non ha tappe, né una meta.</p>
-            <p>Gli incontri online non seguiranno una frequenza prestabilita,</p>
-            <p>né avranno una durata definita.</p>
-            <p>Potranno essere a distanza di settimane o mesi.</p>
-            <p>Ogni volta, il gruppo riceverà un messaggio con il giorno e l’orario di inizio.</p>
-          </div>
-
-          <div className="space-y-1">
-            <p>Non ci sarà un programma.</p>
-            <p>Ciò che accade, accade.</p>
-          </div>
-
-          <div className="space-y-1">
-            <p>Potrà esserci silenzio.</p>
-            <p>Potrà sorgere una condivisione di parole, esperienze, domande.</p>
-            <p>A volte potranno esserci esercizi o una meditazione guidata.</p>
-            <p>A volte, semplicemente, staremo.</p>
-          </div>
-
-          <div className="space-y-1">
-            <p>Tutto avverrà in totale libertà.</p>
-            <p>La partecipazione non è obbligatoria.</p>
-            <p>Ogni incontro è a donazione libera.</p>
-          </div>
-
-          <div className="space-y-1">
-            <p>Se senti di farne parte, sei il benvenuto a casa.</p>
-            <p>Dove sei da sempre, perché non c’è nulla da raggiungere.</p>
-          </div>
-
-          <div className="space-y-1">
-            <p>Se desideri ricevere il messaggio per i prossimi incontri</p>
-            <p>e far parte del gruppo WhatsApp Spazio Sorgente,</p>
-            <p>puoi scrivermi qui:</p>
-            <p className="mt-2">+39 3206074072</p>
-          </div>
-
-          <div className="pt-8 space-y-1">
-            <p>Con Gioia,</p>
-            <p>Michael</p>
-          </div>
+          {ss.blocks.map((block, bi) => (
+            <div key={bi} className="space-y-1">
+              {block.map((line, li) => (
+                <p key={li}>{line}</p>
+              ))}
+              {bi === 5 && (
+                <p className="mt-2">+39 3206074072</p>
+              )}
+            </div>
+          ))}
         </motion.div>
       </main>
     </motion.div>

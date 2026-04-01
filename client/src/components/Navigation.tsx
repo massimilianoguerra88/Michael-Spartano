@@ -2,50 +2,54 @@ import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLang } from "@/contexts/LanguageContext";
+import { useT } from "@/i18n/useT";
 
-const links = [
-  { 
-    href: "/opere", 
-    label: "Opere",
-    subLinks: [
-      { href: "/opere/performance", label: "Performance" },
-      { href: "/opere/disegni", label: "Disegni" },
-      { href: "/opere/land-art", label: "Land Art" },
-      { href: "/opere/oggetti", label: "Oggetti" },
-      { href: "/opere/poesie", label: "Poesie" },
-    ]
-  },
-  { 
-    href: "/pratica", 
-    label: "Pratica",
-    subLinks: [
-      { 
-        href: "/pratica/non-dualismo", 
-        label: "Non-Dualismo",
-        subLinks: [
-          { href: "/pratica/non-dualismo/sessione-individuale", label: "Sessione individuale" },
-          { href: "/pratica/non-dualismo/seminario", label: "Seminario" },
-          { href: "/pratica/non-dualismo/meditazione", label: "Meditazione" }
-        ]
-      },
-      { 
-        href: "/pratica/arte", 
-        label: "Arte",
-        subLinks: [
-          { href: "/pratica/arte/il-fiore-della-vita", label: "Il Fiore della Vita" },
-          { href: "/pratica/arte/corpo-natura", label: "Corpo Natura" },
-          { href: "/pratica/arte/tracce-di-fango", label: "Tracce di fango" },
-          { href: "/pratica/arte/dipingere-naturalmente", label: "Dipingere Naturalmente" },
-          { href: "/pratica/arte/stone-balancing", label: "Stone balancing" }
-        ]
-      },
-      { href: "/pratica/musica", label: "Musica" },
-    ]
-  },
-  { href: "/educazione", label: "Educazione" },
-  { href: "/spazio-sorgente", label: "Spazio Sorgente" },
-  { href: "/contatti", label: "Contatti" },
-];
+function getLinks(nav: ReturnType<typeof useT>["nav"]) {
+  return [
+    {
+      href: "/opere",
+      label: nav.opere,
+      subLinks: [
+        { href: "/opere/performance", label: nav.performance },
+        { href: "/opere/disegni", label: nav.disegni },
+        { href: "/opere/land-art", label: nav.landArt },
+        { href: "/opere/oggetti", label: nav.oggetti },
+        { href: "/opere/poesie", label: nav.poesie },
+      ],
+    },
+    {
+      href: "/pratica",
+      label: nav.pratica,
+      subLinks: [
+        {
+          href: "/pratica/non-dualismo",
+          label: nav.nonDualismo,
+          subLinks: [
+            { href: "/pratica/non-dualismo/sessione-individuale", label: nav.sessioneIndividuale },
+            { href: "/pratica/non-dualismo/seminario", label: nav.seminario },
+            { href: "/pratica/non-dualismo/meditazione", label: nav.meditazione },
+          ],
+        },
+        {
+          href: "/pratica/arte",
+          label: nav.arte,
+          subLinks: [
+            { href: "/pratica/arte/il-fiore-della-vita", label: nav.fioredellaVita },
+            { href: "/pratica/arte/corpo-natura", label: nav.corpoNatura },
+            { href: "/pratica/arte/tracce-di-fango", label: nav.tracceDiFango },
+            { href: "/pratica/arte/dipingere-naturalmente", label: nav.dipingereNaturalmente },
+            { href: "/pratica/arte/stone-balancing", label: nav.stoneBalancing },
+          ],
+        },
+        { href: "/pratica/musica", label: nav.musica },
+      ],
+    },
+    { href: "/educazione", label: nav.educazione },
+    { href: "/spazio-sorgente", label: nav.spazioSorgente },
+    { href: "/contatti", label: nav.contatti },
+  ];
+}
 
 export function Navigation() {
   const [location] = useLocation();
@@ -54,6 +58,10 @@ export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
   const [expandedMobileNested, setExpandedMobileNested] = useState<string | null>(null);
+
+  const { lang, setLang } = useLang();
+  const t = useT();
+  const links = getLinks(t.nav);
 
   const isHome = location === "/";
 
@@ -87,6 +95,32 @@ export function Navigation() {
     setExpandedMobileNested(prev => prev === href ? null : href);
   };
 
+  const LangSwitcher = ({ className }: { className?: string }) => (
+    <div className={cn("flex items-center gap-1 text-xs tracking-widest font-sans select-none", className)}>
+      <button
+        onClick={() => setLang('it')}
+        className={cn(
+          "transition-opacity duration-200",
+          lang === 'it' ? "font-semibold opacity-100" : "opacity-50 hover:opacity-80"
+        )}
+        aria-label="Italiano"
+      >
+        IT
+      </button>
+      <span className="opacity-40">|</span>
+      <button
+        onClick={() => setLang('en')}
+        className={cn(
+          "transition-opacity duration-200",
+          lang === 'en' ? "font-semibold opacity-100" : "opacity-50 hover:opacity-80"
+        )}
+        aria-label="English"
+      >
+        EN
+      </button>
+    </div>
+  );
+
   return (
     <>
       <nav className={cn(
@@ -107,16 +141,16 @@ export function Navigation() {
         {!isHome && (
           <Link href="/">
             <a className="hidden md:block absolute left-1/2 -translate-x-1/2 text-base font-light tracking-wide hover:opacity-100 transition-opacity duration-300 opacity-80 top-8 py-2">
-              Home
+              {t.nav.home}
             </a>
           </Link>
         )}
 
         {/* Desktop nav */}
-        <div className="hidden md:flex flex-wrap justify-end gap-x-6 gap-y-2 text-sm md:text-base font-normal tracking-wide">
+        <div className="hidden md:flex flex-wrap justify-end items-center gap-x-6 gap-y-2 text-sm md:text-base font-normal tracking-wide">
           {links.map((link) => (
-            <div 
-              key={link.href} 
+            <div
+              key={link.href}
               className="relative"
               onMouseEnter={() => setHoveredLink(link.href)}
               onMouseLeave={() => setHoveredLink(null)}
@@ -152,14 +186,14 @@ export function Navigation() {
                     transition={{ duration: 0.2 }}
                     className="absolute left-1/2 -translate-x-1/2 top-full pt-2 min-w-[160px] flex flex-col items-center gap-2 z-[60]"
                   >
-                    <div 
+                    <div
                       className={cn(
                         "pt-4 flex flex-col items-center gap-2 min-w-[180px]",
                         isHome ? "text-white" : "text-black"
                       )}
                     >
                       {link.subLinks.map((subLink) => (
-                        <div 
+                        <div
                           key={subLink.href}
                           className="relative w-full flex flex-col items-center"
                           onMouseEnter={() => setHoveredSubLink(subLink.href)}
@@ -170,7 +204,7 @@ export function Navigation() {
                               "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-sm tracking-wide block py-1",
                               isHome ? "font-light" : "font-light hover:font-normal",
                               (location === subLink.href || hoveredSubLink === subLink.href)
-                                ? "opacity-100 font-bold border-b-2 border-current pb-0.5 inline-block" 
+                                ? "opacity-100 font-bold border-b-2 border-current pb-0.5 inline-block"
                                 : "opacity-80 hover:translate-x-1 inline-block"
                             )}>
                               {subLink.label}
@@ -195,8 +229,8 @@ export function Navigation() {
                                       <a className={cn(
                                         "whitespace-nowrap hover:opacity-100 transition-all duration-200 text-sm tracking-wide block py-1",
                                         isHome ? "font-light" : "font-light hover:font-normal",
-                                        location === nested.href 
-                                          ? "opacity-100 font-bold border-b-2 border-current pb-0.5" 
+                                        location === nested.href
+                                          ? "opacity-100 font-bold border-b-2 border-current pb-0.5"
                                           : "opacity-80 hover:translate-x-1"
                                       )}>
                                         {nested.label}
@@ -215,6 +249,9 @@ export function Navigation() {
               </AnimatePresence>
             </div>
           ))}
+
+          {/* Desktop language switcher */}
+          <LangSwitcher className="ml-2" />
         </div>
 
         {/* Hamburger button — mobile only */}
@@ -257,7 +294,7 @@ export function Navigation() {
                   onClick={closeMobile}
                   className="font-serif text-xl tracking-wide py-4 border-b border-black/10 block text-black/70 hover:text-black transition-colors"
                 >
-                  Home
+                  {t.nav.home}
                 </a>
               </Link>
 
@@ -355,6 +392,11 @@ export function Navigation() {
                   )}
                 </div>
               ))}
+
+              {/* Mobile language switcher */}
+              <div className="pt-8">
+                <LangSwitcher className="text-black" />
+              </div>
             </div>
           </motion.div>
         )}

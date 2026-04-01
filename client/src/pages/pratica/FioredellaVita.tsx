@@ -6,6 +6,8 @@ import fioreB from "@/assets/images/fiore/fiore_b.jpg";
 import fioreC from "@/assets/images/fiore/fiore_c.jpg";
 import fioreD from "@/assets/images/fiore/fiore_d.jpg";
 import fioreE from "@/assets/images/fiore/fiore_e.jpg";
+import { useT } from "@/i18n/useT";
+import { renderLines } from "@/i18n/renderLines";
 
 const images = [
   { src: fioreA, alt: "Il Fiore della Vita incorniciato su sfondo bianco" },
@@ -17,6 +19,9 @@ const images = [
 ];
 
 export default function FioredellaVita() {
+  const t = useT();
+  const fdv = t.fioredellaVita;
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -38,10 +43,10 @@ export default function FioredellaVita() {
           className="mb-16 md:mb-24"
         >
           <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90 mb-2">
-            Il Fiore della Vita
+            {fdv.title}
           </h1>
           <p className="text-lg font-serif text-foreground/80 italic">
-            Un disegno sacro
+            {fdv.subtitle}
           </p>
         </motion.div>
 
@@ -54,43 +59,9 @@ export default function FioredellaVita() {
             className="flex-1 w-full text-left"
           >
             <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
-              <p>
-                Il Fiore della Vita è una geometria sacra<br />
-                primordiale.<br />
-                Una forma potente,<br />
-                presente in antiche culture<br />
-                come matrice di perfezione,<br />
-                equilibrio e armonia.
-              </p>
-              
-              <p>
-                In questa pratica<br />
-                partiamo dal disegno.
-              </p>
-              
-              <p>
-                Cerchio dopo cerchio,<br />
-                il gesto si fa lento,<br />
-                preciso,<br />
-                ripetuto.<br />
-                Come qualcosa che va<br />
-                ricordato e ricordato.
-              </p>
-
-              <p>
-                La mano segue la forma<br />
-                e l'attenzione si raccoglie.<br />
-                Il Fiore si rivela un'esperienza di presenza,<br />
-                ascolto e pazienza.
-              </p>
-
-              <p>
-                Sono proposte sessioni<br />
-                individuali o di gruppo,<br />
-                in cui il disegno diventa<br />
-                uno spazio di condivisione<br />
-                e apertura.
-              </p>
+              {fdv.paragraphs.map((para, i) => (
+                <p key={i}>{renderLines(para)}</p>
+              ))}
             </div>
           </motion.div>
 
