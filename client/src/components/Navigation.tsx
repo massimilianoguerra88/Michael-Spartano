@@ -133,7 +133,7 @@ export function Navigation() {
               Michael Spartano
             </span>
             <span className="text-[16px] font-serif italic opacity-80 mt-1 absolute top-full left-1/2 -translate-x-1/2 whitespace-nowrap">
-              è solo un nome
+              {t.michaelSpartano.navSubtitle}
             </span>
           </a>
         </Link>
@@ -258,7 +258,7 @@ export function Navigation() {
         <button
           className="md:hidden flex flex-col justify-center items-center gap-[5px] w-8 h-8 z-[110]"
           onClick={() => setMobileOpen(o => !o)}
-          aria-label="Apri menu"
+          aria-label={t.michaelSpartano.menuOpen}
         >
           <span className={cn(
             "block w-6 h-px transition-all duration-300 origin-center",

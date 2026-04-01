@@ -26,6 +26,8 @@ export const it = {
   michaelSpartano: {
     line1: "Non sono interessato al tuo nome.",
     poem: "L'attenzione\nva a ciò che sei,\nche sono.",
+    navSubtitle: "è solo un nome",
+    menuOpen: "Apri menu",
   },
   opere: {
     title: "Opere",

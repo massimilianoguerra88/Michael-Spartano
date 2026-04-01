@@ -28,6 +28,8 @@ export const en: Translations = {
   michaelSpartano: {
     line1: "I am not interested in your name.",
     poem: "Attention\ngoes to what you are,\nthat I am.",
+    navSubtitle: "is just a name",
+    menuOpen: "Open menu",
   },
   opere: {
     title: "Works",
