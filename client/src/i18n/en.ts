@@ -24,6 +24,7 @@ export const en: Translations = {
     educazione: "Education",
     spazioSorgente: "Spazio Sorgente",
     contatti: "Contact",
+    news: "News",
   },
   michaelSpartano: {
     line1: "I am not interested in your name.",

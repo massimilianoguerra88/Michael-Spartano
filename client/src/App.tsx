@@ -39,6 +39,7 @@ import Innatura from "@/pages/opere/poesie/Innatura";
 import IlSilenzioDelleParole from "@/pages/opere/poesie/IlSilenzioDelleParole";
 import AllUno from "@/pages/opere/poesie/AllUno";
 import CioCheSei from "@/pages/opere/poesie/CioCheSei";
+import News from "@/pages/News";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -84,6 +85,7 @@ function Router() {
         <Route path="/educazione" component={Educazione} />
         <Route path="/spazio-sorgente" component={SpazioSorgente} />
         <Route path="/contatti" component={Contatti} />
+        <Route path="/news" component={News} />
         <Route component={NotFound} />
       </Switch>
     </AnimatePresence>

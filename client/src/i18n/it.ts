@@ -22,6 +22,7 @@ export const it = {
     educazione: "Educazione",
     spazioSorgente: "Spazio Sorgente",
     contatti: "Contatti",
+    news: "News",
   },
   michaelSpartano: {
     line1: "Non sono interessato al tuo nome.",

@@ -48,6 +48,7 @@ function getLinks(nav: ReturnType<typeof useT>["nav"]) {
     { href: "/educazione", label: nav.educazione },
     { href: "/spazio-sorgente", label: nav.spazioSorgente },
     { href: "/contatti", label: nav.contatti },
+    { href: "/news", label: nav.news },
   ];
 }
 
