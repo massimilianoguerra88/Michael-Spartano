@@ -33,6 +33,12 @@ export const en: Translations = {
     title: "Works",
     subtitle: "A visual exploration through silence and form.\nEach work is an invitation to look beyond appearance.",
   },
+  nonDualismo: {
+    title: "Non-Dualism",
+  },
+  arte: {
+    title: "Art",
+  },
   performance: {
     title: "Performance",
   },

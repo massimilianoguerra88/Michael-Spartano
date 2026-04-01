@@ -31,6 +31,12 @@ export const it = {
     title: "Opere",
     subtitle: "Un'esplorazione visiva attraverso il silenzio e la forma.\nOgni opera è un invito a guardare oltre l'apparenza.",
   },
+  nonDualismo: {
+    title: "Non-Dualismo",
+  },
+  arte: {
+    title: "Arte",
+  },
   performance: {
     title: "Performance",
   },
