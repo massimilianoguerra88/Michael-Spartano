@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import bgImage from "@assets/unnamed_1771316738230.jpg";
-import bgImageMobile from "@assets/home_mobile.jpg";
+import bgImageMobile from "@assets/mobile_1775242990762.jpg";
 
 export default function Home() {
   return (
@@ -22,8 +22,8 @@ export default function Home() {
           style={{
             backgroundColor: '#0d2a40',
             backgroundImage: `url(${bgImageMobile})`,
-            backgroundSize: '118%',
-            backgroundPosition: '75% center',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
           }}
         />
