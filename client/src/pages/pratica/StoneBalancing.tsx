@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import img1 from "@/assets/images/pratica/stone_balancing/sb_1.jpg";
 import img2 from "@/assets/images/pratica/stone_balancing/sb_2.jpg";
 import img3 from "@/assets/images/pratica/stone_balancing/sb_3.jpg";
-import img6 from "@/assets/images/pratica/stone_balancing/sb_6.jpg";
 import img8 from "@/assets/images/pratica/stone_balancing/sb_8.jpg";
 import img9 from "@/assets/images/pratica/stone_balancing/sb_9.jpg";
 import imgNew1 from "@/assets/images/pratica/stone_balancing/sb_new1.jpg";
-import imgNew2 from "@/assets/images/pratica/stone_balancing/sb_new2.jpg";
+import imgNew3 from "@/assets/images/pratica/stone_balancing/sb_new3.jpg";
+import imgNew4 from "@/assets/images/pratica/stone_balancing/sb_new4.jpg";
 import { useT } from "@/i18n/useT";
 import { renderLines } from "@/i18n/renderLines";
 
@@ -18,8 +18,8 @@ const photos = [
   { src: img8, alt: "Pietra allungata in equilibrio in bianco e nero" },
   { src: img2, alt: "Pietra ovale in equilibrio sul fiume turchese" },
   { src: img9, alt: "Composizione di pietre ad ali sul fiume" },
-  { src: img6, alt: "Silhouette di torre di pietre sul mare in bianco e nero" },
-  { src: imgNew2, alt: "Torre di pietre sul mare con la luna in bianco e nero" },
+  { src: imgNew3, alt: "Composizione di pietre impilate sul fiume" },
+  { src: imgNew4, alt: "Pietre in equilibrio a forma di piramide capovolta" },
 ];
 
 export default function StoneBalancing() {
