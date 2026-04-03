@@ -143,7 +143,7 @@ export function Navigation() {
         <div className="hidden md:flex flex-wrap justify-end items-center gap-x-6 gap-y-2 text-sm md:text-base font-normal tracking-wide">
           {!isHome && (
             <Link href="/">
-              <a className="hover:opacity-100 transition-opacity duration-300 opacity-80 block py-2">
+              <a className="hover:opacity-100 transition-opacity duration-300 relative group opacity-100 block py-2">
                 {t.nav.home}
               </a>
             </Link>
