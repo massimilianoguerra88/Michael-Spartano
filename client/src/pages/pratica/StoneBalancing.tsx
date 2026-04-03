@@ -18,8 +18,8 @@ const photos = [
   { src: img8, alt: "Pietra allungata in equilibrio in bianco e nero" },
   { src: img2, alt: "Pietra ovale in equilibrio sul fiume turchese" },
   { src: img9, alt: "Composizione di pietre ad ali sul fiume" },
-  { src: imgNew4, alt: "Composizione di pietre impilate sul fiume" },
-  { src: imgNew3, alt: "Pietre in equilibrio a forma di piramide capovolta" },
+  { src: imgNew3, alt: "Composizione di pietre impilate sul fiume" },
+  { src: imgNew4, alt: "Pietre in equilibrio a forma di piramide capovolta" },
 ];
 
 export default function StoneBalancing() {
