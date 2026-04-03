@@ -139,16 +139,15 @@ export function Navigation() {
           </a>
         </Link>
 
-        {!isHome && (
-          <Link href="/">
-            <a className="hidden md:block absolute left-1/2 -translate-x-1/2 text-base font-light tracking-wide hover:opacity-100 transition-opacity duration-300 opacity-80 top-8 py-2">
-              {t.nav.home}
-            </a>
-          </Link>
-        )}
-
         {/* Desktop nav */}
         <div className="hidden md:flex flex-wrap justify-end items-center gap-x-6 gap-y-2 text-sm md:text-base font-normal tracking-wide">
+          {!isHome && (
+            <Link href="/">
+              <a className="hover:opacity-100 transition-opacity duration-300 opacity-80 block py-2">
+                {t.nav.home}
+              </a>
+            </Link>
+          )}
           {links.map((link) => (
             <div
               key={link.href}
