@@ -1,8 +1,9 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
-import img1 from "@/assets/images/1.jpg";
-import img2 from "@/assets/images/2.jpg";
-import img3 from "@/assets/images/3.jpg";
+import img1 from "@assets/1_1775469717484.jpg";
+import img2 from "@assets/2_1775469717486.jpg";
+import img3 from "@assets/musica_new3.jpg";
+import img4 from "@assets/musica_new4.jpg";
 import { useT } from "@/i18n/useT";
 import { renderLines } from "@/i18n/renderLines";
 
@@ -59,14 +60,17 @@ export default function Musica() {
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
             className="flex-1 w-full grid grid-cols-2 gap-2 md:gap-4 mt-1 md:mt-[6px]"
           >
-            <div className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
+            <div className="aspect-[4/3] relative overflow-hidden bg-foreground/5 rounded-sm">
               <img src={img1} alt="Sessione musicale 1" className="absolute inset-0 w-full h-full object-cover" />
             </div>
-            <div className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
+            <div className="aspect-[4/3] relative overflow-hidden bg-foreground/5 rounded-sm">
               <img src={img2} alt="Sessione musicale 2" className="absolute inset-0 w-full h-full object-cover" />
             </div>
-            <div className="aspect-[3/4] relative overflow-hidden bg-foreground/5 rounded-sm">
+            <div className="aspect-[4/3] relative overflow-hidden bg-foreground/5 rounded-sm">
               <img src={img3} alt="Sessione musicale 3" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="aspect-[4/3] relative overflow-hidden bg-foreground/5 rounded-sm">
+              <img src={img4} alt="Sessione musicale 4" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </motion.div>
 
