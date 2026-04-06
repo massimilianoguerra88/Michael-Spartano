@@ -45,7 +45,7 @@ export default function Musica() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-            className="flex-1 w-full text-left"
+            className="w-full md:flex-[0.7] text-left"
           >
             <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
               {mus.paragraphs.map((para, i) => (
@@ -58,7 +58,7 @@ export default function Musica() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-            className="flex-1 w-full grid grid-cols-2 gap-2 md:gap-4 mt-1 md:mt-[6px]"
+            className="w-full md:flex-[1.5] grid grid-cols-2 gap-2 md:gap-4 mt-1 md:mt-[6px]"
           >
             <div className="aspect-[4/3] relative overflow-hidden bg-foreground/5 rounded-sm">
               <img src={img1} alt="Sessione musicale 1" className="absolute inset-0 w-full h-full object-cover" />
