@@ -52,7 +52,8 @@ export default function LaVoceDellaNatura() {
             </p>
             <p>
               Info/conferma di partecipazione:<br />
-              spartanomichael@gmail.com
+              spartanomichael@gmail.com<br />
+              3206074072
             </p>
           </div>
         </motion.div>
