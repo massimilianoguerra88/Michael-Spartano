@@ -1,11 +1,11 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
-import img1 from "@/assets/images/pratica/corpo_natura/cn_5.jpg";
+import img1 from "@/assets/images/pratica/corpo_natura/cn_1.jpg";
 import img2 from "@/assets/images/pratica/corpo_natura/cn_2.jpg";
-import img3 from "@/assets/images/pratica/corpo_natura/cn_4.jpg";
-import img4 from "@/assets/images/pratica/corpo_natura/cn_3.jpg";
-import img5 from "@/assets/images/pratica/corpo_natura/cn_6.jpg";
-import img6 from "@/assets/images/pratica/corpo_natura/cn_9.jpg";
+import img3 from "@/assets/images/pratica/corpo_natura/cn_3.jpg";
+import img4 from "@/assets/images/pratica/corpo_natura/cn_4.jpg";
+import img5 from "@/assets/images/pratica/corpo_natura/cn_5.jpg";
+import img6 from "@/assets/images/pratica/corpo_natura/cn_6.jpg";
 import img7 from "@/assets/images/pratica/corpo_natura/cn_7.jpg";
 import img8 from "@/assets/images/pratica/corpo_natura/cn_8.jpg";
 import { useT } from "@/i18n/useT";
