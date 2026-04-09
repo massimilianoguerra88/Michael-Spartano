@@ -69,7 +69,7 @@ export default function Poesie() {
           <div className="space-y-6 font-serif text-base text-foreground/80 leading-relaxed">
             <p>
               La lettura di alcune parole potrebbe aver toccato un punto che non riesci a decifrare.
-              Qualcosa che non ti spieghi, ma che ti ha portato espansione, verità e libertà.
+              Qualcosa che non ti spieghi, ma che ti ha portato espansione, verità e libertà.<br />
               Se desideri continuare a esplorare, puoi fare una donazione libera per la stampa di
               una raccolta di poesie intitolata <em>Dal Vuoto</em>.
             </p>
