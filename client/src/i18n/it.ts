@@ -66,7 +66,7 @@ export const it = {
     title: "Educazione",
     subtitle: "Arte, natura e consapevolezza",
     paragraphs: [
-      "Lavoro con bambini e ragazzi\nattraverso esperienze artistiche e sonore,\nspesso radicate nella natura,\nma capaci di portarne la presenza anche negli spazi chiusi.",
+      "Questa sezione è dedicata al lavoro con bambini e ragazzi\nattraverso esperienze artistiche e sonore,\nspesso radicate nella natura,\nma capaci di portarne la presenza anche negli spazi chiusi.",
       "Le proposte nascono\ndal contatto diretto con la materia:\nterra, foglie, acqua, sassi, colore.\nOgni attività è pensata in base all'età dei partecipanti\ne al contesto in cui si svolge.",
       "Il corpo è sempre coinvolto.\nNon come strumento da guidare,\nma come luogo di scoperta e osservazione.",
       "Attraverso il gesto,\nil ritmo\ne il silenzio,\ni bambini approfondiscono\nla relazione\ncon ciò che li circonda\ne con ciò che sentono.",

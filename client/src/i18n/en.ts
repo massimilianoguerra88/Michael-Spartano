@@ -68,7 +68,7 @@ export const en: Translations = {
     title: "Education",
     subtitle: "Art, nature and awareness",
     paragraphs: [
-      "I work with children and young people\nthrough artistic and sound-based experiences,\noften rooted in nature,\nbut capable of bringing its presence even into indoor spaces.",
+      "This section is dedicated to working with children and young people\nthrough artistic and sound-based experiences,\noften rooted in nature,\nbut capable of bringing its presence even into indoor spaces.",
       "The proposals emerge\nfrom direct contact with matter:\nearth, leaves, water, stones, colour.\nEach activity is shaped by the age of the participants\nand the context in which it takes place.",
       "The body is always involved.\nNot as a tool to be guided,\nbut as a place of discovery and observation.",
       "Through gesture,\nrhythm\nand silence,\nchildren deepen their relationship\nwith what surrounds them\nand with what they feel.",
