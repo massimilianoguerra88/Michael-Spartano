@@ -40,6 +40,7 @@ import IlSilenzioDelleParole from "@/pages/opere/poesie/IlSilenzioDelleParole";
 import AllUno from "@/pages/opere/poesie/AllUno";
 import CioCheSei from "@/pages/opere/poesie/CioCheSei";
 import News from "@/pages/News";
+import LaVoceDellaNatura from "@/pages/news/LaVoceDellaNatura";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -86,6 +87,7 @@ function Router() {
         <Route path="/spazio-sorgente" component={SpazioSorgente} />
         <Route path="/contatti" component={Contatti} />
         <Route path="/news" component={News} />
+        <Route path="/news/la-voce-della-natura" component={LaVoceDellaNatura} />
         <Route component={NotFound} />
       </Switch>
     </AnimatePresence>
