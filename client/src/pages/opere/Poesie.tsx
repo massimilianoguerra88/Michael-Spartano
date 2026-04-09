@@ -60,6 +60,33 @@ export default function Poesie() {
           </ul>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
+          className="mt-24 md:mt-32 pt-12 border-t border-foreground/10 max-w-xl"
+        >
+          <div className="space-y-6 font-serif text-base text-foreground/80 leading-relaxed">
+            <p>
+              La lettura di alcune parole potrebbe aver toccato un punto che non riesci a decifrare.
+              Qualcosa che non ti spieghi, ma che ti ha portato espansione, verità e libertà.
+              Se desideri continuare a esplorare, puoi fare una donazione libera per la stampa di
+              una raccolta di poesie intitolata <em>Dal Vuoto</em>.
+            </p>
+            <p>
+              Puoi donare qui:{" "}
+              <a
+                href="https://paypal.me/MichaelSpartano73"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-foreground underline-offset-2 hover:opacity-70 transition-opacity duration-300"
+              >
+                paypal.me/MichaelSpartano73
+              </a>
+            </p>
+          </div>
+        </motion.div>
+
       </main>
     </motion.div>
   );
