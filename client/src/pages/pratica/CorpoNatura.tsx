@@ -1,21 +1,25 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
-import img1 from "@/assets/images/pratica/corpo_natura/cn_1.jpg";
+import img1 from "@/assets/images/pratica/corpo_natura/cn_5.jpg";
 import img2 from "@/assets/images/pratica/corpo_natura/cn_2.jpg";
-import img3 from "@/assets/images/pratica/corpo_natura/cn_3.jpg";
-import img4 from "@/assets/images/pratica/corpo_natura/cn_4.jpg";
-import img5 from "@/assets/images/pratica/corpo_natura/cn_5.jpg";
-import img6 from "@/assets/images/pratica/corpo_natura/cn_6.jpg";
+import img3 from "@/assets/images/pratica/corpo_natura/cn_4.jpg";
+import img4 from "@/assets/images/pratica/corpo_natura/cn_3.jpg";
+import img5 from "@/assets/images/pratica/corpo_natura/cn_6.jpg";
+import img6 from "@/assets/images/pratica/corpo_natura/cn_9.jpg";
+import img7 from "@/assets/images/pratica/corpo_natura/cn_7.jpg";
+import img8 from "@/assets/images/pratica/corpo_natura/cn_8.jpg";
 import { useT } from "@/i18n/useT";
 import { renderLines } from "@/i18n/renderLines";
 
 const photos = [
-  { src: img1, alt: "Adulto disteso a terra con foglie e bambini attorno" },
+  { src: img1, alt: "Cesto e secchio con foglie e materiali naturali" },
   { src: img2, alt: "Adulto disteso a terra, bambino in piedi accanto" },
-  { src: img3, alt: "Materiali naturali disposti a terra: foglie, bacche, rametti" },
-  { src: img4, alt: "Adulto e bambini seduti osservano i materiali naturali disposti" },
-  { src: img5, alt: "Mano di bambino nel cesto di foglie e materiali naturali" },
-  { src: img6, alt: "Sagoma del corpo tracciata con rami e materiali naturali sul pavimento" },
+  { src: img3, alt: "Adulto e bambini seduti osservano i materiali naturali disposti" },
+  { src: img4, alt: "Materiali naturali disposti a terra: foglie, bacche, rametti" },
+  { src: img5, alt: "Sagoma del corpo tracciata con rami e materiali naturali sul pavimento" },
+  { src: img6, alt: "Sagoma del corpo tracciata con listelli chiari sul pavimento" },
+  { src: img7, alt: "Persona distesa accanto a sagoma tracciata con sassi" },
+  { src: img8, alt: "Spirale e pattern di sassi sul terreno" },
 ];
 
 export default function CorpoNatura() {
