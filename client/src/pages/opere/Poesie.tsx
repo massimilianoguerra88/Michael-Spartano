@@ -81,7 +81,7 @@ export default function Poesie() {
                 rel="noopener noreferrer"
                 className="text-foreground/90 underline decoration-foreground underline-offset-2 hover:opacity-70 transition-opacity duration-300"
               >
-                paypal.me/MichaelSpartano73
+                MichaelSpartano
               </a>
             </p>
           </div>
