@@ -45,26 +45,25 @@ export default function News() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 + index * 0.1 }}
+              className="flex flex-col items-start"
               data-testid={`card-event-${index}`}
             >
-              <Link href={`/news/${event.slug}`}>
-                <a className="flex flex-col items-start cursor-pointer group">
-                  <img
-                    src={event.src}
-                    alt={event.title}
-                    className="w-full object-contain rounded-sm transition-opacity duration-300 group-hover:opacity-80"
-                    data-testid={`img-event-${index}`}
-                  />
-                  <div className="mt-4 space-y-1">
-                    <p className="font-serif text-lg font-normal text-foreground/90">
-                      {event.title}
-                    </p>
-                    <p className="font-serif text-base italic text-foreground/75">
-                      {event.subtitle}
-                    </p>
-                  </div>
-                </a>
-              </Link>
+              <img
+                src={event.src}
+                alt={event.title}
+                className="w-full object-contain rounded-sm"
+                data-testid={`img-event-${index}`}
+              />
+              <div className="mt-4 space-y-1">
+                <Link href={`/news/${event.slug}`}>
+                  <a className="font-serif text-lg font-normal text-foreground/90 underline decoration-foreground underline-offset-2 cursor-pointer hover:opacity-70 transition-opacity duration-300">
+                    {event.title}
+                  </a>
+                </Link>
+                <p className="font-serif text-base italic text-foreground/75">
+                  {event.subtitle}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
