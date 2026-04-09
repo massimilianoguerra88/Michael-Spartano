@@ -79,7 +79,7 @@ export default function Poesie() {
                 href="https://paypal.me/MichaelSpartano73"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline decoration-foreground underline-offset-2 hover:opacity-70 transition-opacity duration-300"
+                className="text-foreground/90 underline decoration-foreground underline-offset-2 hover:opacity-70 transition-opacity duration-300"
               >
                 paypal.me/MichaelSpartano73
               </a>
