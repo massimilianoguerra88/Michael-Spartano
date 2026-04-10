@@ -71,15 +71,7 @@ export default function Poesie() {
           <div className="space-y-6 font-serif text-base text-foreground/80 leading-relaxed">
             <p>
               {t.poesie.donationIntro}<br />
-              {t.poesie.donationCta}{" "}
-              <a
-                href="https://paypal.me/MichaelSpartano73"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/90 underline decoration-foreground underline-offset-2 hover:opacity-70 transition-opacity duration-300"
-              >
-                {t.poesie.donationLink} <em>{t.poesie.donationBook}</em>
-              </a>.
+              {t.poesie.donationCta}{" "}{t.poesie.donationLink} <em>{t.poesie.donationBook}</em>.
             </p>
             <p>
               {t.poesie.donateHere}{" "}
