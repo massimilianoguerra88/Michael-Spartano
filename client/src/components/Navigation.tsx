@@ -65,14 +65,6 @@ export function Navigation() {
   const links = getLinks(t.nav);
 
   const isHome = location === "/";
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -134,7 +126,7 @@ export function Navigation() {
     <>
       <nav className={cn(
         "w-full py-8 px-6 md:px-12 flex flex-row items-center justify-between gap-6 z-[110] fixed top-0 left-0 transition-all duration-300",
-        isHome && !mobileOpen && !scrolled ? "text-white" : "text-black bg-white"
+        isHome && !mobileOpen ? "text-white" : "text-black bg-white"
       )}>
         <Link href="/michael-spartano">
           <a className="flex flex-col items-center hover:opacity-70 transition-opacity group relative">
@@ -195,10 +187,7 @@ export function Navigation() {
                     className="absolute left-1/2 -translate-x-1/2 top-full pt-2 min-w-[160px] flex flex-col items-center gap-2 z-[60]"
                   >
                     <div
-                      className={cn(
-                        "pt-4 pb-3 px-4 flex flex-col items-center gap-2 min-w-[180px]",
-                        !(isHome && !scrolled) && "bg-white text-black shadow-sm rounded-sm"
-                      )}
+                      className="pt-4 pb-3 px-4 flex flex-col items-center gap-2 min-w-[180px] bg-white text-black shadow-sm rounded-sm"
                     >
                       {link.subLinks.map((subLink) => (
                         <div
@@ -228,10 +217,7 @@ export function Navigation() {
                                 transition={{ duration: 0.2 }}
                                 className="absolute left-[calc(100%+0.5rem)] top-0 pt-0 min-w-[160px] flex flex-col items-start gap-2 z-[70]"
                               >
-                                <div className={cn(
-                                  "flex flex-col items-start gap-2 px-4 py-2",
-                                  !(isHome && !scrolled) && "bg-white text-black shadow-sm rounded-sm"
-                                )}>
+                                <div className="flex flex-col items-start gap-2 px-4 py-2 bg-white text-black shadow-sm rounded-sm">
                                   {subLink.subLinks.map((nested) => (
                                     <Link key={nested.href} href={nested.href}>
                                       <a className={cn(
@@ -270,17 +256,17 @@ export function Navigation() {
         >
           <span className={cn(
             "block w-6 h-px transition-all duration-300 origin-center",
-            isHome && !mobileOpen && !scrolled ? "bg-white" : "bg-black",
+            isHome && !mobileOpen ? "bg-white" : "bg-black",
             mobileOpen && "rotate-45 translate-y-[6px]"
           )} />
           <span className={cn(
             "block w-6 h-px transition-all duration-300",
-            isHome && !mobileOpen && !scrolled ? "bg-white" : "bg-black",
+            isHome && !mobileOpen ? "bg-white" : "bg-black",
             mobileOpen && "opacity-0"
           )} />
           <span className={cn(
             "block w-6 h-px transition-all duration-300 origin-center",
-            isHome && !mobileOpen && !scrolled ? "bg-white" : "bg-black",
+            isHome && !mobileOpen ? "bg-white" : "bg-black",
             mobileOpen && "-rotate-45 -translate-y-[6px]"
           )} />
         </button>
