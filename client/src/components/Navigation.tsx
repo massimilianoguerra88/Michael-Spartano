@@ -187,7 +187,7 @@ export function Navigation() {
                     className="absolute left-1/2 -translate-x-1/2 top-full pt-2 min-w-[160px] flex flex-col items-center gap-2 z-[60]"
                   >
                     <div
-                      className={cn("pt-4 pb-3 px-4 flex flex-col items-center gap-2 min-w-[180px]", !isHome && "bg-white text-black shadow-sm rounded-sm")}
+                      className="pt-4 pb-3 px-4 flex flex-col items-center gap-2 min-w-[180px]"
                     >
                       {link.subLinks.map((subLink) => (
                         <div
@@ -217,7 +217,7 @@ export function Navigation() {
                                 transition={{ duration: 0.2 }}
                                 className="absolute left-[calc(100%+0.5rem)] top-0 pt-0 min-w-[160px] flex flex-col items-start gap-2 z-[70]"
                               >
-                                <div className={cn("flex flex-col items-start gap-2 px-4 py-2", !isHome && "bg-white text-black shadow-sm rounded-sm")}>
+                                <div className="flex flex-col items-start gap-2 px-4 py-2">
                                   {subLink.subLinks.map((nested) => (
                                     <Link key={nested.href} href={nested.href}>
                                       <a className={cn(
