@@ -263,6 +263,15 @@ export const it = {
       "Sono proposte sessioni\nindividuali o di gruppo,\nin cui il suono sorge\nnel silenzio\ne genera risonanze interiori.",
     ],
   },
+  news: {
+    voceNatura: {
+      title: "La voce della natura",
+      subtitle: "Bagno di Suoni e parole",
+      p1: "Una sessione di immersione sonora guidata dalla voce, da elementi naturali e da strumenti armonici come lira pentatonica, piramide di cristallo, handpan tongue drum ed altri.\nIl suono diventa uno spazio di rilassamento profondo e di riconnessione con il silenzio.",
+      p2: "Aperto a tutti, grandi e piccoli.\nAdulto: 20€\nBimbo: 5€",
+      p3: "Info/conferma di partecipazione:\nspartanomichael@gmail.com\n3206074072",
+    },
+  },
 };
 
 export type Translations = typeof it;

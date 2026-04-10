@@ -265,4 +265,13 @@ export const en: Translations = {
       "Individual or group sessions are offered,\nin which sound arises\nin silence\nand generates inner resonances.",
     ],
   },
+  news: {
+    voceNatura: {
+      title: "The voice of nature",
+      subtitle: "A bath of sounds and words",
+      p1: "A session of sound immersion guided by the voice, natural elements and harmonic instruments such as pentatonic lyre, crystal pyramid, handpan tongue drum and others.\nSound becomes a space of deep relaxation and reconnection with silence.",
+      p2: "Open to everyone, adults and children.\nAdult: 20€\nChild: 5€",
+      p3: "Info/registration:\nspartanomichael@gmail.com\n3206074072",
+    },
+  },
 };

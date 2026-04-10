@@ -1,8 +1,13 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useT } from "@/i18n/useT";
+import { renderLines } from "@/i18n/renderLines";
 
 export default function LaVoceDellaNatura() {
+  const t = useT();
+  const v = t.news.voceNatura;
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -27,10 +32,10 @@ export default function LaVoceDellaNatura() {
             <a className="font-serif text-sm text-foreground/50 hover:text-foreground/80 transition-colors duration-300 cursor-pointer mb-6 inline-block">← News</a>
           </Link>
           <h1 className="text-2xl md:text-3xl font-normal font-serif text-foreground/90">
-            La voce della natura
+            {v.title}
           </h1>
           <p className="text-lg font-serif italic text-foreground/75 mt-1">
-            Bagno di Suoni e parole
+            {v.subtitle}
           </p>
         </motion.div>
 
@@ -41,20 +46,9 @@ export default function LaVoceDellaNatura() {
           className="max-w-xl text-left"
         >
           <div className="space-y-8 font-serif text-base text-foreground/80 leading-relaxed">
-            <p>
-              Una sessione di immersione sonora guidata dalla voce, da elementi naturali e da strumenti armonici come lira pentatonica, piramide di cristallo, handpan tongue drum ed altri.<br />
-              Il suono diventa uno spazio di rilassamento profondo e di riconnessione con il silenzio.
-            </p>
-            <p>
-              Aperto a tutti, grandi e piccoli.<br />
-              Adulto: 20€<br />
-              Bimbo: 5€
-            </p>
-            <p>
-              Info/conferma di partecipazione:<br />
-              spartanomichael@gmail.com<br />
-              3206074072
-            </p>
+            <p>{renderLines(v.p1)}</p>
+            <p>{renderLines(v.p2)}</p>
+            <p>{renderLines(v.p3)}</p>
           </div>
         </motion.div>
 

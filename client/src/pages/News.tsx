@@ -1,18 +1,21 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useT } from "@/i18n/useT";
 import locandina1 from "@assets/Locandina_1775767650957.png";
 
-const events = [
-  {
-    src: locandina1,
-    title: "La voce della natura",
-    subtitle: "Bagno di suoni e parole",
-    slug: "la-voce-della-natura",
-  },
-];
-
 export default function News() {
+  const t = useT();
+
+  const events = [
+    {
+      src: locandina1,
+      title: t.news.voceNatura.title,
+      subtitle: t.news.voceNatura.subtitle,
+      slug: "la-voce-della-natura",
+    },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
