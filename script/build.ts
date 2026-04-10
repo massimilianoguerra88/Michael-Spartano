@@ -1,6 +1,6 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
-import { rm, readFile } from "fs/promises";
+import { rm, readFile, mkdir, copyFile } from "fs/promises";
 
 // server deps to bundle to reduce openat(2) syscalls
 // which helps cold start times
@@ -32,11 +32,48 @@ const allowlist = [
   "zod-validation-error",
 ];
 
+const spaRoutes = [
+  "michael-spartano",
+  "opere",
+  "opere/performance",
+  "opere/disegni",
+  "opere/land-art",
+  "opere/oggetti",
+  "opere/poesie",
+  "pratica",
+  "pratica/non-dualismo",
+  "pratica/non-dualismo/sessione-individuale",
+  "pratica/non-dualismo/seminario",
+  "pratica/non-dualismo/meditazione",
+  "pratica/arte",
+  "pratica/arte/il-fiore-della-vita",
+  "pratica/arte/corpo-natura",
+  "pratica/arte/tracce-di-fango",
+  "pratica/arte/dipingere-naturalmente",
+  "pratica/arte/stone-balancing",
+  "pratica/musica",
+  "educazione",
+  "spazio-sorgente",
+  "contatti",
+  "news",
+  "news/la-voce-della-natura",
+];
+
+async function generateSpaRoutes() {
+  for (const route of spaRoutes) {
+    await mkdir(`dist/public/${route}`, { recursive: true });
+    await copyFile("dist/public/index.html", `dist/public/${route}/index.html`);
+  }
+  console.log(`✓ SPA routes: created ${spaRoutes.length} route directories`);
+}
+
 async function buildAll() {
   await rm("dist", { recursive: true, force: true });
 
   console.log("building client...");
   await viteBuild();
+
+  await generateSpaRoutes();
 
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
