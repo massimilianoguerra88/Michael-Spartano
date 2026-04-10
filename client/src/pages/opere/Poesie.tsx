@@ -64,7 +64,7 @@ export default function Poesie() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
-          className="mt-24 md:mt-32 pt-12 border-t border-foreground/10 max-w-xl"
+          className="mt-10 md:mt-14 pt-8 border-t border-foreground/10 max-w-xl"
         >
           <div className="space-y-6 font-serif text-base text-foreground/80 leading-relaxed">
             <p>
