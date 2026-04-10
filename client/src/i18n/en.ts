@@ -36,6 +36,13 @@ export const en: Translations = {
     title: "Works",
     subtitle: "A visual exploration through silence and form.\nEach work is an invitation to look beyond appearance.",
   },
+  poesie: {
+    donationIntro: "Reading some of these words may have touched a place within you that you cannot quite decipher. Something you can't explain, yet it has brought you expansion, truth and freedom.",
+    donationCta: "If you wish to continue exploring,",
+    donationLink: "you can make a free donation to contribute to the printing of a poetry collection called",
+    donationBook: "Dal Vuoto",
+    donateHere: "You can donate here:",
+  },
   nonDualismo: {
     title: "Non-Dualism",
   },

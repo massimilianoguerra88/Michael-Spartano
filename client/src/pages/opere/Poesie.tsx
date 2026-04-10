@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useT } from "@/i18n/useT";
 
 const poems = [
   { title: "Ciò che sei", path: "/opere/poesie/cio-che-sei" },
@@ -11,6 +12,7 @@ const poems = [
 ];
 
 export default function Poesie() {
+  const t = useT();
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -68,13 +70,19 @@ export default function Poesie() {
         >
           <div className="space-y-6 font-serif text-base text-foreground/80 leading-relaxed">
             <p>
-              La lettura di alcune parole potrebbe aver toccato un punto che non riesci a decifrare.
-              Qualcosa che non ti spieghi, ma che ti ha portato espansione, verità e libertà.<br />
-              Se desideri continuare a esplorare, puoi fare una donazione libera per contribuire alla stampa di
-              una raccolta di poesie intitolata <em>Dal Vuoto</em>.
+              {t.poesie.donationIntro}<br />
+              {t.poesie.donationCta}{" "}
+              <a
+                href="https://paypal.me/MichaelSpartano73"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground/90 underline decoration-foreground underline-offset-2 hover:opacity-70 transition-opacity duration-300"
+              >
+                {t.poesie.donationLink} <em>{t.poesie.donationBook}</em>
+              </a>.
             </p>
             <p>
-              Puoi donare qui:{" "}
+              {t.poesie.donateHere}{" "}
               <a
                 href="https://paypal.me/MichaelSpartano73"
                 target="_blank"

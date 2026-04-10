@@ -34,6 +34,13 @@ export const it = {
     title: "Opere",
     subtitle: "Un'esplorazione visiva attraverso il silenzio e la forma.\nOgni opera è un invito a guardare oltre l'apparenza.",
   },
+  poesie: {
+    donationIntro: "La lettura di alcune parole potrebbe aver toccato un punto che non riesci a decifrare. Qualcosa che non ti spieghi, ma che ti ha portato espansione, verità e libertà.",
+    donationCta: "Se desideri continuare a esplorare,",
+    donationLink: "puoi fare una donazione libera per contribuire alla stampa di una raccolta di poesie intitolata",
+    donationBook: "Dal Vuoto",
+    donateHere: "Puoi donare qui:",
+  },
   nonDualismo: {
     title: "Non-Dualismo",
   },
